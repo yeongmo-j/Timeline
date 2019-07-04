@@ -20,6 +20,7 @@ public class UserController {
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(UserEntity userEntity, HttpSession session) {
+		//로그인 
 		Response response = new Response();
 		boolean result = userService.login(userEntity); // 로그인 성공하면 true 실패하면 false
 		if (result) {
@@ -38,6 +39,7 @@ public class UserController {
 	
 	@RequestMapping(value="/regist", method=RequestMethod.POST)
 	public String regist(UserEntity userEntity) {
+		//회원가입
 		Response response = new Response();
 		boolean result = userService.registUser(userEntity); //회원가입 성공하면 true 실패하면 false
 		if (result) {
@@ -54,6 +56,7 @@ public class UserController {
 	
 	@RequestMapping(value="/logout", method=RequestMethod.GET)
 	public void logout(HttpSession session) {
+		//로그아웃
 		session.invalidate();
 	}
 }

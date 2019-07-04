@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService{
 		
 	@Override
 	public boolean registUser(UserEntity userEntity) {
+		//회원가입 성공하면 true
 		boolean available = userRepository.existsByUsername(userEntity.getUsername());
 		if (available) {
 			//이미 존재하는 이름이므로 실패

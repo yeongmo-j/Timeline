@@ -11,21 +11,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="user")
+@Table(name="article")
 @NoArgsConstructor
 @Data
-public class UserEntity {
+public class ArticleEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
 	@Column(nullable=false)
-	private String username;
+	private int userID;
 	
 	@Column(nullable=false)
-	private String password;
+	private String content;
 	
 	@Column
-	private String profile;
+	private String photo;
+	
+	@Column
+	private int like;
 
 }

@@ -11,21 +11,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="user")
+@Table(name="liked")
 @NoArgsConstructor
 @Data
-public class UserEntity {
+public class LikedEntity {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
 	@Column(nullable=false)
-	private String username;
+	private int userID;
 	
 	@Column(nullable=false)
-	private String password;
-	
-	@Column
-	private String profile;
-
+	private int articleID;
 }

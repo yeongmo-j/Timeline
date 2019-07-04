@@ -1,20 +1,69 @@
 import React, { Component } from 'react';
-import { Layout } from 'antd';
+import Article from './Article';
 
 import './Timeline.css';
 
-const { Header, Footer, Content } = Layout;
 
 class Timeline extends Component {
 
+    state = {
+        articles : []
+    }
+
+    //임시로 유저아이디 설정해놓음
+    userID = 1;
+
+    componentWillMount(){
+        this.setState({articles : [{
+                "userID" : 2,
+                "username" : "user 2",
+                "userProfile" : "profile2",
+                "articleID" : 2,
+                "content" : "temporaryContent 1",
+                "photo" : [
+                    "photo1", "photo2", "photo3"
+                ],
+                "like" : 4,
+                "liked" : "true"
+            }, {
+                "userID" : 3,
+                "username" : "user 3",
+                "userProfile" : "profile3",
+                "articleID" : 3,
+                "content" : "temporaryContent 2",
+                "photo" : [
+                    "photo1"
+                ],
+                "like" : 4,
+                "liked" : "false"
+            }, {
+                "userID" : 4,
+                "username" : "user 4",
+                "userProfile" : "profile4",
+                "articleID" : 4,
+                "content" : "temporaryContent 3",
+                "photo" : [
+                    "photo1"
+                ],
+                "like" : 3,
+                "liked" : "false"
+            }
+        ]
+        })
+    }
+
     render() {
+        const articles = this.state.articles.map( (article,i)=> {
+            return (
+            <div>
+                <Article article={article} key={i}/>
+            </div>
+            );
+        })
+
         return (
         <div>
-            <Layout>
-                <Header className='Header'>Timeline</Header>
-                <Content>Content</Content>
-                <Footer>Footer</Footer>
-            </Layout>
+            {articles}
         </div>
         );
     }

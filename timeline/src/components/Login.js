@@ -21,7 +21,7 @@ class Login extends Component {
                     const result = rsp.status.result;
                     if (result === 'positive'){
                         console.log("success")
-                        history.push("/timeline")
+                        history.push("/main")
                     } else {
                         console.log("fail!")
                     }

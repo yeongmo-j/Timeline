@@ -4,7 +4,7 @@ import { Router, Route, Switch } from "react-router-dom";
 
 import Login from './components/Login';
 import Register from './components/Register';
-import Timeline from './components/Timeline';
+import Main from './components/Main';
 
 import './App.css';
 
@@ -17,7 +17,7 @@ class App extends Component {
           <Switch>
             <Route path='/login' exact component={Login} /> 
             <Route path='/register' exact component={Register} />
-            <Route path='/timeline' exact component={Timeline} />
+            <Route path='/main' exact component={Main} />
           </Switch>
         </Router>
       </div>

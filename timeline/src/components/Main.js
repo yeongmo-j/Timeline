@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Layout } from 'antd';
 import Timeline from './Timeline';
+import ArticleForm from './ArticleForm';
 
 import './Main.css';
 
@@ -14,6 +15,7 @@ class Main extends Component {
             <Layout>
                 <Header className='Header'>Timeline</Header>
                 <Content>
+                    <ArticleForm/>
                     <Timeline/>
                 </Content>
                 <Footer>Footer</Footer>

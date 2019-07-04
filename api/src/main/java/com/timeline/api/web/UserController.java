@@ -3,6 +3,8 @@ package com.timeline.api.web;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +14,7 @@ import com.timeline.api.entity.UserEntity;
 import com.timeline.api.response.Response;
 import com.timeline.api.service.UserService;
 
+@CrossOrigin(origins = "*")
 @RestController
 public class UserController {
 	
@@ -19,7 +22,7 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String login(UserEntity userEntity, HttpSession session) {
+	public String login(@RequestBody UserEntity userEntity, HttpSession session) {
 		//로그인 
 		Response response = new Response();
 		boolean result = userService.login(userEntity); // 로그인 성공하면 true 실패하면 false
@@ -38,7 +41,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/regist", method=RequestMethod.POST)
-	public String regist(UserEntity userEntity) {
+	public String regist(@RequestBody UserEntity userEntity) {
 		//회원가입
 		Response response = new Response();
 		boolean result = userService.registUser(userEntity); //회원가입 성공하면 true 실패하면 false

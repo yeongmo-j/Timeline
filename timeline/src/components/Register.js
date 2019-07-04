@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import { Link } from "react-router-dom";
+import { history } from '../History';
 
 import './Login.css';
 
@@ -11,6 +12,20 @@ class Register extends Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
+                fetch('http://localhost:8080/regist', {
+                    method : 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body : JSON.stringify(values)
+                }).then(response => response.json())
+                .then(rsp => {
+                    const result = rsp.status.result;
+                    if (result === 'positive'){
+                        console.log("success")
+                        history.push("/login")
+                    } else {
+                        console.log("fail!")
+                    }
+                })
             }
         });
     };

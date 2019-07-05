@@ -1,5 +1,8 @@
 package com.timeline.api.web;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,15 +25,15 @@ public class ArticleController {
 	@RequestMapping(value="/article/insert", method=RequestMethod.POST)
 	public String insertArticle(@RequestBody ArticleEntity articleEntity) {
 		Response response = new Response();
-		articleService.insert(articleEntity);
+		ArticleEntity savedEntity = articleService.insert(articleEntity);
 		response.setCode("200");
 		response.setResult("positive");
+		//결과로 data에 저장된 articleID를 넣어서 보내줌
+		Map<String,Integer> map = new HashMap<String,Integer>();
+		map.put("articleID", savedEntity.getId());
+		response.setData(map);
 		return new Gson().toJson(response);
 	}
-	
-	@RequestMapping(value="/article/insertPhoto", method=RequestMethod.POST)
-	public String insertPhoto() {
-		//사진 등록
-	}
+		
 
 }

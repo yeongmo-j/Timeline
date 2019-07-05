@@ -29,6 +29,6 @@ public class ArticleEntity {
 	private String photo;
 	
 	@Column
-	private int like;
+	private int likeCount;
 
 }

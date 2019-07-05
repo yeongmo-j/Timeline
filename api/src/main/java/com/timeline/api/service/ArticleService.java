@@ -4,6 +4,6 @@ import com.timeline.api.entity.ArticleEntity;
 
 public interface ArticleService {
 	
-	void insert(ArticleEntity articleEntity);
+	ArticleEntity insert(ArticleEntity articleEntity);
 
 }

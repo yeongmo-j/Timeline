@@ -34,6 +34,4 @@ public class ArticleController {
 		response.setData(map);
 		return new Gson().toJson(response);
 	}
-		
-
 }

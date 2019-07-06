@@ -15,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.google.gson.Gson;
 import com.timeline.api.service.PhotoService;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins="*")
 @RestController
 public class PhotoController {
 	

@@ -3,7 +3,6 @@ package com.timeline.api.web;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,7 +13,7 @@ import com.timeline.api.entity.UserEntity;
 import com.timeline.api.response.Response;
 import com.timeline.api.service.UserService;
 
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins="*")
 @RestController
 public class UserController {
 	

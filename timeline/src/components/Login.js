@@ -18,6 +18,7 @@ class Login extends Component {
                     body : 'username='+values.username+'&password='+values.password
                 })
                 .then(response => {
+                    console.log(response)
                     const result = response.status;
                     if (result === 200){
                         console.log("success")

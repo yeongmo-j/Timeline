@@ -49,51 +49,7 @@ public class UserServiceImpl implements UserService, UserDetailsService{
 		authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
 		
 		return new User(userEntity.getUsername(), userEntity.getPassword(), authorities);
-		/*
-		UserDetails userDetails = new UserDetails() {
-			
-			@Override
-			public boolean isEnabled() {
-				// TODO Auto-generated method stub
-				return true;
-			}
-			
-			@Override
-			public boolean isCredentialsNonExpired() {
-				// TODO Auto-generated method stub
-				return true;
-			}
-			
-			@Override
-			public boolean isAccountNonLocked() {
-				return true;
-			}
-			
-			@Override
-			public boolean isAccountNonExpired() {
-				// DB안에 이 username이 유일해야 함! 이거 다시 신경써주기
-				return true;
-			}
-			
-			@Override
-			public String getUsername() {
-				return userEntity.getUsername();
-			}
-			
-			@Override
-			public String getPassword() {
-				return userEntity.getPassword();
-			}
-			
-			@Override
-			public Collection<? extends GrantedAuthority> getAuthorities() {
-				// TODO 이부분 테이블로 관리되도록 바꿔줄 것
-				List<GrantedAuthority> authorities = new ArrayList<>();
-				authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
-				return authorities;
-			}
-			
-		};*/
+
 	}
 
 }

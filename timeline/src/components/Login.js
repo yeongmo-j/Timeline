@@ -14,12 +14,12 @@ class Login extends Component {
                 console.log('Received values of form: ', values);
                 fetch('http://localhost:8080/login', {
                     method : 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body : JSON.stringify(values)
-                }).then(response => response.json())
-                .then(rsp => {
-                    const result = rsp.status.result;
-                    if (result === 'positive'){
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body : 'username='+values.username+'&password='+values.password
+                })
+                .then(response => {
+                    const result = response.status;
+                    if (result === 200){
                         console.log("success")
                         history.push("/main")
                     } else {

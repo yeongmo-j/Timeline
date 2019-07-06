@@ -1,7 +1,5 @@
 package com.timeline.api.web;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +18,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	/*
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String login(@RequestBody UserEntity userEntity, HttpSession session) {
 		//로그인 
@@ -38,6 +37,8 @@ public class UserController {
 		}
 		return new Gson().toJson(response);
 	}
+	*/
+	
 	
 	@RequestMapping(value="/regist", method=RequestMethod.POST)
 	public String regist(@RequestBody UserEntity userEntity) {
@@ -55,10 +56,11 @@ public class UserController {
 		}
 		return new Gson().toJson(response);
 	}
-	
+	/*
 	@RequestMapping(value="/logout", method=RequestMethod.GET)
 	public void logout(HttpSession session) {
 		//로그아웃
 		session.invalidate();
 	}
+	*/
 }

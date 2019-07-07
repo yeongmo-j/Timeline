@@ -1,15 +1,6 @@
 package com.timeline.api.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +8,7 @@ import com.timeline.api.entity.UserEntity;
 import com.timeline.api.repository.UserRepository;
 
 @Service
-public class UserServiceImpl implements UserService, UserDetailsService{
+public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	UserRepository userRepository;
@@ -38,18 +29,16 @@ public class UserServiceImpl implements UserService, UserDetailsService{
 		return true;
 	}
 	
-	//UserDetailService 인터페이스 구현
 	@Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		//UserDetails = 대부분의 웹사이트에서 사용하는 계정관련 property들을 추상화한 인터페이스 이걸로 변환시켜 줘야 함
-
-		UserEntity userEntity = userRepository.findByUsername(username);
+	public UserEntity login(UserEntity userEntity) throws Exception{
+		boolean available = userRepository.existsByUsername(userEntity.getUsername()); //이름 있는지 확인
+		if (!available) throw new Exception() ; //없으면 예외 발생
 		
-		List<GrantedAuthority> authorities = new ArrayList<>();
-		authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
-		
-		return new User(userEntity.getUsername(), userEntity.getPassword(), authorities);
-
+		UserEntity findedUser = userRepository.findByUsername(userEntity.getUsername()); //비밀번호 받아와
+		if (passwordEncoder.matches(userEntity.getPassword(), findedUser.getPassword())) //비밀번호 맞으면 
+			return findedUser; //해당 엔티티 리턴 
+		else
+			return null; //비밀번호가 다름
 	}
-
+	
 }

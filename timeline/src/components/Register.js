@@ -16,14 +16,12 @@ class Register extends Component {
                     method : 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body : JSON.stringify(values)
-                }).then(response => response.json())
-                .then(rsp => {
-                    const result = rsp.status.result;
-                    if (result === 'positive'){
+                }).then(response => {
+                    if (response.status === 200){
                         console.log("success")
                         history.push("/login")
                     } else {
-                        console.log("fail!")
+                        console.log("fail")
                     }
                 })
             }

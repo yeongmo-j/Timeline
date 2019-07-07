@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Article from './Article';
+import { getUser }from '../authentication';
 
 import './Timeline.css';
 
@@ -10,8 +11,9 @@ class Timeline extends Component {
         articles : []
     }
 
-    //임시로 유저아이디 설정해놓음
-    userID = 1;
+    // 유저아이디
+    userID = getUser().userID
+
 
     componentWillMount(){
         this.setState({articles : [{

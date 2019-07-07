@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Upload, Modal } from 'antd';
+import { getUser, getToken } from '../authentication';
 
 function getBase64(file) {
     return new Promise((resolve, reject) => {
@@ -8,7 +9,7 @@ function getBase64(file) {
         reader.onload = () => resolve(reader.result);
         reader.onerror = error => reject(error);
     });
-}  
+}
 
 const { TextArea } = Input;
 
@@ -21,6 +22,8 @@ class ArticleForm extends Component {
 
         ],
     };
+
+    userID = getUser().userID
 
     handleCancel = () => this.setState({ previewVisible: false });
 
@@ -52,22 +55,29 @@ class ArticleForm extends Component {
                 let fileNames = fileList.join('/')
                 //db에는 파일명이 저장됨. 파일명의 리스트를 만들어서 그들 사이를 /로 조인해줌. 나중에 split해서 쓸 것임
 
-                //userID 임시 설정
                 let article = {
-                    'userID' : 1,
-                    'content' : values.content,
-                    'photo' : fileNames
+                    'userID': this.userID,
+                    'content': values.content,
+                    'photo': fileNames
                 }
 
                 fetch('http://localhost:8080/article/insert', {
-                    method:'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body : JSON.stringify(article)
-                }).then(response => response.json())
-                .then(rsp => {
-                    console.log(rsp)
-                })
-
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'token': getToken()
+                    },
+                    body: JSON.stringify(article)
+                }).then(response => {
+                    if (response.status === 200) {
+                        //글올리기 성공
+                        response.json().then( rsp => {
+                            console.log(rsp)
+                        })
+                    } else {
+                        console.log("글올리기 실패")
+                    }
+                });
             }
         });
     };
@@ -78,12 +88,12 @@ class ArticleForm extends Component {
 
         const { previewVisible, previewImage, fileList } = this.state;
         const uploadButton = (
-          <div>
-            <Icon type="plus" />
-            <div className="ant-upload-text">Upload</div>
-          </div>
+            <div>
+                <Icon type="plus" />
+                <div className="ant-upload-text">Upload</div>
+            </div>
         );
-        
+
         //여기까지가 사진 폼 
 
         const { getFieldDecorator } = this.props.form;
@@ -107,7 +117,7 @@ class ArticleForm extends Component {
                         <div className="clearfix">
                             <Upload
                                 name="file"
-                                action="http://localhost:8080/photo/upload/1" //유저아이디 1로 설정
+                                action={"http://localhost:8080/photo/upload/" + this.userID}//유저아이디 1로 설정
                                 listType="picture-card"
                                 fileList={fileList}
                                 onPreview={this.handlePreview}

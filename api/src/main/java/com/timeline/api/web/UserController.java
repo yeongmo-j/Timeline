@@ -1,5 +1,10 @@
 package com.timeline.api.web;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,59 +13,73 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 import com.timeline.api.entity.UserEntity;
-import com.timeline.api.response.Response;
+import com.timeline.api.service.JwtService;
 import com.timeline.api.service.UserService;
 
-//@CrossOrigin(origins="*")
 @RestController
 public class UserController {
-	
+
 	@Autowired
 	private UserService userService;
-	
-	/*
+
+	@Autowired
+	private JwtService jwtService;
+
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String login(@RequestBody UserEntity userEntity, HttpSession session) {
+	public String login(@RequestBody UserEntity userEntity, HttpServletResponse response) {
 		//로그인 
-		Response response = new Response();
-		boolean result = userService.login(userEntity); // 로그인 성공하면 true 실패하면 false
-		if (result) {
-			//로그인 성공
-			response.setCode("200");
-			response.setResult("positive");
-			//일단 완성된 로그인 환경 전에 임시 방편으로 세션에 사용자 이름만 저장 해 둔다
-			session.setAttribute("user", userEntity.getUsername());
-		} else {
-			//로그인 실패
-			response.setCode("401");
-			response.setResult("negative");
+		try {
+			UserEntity findedUser = userService.login(userEntity); // 로그인 성공하면 true 실패하면 false
+			if (findedUser != null) {
+				//로그인 성공
+				response.setStatus(HttpServletResponse.SC_OK);
+				Map<String, Object> user = new HashMap<>();
+				user.put("userID", findedUser.getId());
+				user.put("username", findedUser.getUsername());
+				Map<String, Object> result = new HashMap<>();
+				result.put("token", jwtService.makeJwt(findedUser));
+				result.put("user", user);
+				/*
+				 * 리턴 형식
+				 * {
+				 * 		token : jwt,
+				 * 		user : {
+				 * 			userID : 유저의 아이디 ,
+				 * 			username : 유저의 이름
+				 *  	}
+				 *  }
+				 *	의 형태로 리턴됨
+				 */
+				return new Gson().toJson(result);
+			} else {
+				//로그인 실패
+				 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+				 return null;
+			}
+		} catch (Exception e) {
+			//아이디 존재 안함
+			response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+			return null;
 		}
-		return new Gson().toJson(response);
 	}
-	*/
-	
-	
+
 	@RequestMapping(value="/regist", method=RequestMethod.POST)
-	public String regist(@RequestBody UserEntity userEntity) {
+	public String regist(@RequestBody UserEntity userEntity,HttpServletResponse response) {
 		//회원가입
-		Response response = new Response();
-		boolean result = userService.registUser(userEntity); //회원가입 성공하면 true 실패하면 false
-		if (result) {
-			//회원가입 성공
-			response.setCode("200");
-			response.setResult("positive");
-		} else {
-			//회원가입 실패
-			response.setCode("400");
-			response.setResult("negative");
+		try {
+			boolean result = userService.registUser(userEntity); //회원가입 성공하면 true 실패하면 false
+			if (result) {
+				//회원가입 성공
+				response.setStatus(HttpServletResponse.SC_OK);
+				return null;
+			} else {
+				//회원가입 실패
+				response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+				return null;
+			}
+		} catch (Exception e) {
+			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			return null;
 		}
-		return new Gson().toJson(response);
 	}
-	/*
-	@RequestMapping(value="/logout", method=RequestMethod.GET)
-	public void logout(HttpSession session) {
-		//로그아웃
-		session.invalidate();
-	}
-	*/
 }

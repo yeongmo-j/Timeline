@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import { Link } from "react-router-dom";
 import { history } from '../History';
+import { login } from '../authentication'; 
 
 import './Login.css';
 
@@ -14,16 +15,19 @@ class Login extends Component {
                 console.log('Received values of form: ', values);
                 fetch('http://localhost:8080/login', {
                     method : 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body : 'username='+values.username+'&password='+values.password
+                    headers: { 'Content-Type': 'application/json' },
+                    body : JSON.stringify(values)
                 })
-                .then(response => {
-                    console.log(response)
+                .then(response => { 
                     const result = response.status;
                     if (result === 200){
-                        console.log("success")
-                        history.push("/main")
+                        response.json().then(response => {
+                            login(response)
+                            console.log("success")
+                            history.push("/main")    
+                        })
                     } else {
+                        //실패
                         console.log("fail!")
                     }
                 })

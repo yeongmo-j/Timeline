@@ -51,7 +51,10 @@ public class ArticleResponse {
 	}
 
 	public ArticleResponse setPhoto(String photos) {
-		this.photo = photos.split("/");
+		if (photos == null)
+			this.photo = null;
+		else
+			this.photo = photos.split("/");
 		return this;
 	}
 

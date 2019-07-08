@@ -58,7 +58,7 @@ public class ArticleController {
 						.setUsername(user.getUsername()) //여기 다시 설정
 						.setProfile(user.getProfile()) //여기 다시 설정
 						.setContent(article.getContent())
-						.setPhoto(article.getPhoto()) //null일 경우 처리
+						.setPhoto((article.getPhoto()==null || article.getPhoto().equals("")) ? null : article.getPhoto()) //null일 경우 처리
 						.setLike(article.getLikeCount())
 						.setLiked(false) //여기 다시 설정
 						.setCreatedtime(article.getCreatedtime());
@@ -68,6 +68,7 @@ public class ArticleController {
 			return new Gson().toJson(formmedArticleList);
 		} catch (Exception e) {
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			e.printStackTrace(System.out);
 			return null;
 		}
 	}

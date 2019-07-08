@@ -15,7 +15,12 @@ public class PhotoServiceImpl implements PhotoService{
 	
 	@Override
 	public String uploadPhoto(MultipartFile file, int userID) {
-		String fileName = userID+makeFileName()+file.getOriginalFilename();
+		String originalFileName = file.getOriginalFilename();
+		int indexOfDot = originalFileName.length()-1;
+		while (originalFileName.charAt(indexOfDot)!='.')
+			indexOfDot--;
+		String fileName = userID+makeFileName()+(int)(Math.random()*100)+
+				originalFileName.substring(indexOfDot);
 		try {
 			saveFile(file, fileName);
 		} catch (IOException e) {

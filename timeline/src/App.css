@@ -1,4 +1,6 @@
-@import '~antd/dist/antd.css';
+/*@import '~antd/dist/antd.css'; */
+@import './result.css';
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap&subset=korean');
 
 .App {
   text-align: center;
@@ -32,4 +34,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/*본체 몸통 색깔 */
+.ant-layout-content {
+  background-color: white;
+}
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
 }

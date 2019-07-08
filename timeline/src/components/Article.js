@@ -29,6 +29,9 @@ class Article extends Component {
 
     getPhoto = (photoArr) => {
         let result =[]
+        if (photoArr == null ||photoArr == []){
+            return null;
+        }
         photoArr.map(photo => {
             let imgSrc = 'http://localhost:8080/photo/download?filename='+photo
             result.push(<img src={imgSrc} width="300px"/>)

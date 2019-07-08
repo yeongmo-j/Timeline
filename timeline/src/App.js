@@ -3,9 +3,11 @@ import {history} from './History';
 import { Router, Route, Switch } from "react-router-dom";
 import { PrivateRoute } from './PrivateRoute';
 
-import Login from './components/Login';
-import Register from './components/Register';
+import LoginAndRegister from './components/LoginAndRegister';
 import Main from './components/Main';
+
+//material ui font
+import 'typeface-roboto';
 
 import './App.css';
 
@@ -16,8 +18,8 @@ class App extends Component {
       <div>
         <Router history={history}>
           <Switch>
-            <Route path='/login' exact component={Login} /> 
-            <Route path='/register' exact component={Register} />
+            <Route path='/login' exact component={LoginAndRegister} /> 
+            <Route path='/register' exact component={LoginAndRegister} />
             <PrivateRoute path='/main' exact component={Main} />
           </Switch>
         </Router>

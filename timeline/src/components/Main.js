@@ -4,6 +4,7 @@ import Timeline from './Timeline';
 import ArticleForm from './ArticleForm';
 import { logout, getUser } from '../authentication';
 import { history } from '../History';
+import PrimarySearchAppBar from './Appbar';
 
 import './Main.css';
 
@@ -20,8 +21,7 @@ class Main extends Component {
         return (
         <div>
             <Layout>
-                <Header className='Header'>Timeline
-                </Header>
+                <PrimarySearchAppBar />
                 <Content>
                     <Button type="danger" onClick={this.logOut} >Danger</Button>
                     <ArticleForm/>

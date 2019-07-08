@@ -1,0 +1,17 @@
+.login {
+    max-width: 480px;
+    padding: 50px 85px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px white;
+    background: white;
+}
+
+#loginHeadline{
+    color: #2DB400;
+    margin: 0;
+    font-size: 50pt;
+    font-weight: 600;
+    text-align: center;
+
+}

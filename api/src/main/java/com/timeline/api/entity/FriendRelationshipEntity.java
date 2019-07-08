@@ -1,7 +1,5 @@
 package com.timeline.api.entity;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,34 +7,28 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.CreationTimestamp;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name="article")
+@Table(name="friendrelationship")
 @NoArgsConstructor
 @Data
-public class ArticleEntity {
+public class FriendRelationshipEntity {
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
 	@Column(nullable=false)
-	private int userID;
+	private int userID1;
 	
 	@Column(nullable=false)
-	private String content;
+	private int userID2;
 	
-	@Column
-	private String photo;
-	
-	@Column
-	private int likeCount;
-	
-	@Column
-    @CreationTimestamp
-    private LocalDateTime createdtime;
-	
+	/*
+	 * 일단 저장할 때 회원 1과 2가 서로 친구라면, {1,2}, {2,1} 이렇게 저장한다
+	 * 중복이 생기지만, 나중에 쿼리날릴 때 힘들꺼같음
+	 */
+
 }

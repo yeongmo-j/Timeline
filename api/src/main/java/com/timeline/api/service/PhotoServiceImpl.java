@@ -37,4 +37,5 @@ public class PhotoServiceImpl implements PhotoService{
 		stream.write(data);
 		stream.close();
 	}
+	
 }

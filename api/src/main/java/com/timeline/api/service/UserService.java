@@ -7,5 +7,7 @@ public interface UserService {
 	boolean registUser(UserEntity userEntity);
 
 	UserEntity login(UserEntity userEntity) throws Exception;
+	
+	UserEntity findById(int id);
 
 }

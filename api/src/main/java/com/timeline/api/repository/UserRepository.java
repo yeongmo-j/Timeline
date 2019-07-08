@@ -13,4 +13,6 @@ public interface UserRepository extends CrudRepository<UserEntity, Integer>{
 	String getPassword(String username);
 	
 	UserEntity findByUsername(String username);
+	
+	UserEntity findById(int id);
 }

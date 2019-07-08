@@ -41,4 +41,8 @@ public class UserServiceImpl implements UserService{
 			return null; //비밀번호가 다름
 	}
 	
+	@Override
+	public UserEntity findById(int id) {
+		return userRepository.findById(id);
+	}
 }

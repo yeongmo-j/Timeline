@@ -16,6 +16,14 @@ class Timeline extends Component {
 
 
     componentWillMount(){
+        const requesturl = 'http://localhost:8080/article/getarticles?userID='+this.userID
+        fetch(requesturl)
+        .then(response => response.json())
+        .then(response => {
+            console.log(response)
+            this.setState({articles : response})
+        })
+        /*
         this.setState({articles : [{
                 "userID" : 2,
                 "username" : "user 2",
@@ -51,7 +59,7 @@ class Timeline extends Component {
                 "liked" : "false"
             }
         ]
-        })
+        })*/
     }
 
     render() {

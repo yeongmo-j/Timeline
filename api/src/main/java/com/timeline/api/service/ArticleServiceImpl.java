@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.timeline.api.entity.ArticleEntity;
 import com.timeline.api.repository.ArticleRepository;
-import com.timeline.api.repository.UserRepository;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {
@@ -25,4 +24,16 @@ public class ArticleServiceImpl implements ArticleService {
 		List<ArticleEntity> friendsArticlesList = articleRepository.getFriendsArticles(userID);
 		return friendsArticlesList;
 	}
+
+	@Override
+	public ArticleEntity findArticle(int articleID) {
+		return articleRepository.findArticle(articleID);
+	}
+
+	@Override
+	public void updateArticle(ArticleEntity articleEntity) {
+		articleRepository.save(articleEntity);
+	}
+	
+	
 }

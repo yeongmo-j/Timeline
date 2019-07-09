@@ -24,13 +24,13 @@ public class JwtServiceImpl implements JwtService {
 
 	private static String SECRETKEY = "TimelineApplicationSecretkey";
 		
-	private static int MINUTE = 10; //10분동안 토큰 유효
+	private static int HOUR = 12; //12시간 동안 토큰 유효
 	
 	@Override
 	public String makeJwt(UserEntity userEntity) throws Exception {
 		SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
 		Date expireTime = new Date();
-		expireTime.setTime(expireTime.getTime() + 1000 * 60 * MINUTE);
+		expireTime.setTime(expireTime.getTime() + 1000 * 60 * 60 * HOUR);
 		byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary(SECRETKEY);
 		Key signingKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
 		

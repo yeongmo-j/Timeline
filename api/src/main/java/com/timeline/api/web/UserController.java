@@ -24,8 +24,8 @@ public class UserController {
 
 	@Autowired
 	private JwtService jwtService;
-
-	@RequestMapping(value="/login", method=RequestMethod.POST)
+	
+	@RequestMapping(value="/login", method=RequestMethod.POST, produces="text/plain;charset=UTF-8")
 	public String login(@RequestBody UserEntity userEntity, HttpServletResponse response) {
 		//로그인 
 		try {
@@ -63,12 +63,12 @@ public class UserController {
 		}
 	}
 
-	@RequestMapping(value="/regist", method=RequestMethod.POST)
+	@RequestMapping(value="/regist", method=RequestMethod.POST, produces="text/plain;charset=UTF-8")
 	public String regist(@RequestBody UserEntity userEntity,HttpServletResponse response) {
 		//회원가입
 		try {
-			boolean result = userService.registUser(userEntity); //회원가입 성공하면 true 실패하면 false
-			if (result) {
+			UserEntity result = userService.registUser(userEntity); //회원가입  실패하면 null
+			if (result != null) {
 				//회원가입 성공
 				response.setStatus(HttpServletResponse.SC_OK);
 				return null;

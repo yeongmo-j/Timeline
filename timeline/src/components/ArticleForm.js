@@ -76,6 +76,8 @@ class ArticleForm extends Component {
                         response.json().then( rsp => {
                             console.log(rsp)
                         })
+                        this.props.form.resetFields()                
+                        this.props.callBack()
                     } else {
                         console.log("글올리기 실패")
                     }

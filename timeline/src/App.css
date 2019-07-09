@@ -38,9 +38,10 @@
 
 /*본체 몸통 색깔 */
 .ant-layout-content {
-  background-color: white;
+
 }
 
 body {
   font-family: 'Nanum Gothic', sans-serif;
+  word-break:break-all;
 }

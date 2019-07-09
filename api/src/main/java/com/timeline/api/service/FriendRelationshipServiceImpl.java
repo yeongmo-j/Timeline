@@ -1,10 +1,12 @@
 package com.timeline.api.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.timeline.api.entity.FriendRelationshipEntity;
 import com.timeline.api.repository.FriendRelationshipRepository;
 
+@Service
 public class FriendRelationshipServiceImpl implements FriendRelationshipService{
 	
 	@Autowired

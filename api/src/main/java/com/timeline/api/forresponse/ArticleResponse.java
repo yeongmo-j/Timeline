@@ -21,7 +21,7 @@ public class ArticleResponse {
 	
 	private int like;
 	
-	private boolean liked;
+	private String liked;
 
 	private LocalDateTime createdtime;
 	
@@ -63,7 +63,7 @@ public class ArticleResponse {
 		return this;
 	}
 
-	public ArticleResponse setLiked(boolean liked) {
+	public ArticleResponse setLiked(String liked) {
 		this.liked = liked;
 		return this;
 	}

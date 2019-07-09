@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.timeline.api.entity.FriendRelationshipEntity;
 import com.timeline.api.entity.UserEntity;
+import com.timeline.api.repository.FriendRelationshipRepository;
 import com.timeline.api.repository.UserRepository;
 
 @Service
@@ -16,17 +18,24 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	PasswordEncoder passwordEncoder;
 	
+	@Autowired
+	FriendRelationshipRepository friendRelationshipRepository;
+	
 	@Override
-	public boolean registUser(UserEntity userEntity) {
+	public UserEntity registUser(UserEntity userEntity) {
 		//회원가입 성공하면 true
 		boolean available = userRepository.existsByUsername(userEntity.getUsername());
 		if (available) {
 			//이미 존재하는 이름이므로 실패
-			return false;
+			return null;
 		}
 		userEntity.setPassword(passwordEncoder.encode(userEntity.getPassword())); //패스워드 암호화
-		userRepository.save(userEntity);
-		return true;
+		UserEntity savedUser = userRepository.save(userEntity);
+		FriendRelationshipEntity friendRelationshipEntity = new FriendRelationshipEntity();
+		friendRelationshipEntity.setUserID1(savedUser.getId());
+		friendRelationshipEntity.setUserID2(savedUser.getId());
+		friendRelationshipRepository.save(friendRelationshipEntity);
+		return savedUser;
 	}
 	
 	@Override

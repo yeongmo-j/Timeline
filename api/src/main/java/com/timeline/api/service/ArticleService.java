@@ -8,7 +8,9 @@ public interface ArticleService {
 	
 	ArticleEntity insert(ArticleEntity articleEntity);
 	
-	
 	List<ArticleEntity> getFriendsArticle(int userID);
 
+	ArticleEntity findArticle(int articleID);
+	
+	void updateArticle(ArticleEntity articleEntity);
 }

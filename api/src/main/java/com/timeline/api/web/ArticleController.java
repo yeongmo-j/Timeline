@@ -18,6 +18,7 @@ import com.timeline.api.entity.ArticleEntity;
 import com.timeline.api.entity.UserEntity;
 import com.timeline.api.forresponse.ArticleResponse;
 import com.timeline.api.service.ArticleService;
+import com.timeline.api.service.LikedService;
 import com.timeline.api.service.UserService;
 
 @RestController
@@ -28,6 +29,9 @@ public class ArticleController {
 
 	@Autowired
 	UserService userService;
+	
+	@Autowired
+	LikedService likedService;
 
 	@RequestMapping(value="/article/insert", method=RequestMethod.POST)
 	public String insertArticle(@RequestBody ArticleEntity articleEntity, HttpServletResponse response) {
@@ -43,7 +47,7 @@ public class ArticleController {
 		}
 	}
 
-	@RequestMapping(value="/article/getarticles", method=RequestMethod.GET)
+	@RequestMapping(value="/article/getarticles", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
 	public String insertArticle(@RequestParam int userID, HttpServletResponse response) {
 		try {
 			List<ArticleEntity> friendsArticlesList = articleService.getFriendsArticle(userID);
@@ -52,6 +56,9 @@ public class ArticleController {
 			for (int i=0 ; i<length ; i++) {
 				ArticleEntity article = friendsArticlesList.get(i);
 				UserEntity user = userService.findById(article.getUserID());
+				String liked = "true";
+				if (likedService.findIfExist(article.getId(), userID) == null)
+					liked = "false";
 				ArticleResponse responseElement = new ArticleResponse()
 						.setArticleID(article.getId())
 						.setUserID(article.getUserID())
@@ -60,7 +67,7 @@ public class ArticleController {
 						.setContent(article.getContent())
 						.setPhoto((article.getPhoto()==null || article.getPhoto().equals("")) ? null : article.getPhoto()) //null일 경우 처리
 						.setLike(article.getLikeCount())
-						.setLiked(false) //여기 다시 설정
+						.setLiked(liked) //여기
 						.setCreatedtime(article.getCreatedtime());
 				formmedArticleList[i] = responseElement;
 			}

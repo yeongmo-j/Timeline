@@ -24,7 +24,6 @@ class Main extends Component {
                 <PrimarySearchAppBar />
                 <Content>
                     <Button type="danger" onClick={this.logOut} >Danger</Button>
-                    <ArticleForm/>
                     <Timeline/>
                 </Content>
                 <Footer>Footer</Footer>

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Upload, Modal } from 'antd';
 import { getUser, getToken } from '../authentication';
 
+import './ArticleForm.css';
+
 function getBase64(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -99,44 +101,47 @@ class ArticleForm extends Component {
         const { getFieldDecorator } = this.props.form;
 
         return (
-            <Form onSubmit={this.handleSubmit} className="article-form">
-                <Form.Item>
-                    {getFieldDecorator('content', {
-                        rules: [{ required: true, message: 'Please input your story!' }],
-                    })(
-                        <TextArea
-                            placeholder="오늘 무슨 일이 일어났나요?"
-                            autosize={{ minRows: 5, maxRows: 6 }}
-                        />,
-                    )}
-                </Form.Item>
-                <Form.Item>
-                    {getFieldDecorator('photo', {
-                        rules: [{ required: false }],
-                    })(
-                        <div className="clearfix">
-                            <Upload
-                                name="file"
-                                action={"http://localhost:8080/photo/upload/" + this.userID}//유저아이디 1로 설정
-                                listType="picture-card"
-                                fileList={fileList}
-                                onPreview={this.handlePreview}
-                                onChange={this.handleChange}
-                            >
-                                {fileList.length >= 5 ? null : uploadButton}
-                            </Upload>
-                            <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
-                                <img alt="example" style={{ width: '100%' }} src={previewImage} />
-                            </Modal>
-                        </div>
-                    )}
-                </Form.Item>
-                <Form.Item>
-                    <Button type="primary" htmlType="submit" className="article-form-button">
-                        Upload
-                    </Button>
-                </Form.Item>
-            </Form>
+            <div className="articleform" id='box'>
+                <center>당신의 소식을 친구들에게 알려주세요!</center> <br/>
+                <Form onSubmit={this.handleSubmit} className="article-form">
+                    <Form.Item>
+                        {getFieldDecorator('content', {
+                            rules: [{ required: true, message: 'Please input your story!' }],
+                        })(
+                            <TextArea
+                                placeholder="오늘 무슨 일이 일어났나요?"
+                                autosize={{ minRows: 5, maxRows: 6 }}
+                            />,
+                        )}
+                    </Form.Item>
+                    <Form.Item>
+                        {getFieldDecorator('photo', {
+                            rules: [{ required: false }],
+                        })(
+                            <div className="clearfix">
+                                <Upload
+                                    name="file"
+                                    action={"http://localhost:8080/photo/upload/" + this.userID}//유저아이디 1로 설정
+                                    listType="picture-card"
+                                    fileList={fileList}
+                                    onPreview={this.handlePreview}
+                                    onChange={this.handleChange}
+                                >
+                                    {fileList.length >= 5 ? null : uploadButton}
+                                </Upload>
+                                <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
+                                    <img alt="example" style={{ width: '100%' }} src={previewImage} />
+                                </Modal>
+                            </div>
+                        )}
+                    </Form.Item>
+                    <Form.Item>
+                        <center><Button type="primary" htmlType="submit" className="article-form-button" >
+                            Upload
+                    </Button></center>
+                    </Form.Item>
+                </Form>
+            </div>
         );
     }
 }

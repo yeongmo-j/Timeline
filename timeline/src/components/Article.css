@@ -1,0 +1,34 @@
+@import './Box.css';
+
+
+.article{
+}
+
+#profile{
+    background-size: cover;
+    border-radius:50% 50% 50% 50%;
+    width:50px;
+    height:50px;
+}
+
+.titlAndDate {
+    margin-left: 15px;
+    vertical-align: middle
+    
+}
+
+#title{
+    font-size: 16px;
+}
+
+#date{
+
+}
+
+.inline{
+    display: inline-block;
+}
+
+.margin{
+    margin : 15px;
+}

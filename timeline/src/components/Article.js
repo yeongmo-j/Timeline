@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import { getToken } from '../authentication';
+import { Avatar } from 'antd';
+import FbImageLibrary from 'react-fb-image-grid'
+
+
+import './Article.css';
 
 class Article extends Component {
 
@@ -7,51 +12,60 @@ class Article extends Component {
         photo : []
     }
 
-
-
-    componentDidMount(props){
-        /*
-        let photos = []
-        this.props.article.photo.map( photo =>{
-            fetch('http://localhost:8080/photo/download?filename='+photo, {
-                method: 'GET',
-                headers: {
-                    'token': getToken()
-                }
-            })
-            .then(response => {
-                console.log(response)
-                photos.push(response)
-            })
-        })
-        */
-    }
+    imageSourceUrl = 'http://localhost:8080/photo/download?filename=';
 
     getPhoto = (photoArr) => {
-        let result =[]
         if (photoArr == null ||photoArr == []){
             return null;
         }
-        photoArr.map(photo => {
-            let imgSrc = 'http://localhost:8080/photo/download?filename='+photo
-            result.push(<img src={imgSrc} width="300px"/>)
-        })
-        return result
+        let result =[]
+        photoArr.map(photo => result.push('http://localhost:8080/photo/download?filename='+photo))
+        return (<FbImageLibrary images={result}/>);
+    }
+
+    getOnePhoto = (fileName, username) => {
+        if (fileName==="" || fileName == null)
+            return <Avatar size='large'>{username}</Avatar>
+        else
+            return <Avatar size='large' src={this.imageSourceUrl+fileName} />
     }
 
     render() {
+        const userID = this.props.article.userID;
+        const username = this.props.article.username;
+        const profile = this.props.article.profile;
+        const articleID = this.props.article.articleID
+        const content = this.props.article.content
+        const like = this.props.article.like
+        const liked = this.props.article.liked
+        const createdtime = 'this.props.article.createdtime 시간처리 해줄 것'
+
+
         return (
-        <div>
-            유저ID : {this.props.article.userID} <br/>
-            유저 : {this.props.article.username} <br/>
-            유저프로필사진 : {this.props.article.profile} <br/>
-            글ID : {this.props.article.articleID} <br/>
-            내용 : {this.props.article.content} <br/>
-            사진 :  {this.getPhoto(this.props.article.photo)} <br/>
-            좋아요 : {this.props.article.like} <br/>
-            좋아요했음 : {this.props.article.liked} <br/>
-            업로드시간 :  this.props.article.createdtime 시간처리 해줄 것
-            <br/>
+        <div className="article" id='box'>
+            <div>
+                <span >
+                    {this.getOnePhoto(profile,username)}
+                </span>
+                <div className='inline'>
+                    <div className='titlAndDate' id='title'>
+                        <b>{username}</b>
+                    </div>
+                    <div className='titlAndDate' id='date'>
+                        업로드시간 : 시간처리 해줄 것
+                    </div>
+                </div>
+            </div>
+            <div className='margin'>
+                {content}
+            </div>
+            <div>
+                {this.getPhoto(this.props.article.photo)}
+            </div>
+            <div>
+                좋아요 : {this.props.article.like} <br/>
+                좋아요했음 : {this.props.article.liked}
+            </div>
             <br/>
         </div>
         );

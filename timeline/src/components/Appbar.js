@@ -15,6 +15,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
+import { history } from '../History';
+import { logout } from '../authentication'; 
+
 import './Appbar.css';
 
 const useStyles = makeStyles(theme => ({
@@ -100,6 +103,11 @@ const PrimarySearchAppBar = () => {
     handleMobileMenuClose();
   }
 
+  function logOut() {
+    logout()
+    history.push('/login')
+  }
+
   function handleMobileMenuOpen(event) {
     setMobileMoreAnchorEl(event.currentTarget);
   }
@@ -117,6 +125,7 @@ const PrimarySearchAppBar = () => {
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={logOut}>Log out</MenuItem>
     </Menu>
   );
 

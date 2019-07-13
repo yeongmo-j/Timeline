@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Icon, Input } from 'antd'
+import { Form, Button, Icon, Input, message } from 'antd'
 
 import { getToken, getUser } from '../authentication';
 
@@ -7,22 +7,20 @@ import './CommentForm.css';
 
 class CommentForm extends Component {
 
-
-    articleID = this.props.articleID;
-
-    userID = getUser().userID;
-
+    //댓글 입력 버튼 눌렀을 때
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
+                //원하는 폼으로 가공
                 const content = {
-                    articleID : this.articleID,
-                    userID : this.userID,
+                    articleID : this.props.articleID,
+                    userID : getUser().userID,
                     content : values.comment
                 }
-                fetch('http://localhost:8080/comment/insert', {
+                //http요청 보내기
+                fetch('http://localhost:8080/comment', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -32,14 +30,19 @@ class CommentForm extends Component {
                 }).then(response => {
                     if (response.status === 200) {
                         //글올리기 성공
-                        console.log("성공")
-                        this.props.form.resetFields()                
-                        this.props.callBack()
+                        message.success('댓글이 업로드 되었습니다.');
+                        //댓글 창 리셋
+                        this.props.form.resetFields()      
+                        return response.json()
                     } else {
-                        console.log("댓글올리기 실패")
+                        //오류 처리
+                        return null;
                     }
-                });
-
+                })
+                .then(response => {
+                    //다시 렌더링 하기 위해
+                    this.props.addComment(response);
+                })
             }
         });
     };

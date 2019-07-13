@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
-import { Form, Icon, Input, Button, Upload, Modal } from 'antd';
+import { Form, Icon, Input, Button, Upload, Modal, notification } from 'antd';
 import { getUser, getToken } from '../authentication';
 
 import './ArticleForm.css';
+
+const openNotificationWithIcon = type => {
+    notification[type]({
+      message: '소식 업로드 성공!',
+      description:
+        '당신의 소식이 친구들에게 공유 되었어요!',
+    });
+  };  
 
 function getBase64(file) {
     return new Promise((resolve, reject) => {
@@ -59,11 +67,11 @@ class ArticleForm extends Component {
 
                 let article = {
                     'userID': this.userID,
-                    'content': values.content,
+                    'content': values.content.replace(/\n/gi,'<br>'), //줄바꿈 표시를 <br/>로 바꿔줌
                     'photo': fileNames
                 }
 
-                fetch('http://localhost:8080/article/insert', {
+                fetch('http://localhost:8080/article', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -75,9 +83,10 @@ class ArticleForm extends Component {
                         //글올리기 성공
                         response.json().then( rsp => {
                             console.log(rsp)
+                            openNotificationWithIcon('success')
+                            this.props.form.resetFields()                
+                            this.props.addArticle(rsp)    
                         })
-                        this.props.form.resetFields()                
-                        this.props.callBack()
                     } else {
                         console.log("글올리기 실패")
                     }
@@ -123,7 +132,7 @@ class ArticleForm extends Component {
                             <div className="clearfix">
                                 <Upload
                                     name="file"
-                                    action={"http://localhost:8080/photo/upload/" + this.userID}//유저아이디 1로 설정
+                                    action={"http://localhost:8080/photo/upload/"+this.userID}
                                     listType="picture-card"
                                     fileList={fileList}
                                     onPreview={this.handlePreview}

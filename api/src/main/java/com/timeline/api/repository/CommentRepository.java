@@ -11,4 +11,8 @@ public interface CommentRepository extends CrudRepository<CommentEntity, Integer
 
 	@Query(value="SELECT * FROM COMMENT WHERE articleID = ?1 ORDER BY id", nativeQuery=true)
 	List<CommentEntity> findByArticleID(int articleID);
+	
+	void deleteByArticleID(int articleID);
+	
+	void deleteById(int id);
 }

@@ -1,7 +1,5 @@
 package com.timeline.api.web;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,26 +11,28 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.google.gson.Gson;
 import com.timeline.api.entity.CommentEntity;
-import com.timeline.api.entity.UserEntity;
 import com.timeline.api.forresponse.CommentResponse;
 import com.timeline.api.service.CommentService;
-import com.timeline.api.service.UserService;
 
 @RestController
 public class CommentController {
 	
 	@Autowired
 	CommentService commentService;
-	
-	@Autowired
-	UserService userService;
-	
-	@RequestMapping(value="/comment/insert", method=RequestMethod.POST)
+		
+	/*
+	 * 해당 소식에 새로운 댓글을 저장 하는 요청
+	 * 필요한 정보들을 받아 그대로 저장해준다
+	 * 저장된 코멘트를 뷰에서 필요한 정보들과 함께 조합해서
+	 * json으로 반환
+	 */
+	@RequestMapping(value="/comment", method=RequestMethod.POST, produces="text/plain;charset=UTF-8")
 	public String insertArticle(@RequestBody CommentEntity commentEntity, HttpServletResponse response) {
 		try {
-			commentService.insertComment(commentEntity);
+			//저장
+			CommentResponse savedComment = commentService.insertComment(commentEntity);
 			response.setStatus(HttpServletResponse.SC_OK);
-			return null;
+			return new Gson().toJson(savedComment);
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
@@ -40,25 +40,16 @@ public class CommentController {
 		}
 	}
 	
-	@RequestMapping(value="/comment/get/{articleID}", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
+	/*
+	 * 해당 소식에 달려있는 모든 댓글들을
+	 * 뷰에서 필요한 정보들과 함께 조합해서 
+	 * json으로 반환
+	 */
+	@RequestMapping(value="/comment/{articleID}", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
 	public String getComments(@PathVariable int articleID, HttpServletResponse response) {
 		try {
-			List<CommentEntity> commentList = commentService.findByArticleID(articleID);
-			int length = commentList.size();
-			CommentResponse[] formmedCommentList = new CommentResponse[length];
-			for (int i=0 ; i<length ; i++) {
-				CommentEntity comment = commentList.get(i);
-				UserEntity user = userService.findById(comment.getUserID());
-				CommentResponse responseElement = new CommentResponse()
-						.setCommentID(comment.getId())
-						.setArticleID(articleID)
-						.setUserID(user.getId())
-						.setUsername(user.getUsername())
-						.setProfile(user.getProfile())
-						.setContent(comment.getContent())
-						.setCreatedtime(comment.getCreatedtime());
-				formmedCommentList[i] = responseElement;
-			}
+			CommentResponse[] formmedCommentList = commentService.findByArticleID(articleID);
+			//json으로 반환
 			response.setStatus(HttpServletResponse.SC_OK);
 			return new Gson().toJson(formmedCommentList);
 		} catch (Exception e) {
@@ -67,5 +58,22 @@ public class CommentController {
 			return null;
 		}
 	}
-
+	
+	
+	/*
+	 * 해당 댓글 하나를 삭제 해준다.
+	 * 댓글의 id만을 받아준다
+	 */
+	@RequestMapping(value="/comment/{commentID}", method=RequestMethod.DELETE)
+	public String deleteComment(@PathVariable int commentID, HttpServletResponse response) {
+		try {
+			commentService.deleteComment(commentID);
+			response.setStatus(HttpServletResponse.SC_OK);
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			return null;
+		}
+	}
 }

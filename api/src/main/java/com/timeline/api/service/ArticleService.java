@@ -1,16 +1,26 @@
 package com.timeline.api.service;
 
-import java.util.List;
-
 import com.timeline.api.entity.ArticleEntity;
+import com.timeline.api.forresponse.ArticleResponse;
 
 public interface ArticleService {
+	/*
+	 * 소식을 작성
+	 */
+	ArticleResponse insert(ArticleEntity articleEntity);
 	
-	ArticleEntity insert(ArticleEntity articleEntity);
-	
-	List<ArticleEntity> getFriendsArticle(int userID);
+	/*
+	 * 친구들의 소식들을 리스트로 불러오기
+	 */
+	ArticleResponse[] getFriendsArticle(int userID);
 
-	ArticleEntity findArticle(int articleID);
-	
+	/*
+	 * 소식 변경하기
+	 */
 	void updateArticle(ArticleEntity articleEntity);
+	
+	/*
+	 * 소식 삭제하기
+	 */
+	void deleteArticle(int articleID);
 }

@@ -11,16 +11,16 @@ class ArticleArray extends Component {
         return true;
     }
 
+    deleteArticle = (article) => {
+        this.props.deleteArticle(article);
+    }
+
     render() {
         return (
             <div>
-                {this.props.articles.map((article, i) => {
-                    return (
-                        <div>
-                            <Article article={article} key={i} />
-                        </div>
-                    );
-                })}
+                {this.props.articles.map(
+                    article => (<Article key={article.articleID} article={article} deleteArticle={this.deleteArticle} />)
+                )}
             </div>
         );
     }

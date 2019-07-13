@@ -14,6 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 import { history } from '../History';
 import { logout } from '../authentication'; 
@@ -112,6 +113,8 @@ const PrimarySearchAppBar = () => {
     setMobileMoreAnchorEl(event.currentTarget);
   }
 
+  
+
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
     <Menu
@@ -170,9 +173,18 @@ const PrimarySearchAppBar = () => {
     </Menu>
   );
 
+  const theme = createMuiTheme({
+    palette: {
+      primary: {
+        main: '#2DB400',
+      }
+    }
+  });
+  
+
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" theme={theme} id='color'> 
         <Toolbar>
           <IconButton
             edge="start"

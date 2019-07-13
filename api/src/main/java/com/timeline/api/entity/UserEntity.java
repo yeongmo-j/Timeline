@@ -20,10 +20,19 @@ public class UserEntity {
 	private int id;
 	
 	@Column(nullable=false)
+	private String email;
+		
+	@Column(nullable=false)
 	private String username;
 	
 	@Column(nullable=false)
 	private String password;
+	
+	@Column(nullable=false)
+	private String question;
+	
+	@Column(nullable=false)
+	private String answer;
 	
 	@Column
 	private String profile;

@@ -16,6 +16,11 @@ import com.timeline.api.entity.UserEntity;
 import com.timeline.api.service.JwtService;
 import com.timeline.api.service.UserService;
 
+
+/*
+ * 유저 로그인 및 회원가입의 요청 시에 사용되는 컨트롤러로써,
+ * 유저의 정보는 UserEntity에 매핑된 인스턴스가 사용된다
+ */
 @RestController
 public class UserController {
 
@@ -25,20 +30,16 @@ public class UserController {
 	@Autowired
 	private JwtService jwtService;
 	
+	/*
+	 * 로그인 요청
+	 * 로그인이 성공하면, 유저 정보와 생성된 토큰을 반환한다. 
+	 */
 	@RequestMapping(value="/login", method=RequestMethod.POST, produces="text/plain;charset=UTF-8")
 	public String login(@RequestBody UserEntity userEntity, HttpServletResponse response) {
-		//로그인 
 		try {
-			UserEntity findedUser = userService.login(userEntity); // 로그인 성공하면 true 실패하면 false
+			UserEntity findedUser = userService.login(userEntity); // 로그인 성공하면 Entity 반환 실패하면 null 반환
 			if (findedUser != null) {
 				//로그인 성공
-				response.setStatus(HttpServletResponse.SC_OK);
-				Map<String, Object> user = new HashMap<>();
-				user.put("userID", findedUser.getId());
-				user.put("username", findedUser.getUsername());
-				Map<String, Object> result = new HashMap<>();
-				result.put("token", jwtService.makeJwt(findedUser));
-				result.put("user", user);
 				/*
 				 * 리턴 형식
 				 * {
@@ -50,22 +51,35 @@ public class UserController {
 				 *  }
 				 *	의 형태로 리턴됨
 				 */
+				Map<String, Object> user = new HashMap<>();
+				//이름과 아이디 찾아서 넣어주기
+				user.put("userID", findedUser.getId());
+				user.put("username", findedUser.getUsername());
+				//토큰 받아서 넣어주기
+				Map<String, Object> result = new HashMap<>();
+				result.put("token", jwtService.makeJwt(findedUser));
+				result.put("user", user);
+				
+				response.setStatus(HttpServletResponse.SC_OK);
+				//json반환
 				return new Gson().toJson(result);
 			} else {
-				//로그인 실패
+				//로그인 실패 : 비밀번호 불일치 혹은 이메일이 존재하지 않음
 				 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
 				 return null;
 			}
 		} catch (Exception e) {
-			//아이디 존재 안함
-			response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+			e.printStackTrace(System.out);
+			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 			return null;
 		}
 	}
 
+	/*
+	 * 회원가입 요청
+	 */
 	@RequestMapping(value="/regist", method=RequestMethod.POST, produces="text/plain;charset=UTF-8")
 	public String regist(@RequestBody UserEntity userEntity,HttpServletResponse response) {
-		//회원가입
 		try {
 			UserEntity result = userService.registUser(userEntity); //회원가입  실패하면 null
 			if (result != null) {
@@ -78,6 +92,7 @@ public class UserController {
 				return null;
 			}
 		} catch (Exception e) {
+			e.printStackTrace(System.out);
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 			return null;
 		}

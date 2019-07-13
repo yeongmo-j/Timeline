@@ -32,3 +32,8 @@
 .margin{
     margin : 15px;
 }
+
+.rightAlign {
+    float: right;
+    height : 100%;
+}

@@ -1,13 +1,27 @@
 package com.timeline.api.service;
 
-import java.util.List;
-
 import com.timeline.api.entity.CommentEntity;
+import com.timeline.api.forresponse.CommentResponse;
 
 public interface CommentService {
 	
-	CommentEntity insertComment(CommentEntity commentEntity);
+	/*
+	 * 새로운 댓글을 해당 글에 새로 삽입
+	 */
+	CommentResponse insertComment(CommentEntity commentEntity);
 	
-	List<CommentEntity> findByArticleID(int articleID);
+	/*
+	 * 해당 글에 달려있는 모든 댓글들을 리스트로 반환한다
+	 */
+	CommentResponse[] findByArticleID(int articleID);
 
+	/*
+	 * 해당 글을 삭제 할 때 모든 댓글들도 삭제 해줘야 한다
+	 */
+	void deleteAllComments(int articleID);
+	
+	/*
+	 * 해당 글의 해당 댓글을 삭제
+	 */
+	void deleteComment(int commentID);
 }

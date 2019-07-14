@@ -16,7 +16,21 @@ public interface UserService {
 	 */
 	UserEntity login(UserEntity userEntity);
 	
+	/*
+	 * 이메일주소로 비밀번호 질문 찾기
+	 * 해당하는 이메일의 회원이 존재하면, 질문만이 담겨있는 entity 반환, 없으면 null 리
+	 */
+	UserEntity getPasswordQuestion(UserEntity userEntity);
 	
-	UserEntity findById(int id);
-
+	/*
+	 * 비밀번호 찾기 질문에 해당하는 정답이 일치하는지를 확인
+	 * 올바르면 true 뭔가 문제가 있으면 false
+	 */
+	boolean checkAnswer(UserEntity userEntity);
+	
+	/*
+	 * 비밀번호 새로운 비밀번호로 리셋
+	 * 무슨 문제가 있으면 null, 제대로 변경되었음면 entity 반환
+	 */
+	UserEntity resetPassword(UserEntity userEntity);
 }

@@ -3,8 +3,6 @@ import { Form, Icon, Input, Button, message, Select } from 'antd';
 import { Link } from "react-router-dom";
 import { history } from '../History';
 
-import './Login.css';
-
 const { Option } = Select;
 
 class Register extends Component {
@@ -68,7 +66,7 @@ class Register extends Component {
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
-            <Form onSubmit={this.handleSubmit} className="login-form">
+            <Form onSubmit={this.handleSubmit} className="form">
                 <Form.Item>
                     {getFieldDecorator('email', {
                         rules: [{ required: true, message: '이메일 주소를 입력 해 주세요!' }],
@@ -148,7 +146,7 @@ class Register extends Component {
                 </Form.Item>
 
                 <Form.Item>
-                    <Button type="primary" htmlType="submit" className="login-form-button">
+                    <Button type="primary" htmlType="submit" className="button">
                         Register Now!
               </Button>
                     Or <Link to="/login">login now!</Link>

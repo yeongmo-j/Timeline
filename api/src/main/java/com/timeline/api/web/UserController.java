@@ -97,4 +97,64 @@ public class UserController {
 			return null;
 		}
 	}
+	
+	/*
+	 * 비밀번호를 까먹었을 때 이메일을 입력하면 
+	 * 비밀번호 찾기 질문을 불러온다. 
+	 */
+	@RequestMapping(value="/login/forgot/question", method=RequestMethod.POST, produces="text/plain;charset=UTF-8")
+	public String getPasswordQuestion(@RequestBody UserEntity userEntity, HttpServletResponse response) {
+		try {
+			UserEntity onlyQuestionEntity = userService.getPasswordQuestion(userEntity);
+			if (onlyQuestionEntity == null) {
+				response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+				return null;
+			}
+			response.setStatus(HttpServletResponse.SC_OK);
+			return new Gson().toJson(onlyQuestionEntity);
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			return null;
+		}
+	}
+	
+	/* 
+	 * 비밀번호 찾기 질문에 대한 정답
+	 * 이메일주소와 비밀번호 찾기 질문에 대한 답이 입력으로 들어온다
+	 */
+	@RequestMapping(value="/login/forgot/answer", method=RequestMethod.POST)
+	public String checkQuestion(@RequestBody UserEntity userEntity, HttpServletResponse response) {
+		try {
+			boolean result = userService.checkAnswer(userEntity);
+			if (result)
+				response.setStatus(HttpServletResponse.SC_OK);
+			else 
+				response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			return null;
+		}
+	}
+	
+	/*
+	 * 비밀번호 리셋
+	 */
+	@RequestMapping(value="/login/forgot/reset", method=RequestMethod.PUT)
+	public String resetPassword(@RequestBody UserEntity userEntity, HttpServletResponse response) {
+		try {
+			UserEntity savedEntity = userService.resetPassword(userEntity);
+			if (savedEntity != null)
+				response.setStatus(HttpServletResponse.SC_OK);
+			else
+				response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			return null;
+		}
+	}
 }

@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { history } from '../History';
 import { login } from '../authentication'; 
 
-import './Login.css';
-
 class Login extends Component {
 
     //로그인 정보 입력 하고 로그인 버튼 눌렀을 때
@@ -46,7 +44,7 @@ class Login extends Component {
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
-            <Form onSubmit={this.handleSubmit} className="login-form">
+            <Form onSubmit={this.handleSubmit} className="form">
                 <Form.Item>
                     {getFieldDecorator('email', {
                         rules: [{ required: true, message: 'Please input your username!' }],
@@ -73,10 +71,8 @@ class Login extends Component {
                         valuePropName: 'checked',
                         initialValue: true,
                     })(<Checkbox>Remember me</Checkbox>)}
-                    <a className="login-form-forgot" href="">
-                        Forgot password
-              </a>
-                    <Button type="primary" htmlType="submit" className="login-form-button">
+                    <Link to='/login/forgot' className="login-form-forgot">Forgot password</Link>
+                    <Button type="primary" htmlType="submit" className="button">
                         Log in
               </Button>
                     Or <Link to="/register">register now!</Link>

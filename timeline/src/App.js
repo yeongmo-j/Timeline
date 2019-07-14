@@ -20,6 +20,7 @@ class App extends Component {
           <Switch>
             <Route path='/login' exact component={LoginAndRegister} /> 
             <Route path='/register' exact component={LoginAndRegister} />
+            <Route path='/login/forgot' exact component={LoginAndRegister} />
             <PrivateRoute path='/main' exact component={Main} />
           </Switch>
         </Router>

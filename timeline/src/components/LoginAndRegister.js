@@ -4,6 +4,7 @@ import Login from './Login';
 import Register from './Register';
 
 import './LoginAndRegister.css';
+import ForgotPassword from './ForgotPassword';
 
 class LoginAndRegister extends Component {
 
@@ -16,6 +17,7 @@ class LoginAndRegister extends Component {
                         <Switch >
                             <Route path='/login' exact component={Login} />
                             <Route path='/register' excat component={Register} />
+                            <Route path='/login/forgot' exact component={ForgotPassword} />
                         </Switch>
                     </p>
                 </div>

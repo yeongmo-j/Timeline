@@ -14,3 +14,13 @@
     font-weight: 100;
     text-align: center;
 }
+
+.form {
+    max-width: 300px;
+}
+.login-form-forgot {
+    float: right;
+}
+.button {
+    width: 100%;
+}

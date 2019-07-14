@@ -53,9 +53,43 @@ public class UserServiceImpl implements UserService{
 		else
 			return null; //비밀번호가 다르면 null 리
 	}
-	
+
 	@Override
-	public UserEntity findById(int id) {
-		return userRepository.findById(id);
+	public UserEntity getPasswordQuestion(UserEntity userEntity) {
+		//유저 찾아서 질문만을 리턴. 만약 해당하는 이메일의 회원이 존재하지 않으면 null 리턴
+		UserEntity findedEntity = userRepository.findByEmail(userEntity.getEmail());
+		if (findedEntity == null)
+			return null;
+		UserEntity newEntity = new UserEntity();
+		newEntity.setQuestion(findedEntity.getQuestion());
+		return newEntity;
 	}
+
+	@Override
+	public boolean checkAnswer(UserEntity userEntity) {
+		//이메일에 해당하는 entity를 찾아서 질문에 대한 답을 대조해야 한다
+		UserEntity findedEntity = userRepository.findByEmail(userEntity.getEmail());
+		//이메일 한번 더 검증
+		if (findedEntity == null)
+			return false;
+		//질문에 대한 답이 일치하면 true 틀리면 false
+		if (passwordEncoder.matches(userEntity.getAnswer(), findedEntity.getAnswer()))
+			return true;
+		else
+			return false;
+	}
+
+	@Override
+	public UserEntity resetPassword(UserEntity userEntity) {
+		//이메일에 해당하는 entity를 찾아서 비밀번호를 바꿔줘야 함 
+		UserEntity findedEntity = userRepository.findByEmail(userEntity.getEmail());
+		//이메일 한번 더 검증 
+		if (findedEntity == null)
+			return null;
+		//새로운 비밀번호 저장
+		findedEntity.setPassword(passwordEncoder.encode(userEntity.getPassword()));
+		UserEntity savedEntity = userRepository.save(findedEntity);
+		return savedEntity;
+	}
+	
 }

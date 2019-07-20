@@ -73,9 +73,10 @@ public class ArticleController {
 	 * 
 	 */
 	@RequestMapping(value="/article/timeline/{userID}", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
-	public String getArticleList(@PathVariable int userID, HttpServletResponse response) {
+	public String getTimelineList(@PathVariable int userID, HttpServletResponse response) {
 		try {
-			ArticleResponse[] formmedArticleList = articleService.getFriendsArticle(userID);
+			ArticleResponse[] formmedArticleList = articleService.getTimeline(userID);
+			response.setStatus(HttpServletResponse.SC_OK);
 			return new Gson().toJson(formmedArticleList);
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
@@ -83,4 +84,22 @@ public class ArticleController {
 			return null;
 		}
 	}
+	
+	
+	/*
+	 * 자신 혹은 친구의 홈 불러오기 
+	 */
+	@RequestMapping(value="/article/home/{userID}", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
+	public String getHomeList(@PathVariable int userID, HttpServletResponse response) {
+		try {
+			ArticleResponse[] formmedArticleList = articleService.getHomeList(userID);
+			response.setStatus(HttpServletResponse.SC_OK);
+			return new Gson().toJson(formmedArticleList);
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			return null;
+		}
+	}
+	
 }

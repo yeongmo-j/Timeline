@@ -70,8 +70,8 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 	
 	@Override
-	public ArticleResponse[] getFriendsArticle(int userID) {
-		List<ArticleEntity> friendsArticlesList = articleRepository.getFriendsArticles(userID);
+	public ArticleResponse[] getTimeline(int userID) {
+		List<ArticleEntity> friendsArticlesList = articleRepository.getTimeline(userID);
 		int length = friendsArticlesList.size();
 		ArticleResponse[] formmedArticleList = new ArticleResponse[length];
 		for (int i=0 ; i<length ; i++) {
@@ -95,5 +95,18 @@ public class ArticleServiceImpl implements ArticleService {
 		likedRepository.deleteByArticleID(articleID);
 		commentRepository.deleteByArticleID(articleID);
 	}
+
+	@Override
+	public ArticleResponse[] getHomeList(int userID) {
+		List<ArticleEntity> homeArticleList = articleRepository.getHome(userID);
+		int length = homeArticleList.size();
+		ArticleResponse[] formmedArticleList = new ArticleResponse[length];
+		for (int i=0; i<length ; i++) {
+			ArticleEntity article = homeArticleList.get(i);
+			formmedArticleList[i] = formattingArticle(article, userID);
+		}
+		return formmedArticleList;
+	}
+	
 	
 }

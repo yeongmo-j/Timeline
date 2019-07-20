@@ -157,4 +157,23 @@ public class UserController {
 			return null;
 		}
 	}
+	
+	/*
+	 * 프로필 사진 등록
+	 * 유저 id와 저장된 파일이름을 json형식으로 입력 받는다
+	 */
+	@RequestMapping(value="/user/profile", method=RequestMethod.PUT)
+	public String changeProfile(@RequestBody UserEntity userEntity, HttpServletResponse response) {
+		try {
+			userService.changeProfile(userEntity);
+			response.setStatus(HttpServletResponse.SC_OK);
+			return null;
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			return null;
+		}
+	}
+	
+	
 }

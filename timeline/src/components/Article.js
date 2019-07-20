@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { getToken, getUser } from '../authentication';
 import { Avatar, Icon, Row, Col, Button, Popconfirm, notification } from 'antd';
 import FbImageLibrary from 'react-fb-image-grid'
-
 import CommentModal from './CommentModal';
+import {history} from '../History';
+
+import { Link } from "react-router-dom";
 
 
 import './Article.css';
@@ -126,7 +128,14 @@ class Article extends Component {
             return null
         }
     }
+
+    //이름클릭했을 때
+    clickName = () => {
+        history.push('/home/'+this.state.articleUserID)
+    }
+
     render() {
+
         return (
             <div className="article" id='box'>
                 <div>
@@ -135,10 +144,9 @@ class Article extends Component {
                     </div>
                     <div className='inline'>
                         <div className='titlAndDate' id='title'>
-                            <b>{this.state.articleUserID}</b>
+                            <Link onClick={this.clickName} ><b>{this.state.articleUserID}</b></Link>
                             <div className='inline rightAlign'>
                                 {this.deleteButton(getUser().userID, this.state.articleUserID)}
-
                             </div>
                         </div>
                         <div className='titlAndDate' id='date'>

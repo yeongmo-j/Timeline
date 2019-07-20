@@ -22,6 +22,7 @@ class App extends Component {
             <Route path='/register' exact component={LoginAndRegister} />
             <Route path='/login/forgot' exact component={LoginAndRegister} />
             <PrivateRoute path='/main' exact component={Main} />
+            <PrivateRoute path='/home/:userID' exact component={Main} />
           </Switch>
         </Router>
       </div>

@@ -91,5 +91,14 @@ public class UserServiceImpl implements UserService{
 		UserEntity savedEntity = userRepository.save(findedEntity);
 		return savedEntity;
 	}
+
+	@Override
+	public UserEntity changeProfile(UserEntity userEntity) {
+		//id로 해당 회원을 찾는다 
+		UserEntity findedEntity = userRepository.findById(userEntity.getId());
+		findedEntity.setProfile(userEntity.getProfile());
+		userRepository.save(findedEntity);
+		return findedEntity;
+	}
 	
 }

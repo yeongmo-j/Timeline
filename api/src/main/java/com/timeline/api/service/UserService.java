@@ -33,4 +33,10 @@ public interface UserService {
 	 * 무슨 문제가 있으면 null, 제대로 변경되었음면 entity 반환
 	 */
 	UserEntity resetPassword(UserEntity userEntity);
+	
+	/*
+	 * 프로필 사진 변경
+	 * id로 db에 저장된 회원을 찾은 뒤에, 프로필을 변경 해 준다.
+	 */
+	UserEntity changeProfile(UserEntity userEntity);
 }

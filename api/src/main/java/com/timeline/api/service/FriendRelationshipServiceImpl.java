@@ -1,33 +1,48 @@
 package com.timeline.api.service;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.timeline.api.entity.FriendRelationshipEntity;
-import com.timeline.api.repository.FriendRelationshipRepository;
+import com.timeline.api.graphEntity.DeleteEdgeEntity;
+import com.timeline.api.graphEntity.HttpFactory;
+import com.timeline.api.graphEntity.InsertEdgeEntity;
+import com.timeline.api.graphEntity.RequestEdgeEntity;
 
 @Service
 public class FriendRelationshipServiceImpl implements FriendRelationshipService{
 	
-	@Autowired
-	FriendRelationshipRepository friendRelationshipRepository;
+    @Autowired
+    HttpFactory factory;
 
 	@Override
 	public void insert(FriendRelationshipEntity friendRelationshipEntity) {
-		//아이디를 서로 바꿔서 엔티티를 하나 만들어준다
-		FriendRelationshipEntity clone = new FriendRelationshipEntity();
-		clone.setUserID1(friendRelationshipEntity.getUserID2());
-		clone.setUserID2(friendRelationshipEntity.getUserID1());
+		InsertEdgeEntity insertEdgeEntity = new InsertEdgeEntity();
+		insertEdgeEntity.setTimestamp(factory.getTimeStamp());
+		insertEdgeEntity.setLabel(factory.getFiendLabel());
+		insertEdgeEntity.setFrom(friendRelationshipEntity.getUserID1());
+		insertEdgeEntity.setTo(friendRelationshipEntity.getUserID2());
 		
-		//두개의 엔티티를 각각 DB에 저장
-		friendRelationshipRepository.save(friendRelationshipEntity);
-		friendRelationshipRepository.save(clone);
+		List<RequestEdgeEntity> edgeList = new LinkedList<>();
+		edgeList.add(insertEdgeEntity);
+		
+		factory.getRestTemplate().postForObject(factory.getInsertEdgeUrl(), edgeList, List.class);
 	}
 
 	@Override
 	public void delete(FriendRelationshipEntity friendRelationshipEntity) {
-		//각각 두번을 삭제
-		friendRelationshipRepository.deleteByUserID1AndUserID2(friendRelationshipEntity.getUserID1(), friendRelationshipEntity.getUserID2());
-		friendRelationshipRepository.deleteByUserID1AndUserID2(friendRelationshipEntity.getUserID2(), friendRelationshipEntity.getUserID1());
+		DeleteEdgeEntity deleteEdgeEntity = new DeleteEdgeEntity();
+		deleteEdgeEntity.setTimestamp(factory.getTimeStamp());
+		deleteEdgeEntity.setLabel(factory.getFiendLabel());
+		deleteEdgeEntity.setFrom(friendRelationshipEntity.getUserID1());
+		deleteEdgeEntity.setTo(friendRelationshipEntity.getUserID2());
+		
+		List<RequestEdgeEntity> edgeList = new LinkedList<>();
+		edgeList.add(deleteEdgeEntity);
+		
+		factory.getRestTemplate().postForObject(factory.getDeleteEdgeUrl(), edgeList, List.class);
 	}
 }

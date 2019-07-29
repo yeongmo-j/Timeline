@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.timeline.api.entity.ArticleEntity;
 import com.timeline.api.forresponse.ArticleResponse;
@@ -41,7 +42,7 @@ public class ArticleController {
 		try {
 			ArticleResponse responseElement = articleService.insert(articleEntity);
 			response.setStatus(HttpServletResponse.SC_OK);
-			return new Gson().toJson(responseElement);
+			return new ObjectMapper().writeValueAsString(responseElement);					
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
@@ -77,7 +78,7 @@ public class ArticleController {
 		try {
 			ArticleResponse[] formmedArticleList = articleService.getTimeline(userID);
 			response.setStatus(HttpServletResponse.SC_OK);
-			return new Gson().toJson(formmedArticleList);
+			return new ObjectMapper().writeValueAsString(formmedArticleList);
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
@@ -94,7 +95,7 @@ public class ArticleController {
 		try {
 			ArticleResponse[] formmedArticleList = articleService.getHomeList(userID);
 			response.setStatus(HttpServletResponse.SC_OK);
-			return new Gson().toJson(formmedArticleList);
+			return new ObjectMapper().writeValueAsString(formmedArticleList);
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);

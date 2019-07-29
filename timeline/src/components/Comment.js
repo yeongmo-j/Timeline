@@ -21,7 +21,7 @@ class Comment extends Component {
 
     //날짜를 원하는 형식에 맞춰서 출력
     getDate = (date) => {
-        return "" + date.date.year + "/" + date.date.month + "/" + date.date.day + " " + date.time.hour + ":" + date.time.minute
+        return date
     }
 
 

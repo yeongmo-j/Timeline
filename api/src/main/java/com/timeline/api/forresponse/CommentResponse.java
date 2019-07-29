@@ -1,17 +1,13 @@
 package com.timeline.api.forresponse;
 
-import java.time.LocalDateTime;
-
 import lombok.Getter;
 
 @Getter
 public class CommentResponse {
 	
-	private int commentID;
+	private long articleID;
 	
-	private int articleID;
-	
-	private int userID;
+	private long userID;
 	
 	private String username;
 	
@@ -19,19 +15,14 @@ public class CommentResponse {
 	
 	private String content;
 	
-	private LocalDateTime createdtime;
+	private long createdtime;
 
-	public CommentResponse setCommentID(int commentID) {
-		this.commentID = commentID;
-		return this;
-	}
-
-	public CommentResponse setArticleID(int articleID) {
+	public CommentResponse setArticleID(long articleID) {
 		this.articleID = articleID;
 		return this;
 	}
 
-	public CommentResponse setUserID(int userID) {
+	public CommentResponse setUserID(long userID) {
 		this.userID = userID;
 		return this;
 	}
@@ -51,7 +42,7 @@ public class CommentResponse {
 		return this;
 	}
 
-	public CommentResponse setCreatedtime(LocalDateTime createdtime) {
+	public CommentResponse setCreatedtime(long createdtime) {
 		this.createdtime = createdtime;
 		return this;
 	}

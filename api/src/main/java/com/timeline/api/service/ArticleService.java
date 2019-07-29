@@ -13,11 +13,6 @@ public interface ArticleService {
 	 * 친구들의 소식들을 리스트로 불러오기
 	 */
 	ArticleResponse[] getTimeline(int userID);
-
-	/*
-	 * 소식 변경하기
-	 */
-	void updateArticle(ArticleEntity articleEntity);
 	
 	/*
 	 * 소식 삭제하기

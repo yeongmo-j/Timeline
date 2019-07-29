@@ -2,8 +2,6 @@ package com.timeline.api.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -16,8 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class UserEntity {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int id;
+	private long id;
 	
 	@Column(nullable=false)
 	private String email;

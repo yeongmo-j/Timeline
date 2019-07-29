@@ -6,11 +6,14 @@ import org.springframework.stereotype.Service;
 
 import com.timeline.api.entity.FriendRelationshipEntity;
 import com.timeline.api.entity.UserEntity;
-import com.timeline.api.repository.FriendRelationshipRepository;
+import com.timeline.api.graphEntity.HttpFactory;
 import com.timeline.api.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService{
+	
+    @Autowired
+    HttpFactory factory;	
 	
 	@Autowired
 	UserRepository userRepository;
@@ -19,8 +22,8 @@ public class UserServiceImpl implements UserService{
 	PasswordEncoder passwordEncoder;
 	
 	@Autowired
-	FriendRelationshipRepository friendRelationshipRepository;
-	
+	FriendRelationshipService friendRelationshipService;
+		
 	@Override
 	public UserEntity registUser(UserEntity userEntity) {		
 		boolean available = userRepository.existsByEmail(userEntity.getEmail()); //이메일이 존재하면 true가 리턴됨
@@ -30,13 +33,14 @@ public class UserServiceImpl implements UserService{
 		}
 		userEntity.setPassword(passwordEncoder.encode(userEntity.getPassword())); //패스워드 암호화
 		userEntity.setAnswer(passwordEncoder.encode(userEntity.getAnswer())); //비밀번호 초기화 질문 암호화
+		userEntity.setId((int)factory.getAutoIncreasedID());
 		UserEntity savedUser = userRepository.save(userEntity); //저장완료
 		
 		//자기자신을 친구에 넣어놓음
 		FriendRelationshipEntity friendRelationshipEntity = new FriendRelationshipEntity();
 		friendRelationshipEntity.setUserID1(savedUser.getId());
 		friendRelationshipEntity.setUserID2(savedUser.getId());
-		friendRelationshipRepository.save(friendRelationshipEntity);
+		friendRelationshipService.insert(friendRelationshipEntity);
 		
 		//저장된 Entity 리턴
 		return savedUser;

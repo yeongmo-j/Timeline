@@ -48,7 +48,7 @@ public class CommentController {
 	@RequestMapping(value="/comment/{articleID}", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
 	public String getComments(@PathVariable int articleID, HttpServletResponse response) {
 		try {
-			CommentResponse[] formmedCommentList = commentService.findByArticleID(articleID);
+			CommentResponse[] formmedCommentList = commentService.getCommentList(articleID);
 			//json으로 반환
 			response.setStatus(HttpServletResponse.SC_OK);
 			return new Gson().toJson(formmedCommentList);

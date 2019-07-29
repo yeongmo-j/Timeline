@@ -13,15 +13,15 @@ public interface CommentService {
 	/*
 	 * 해당 글에 달려있는 모든 댓글들을 리스트로 반환한다
 	 */
-	CommentResponse[] findByArticleID(int articleID);
+	CommentResponse[] getCommentList(long articleID);
 
 	/*
 	 * 해당 글을 삭제 할 때 모든 댓글들도 삭제 해줘야 한다
 	 */
-	void deleteAllComments(int articleID);
+	void deleteAllComments(long articleID);
 	
 	/*
 	 * 해당 글의 해당 댓글을 삭제
 	 */
-	void deleteComment(int commentID);
+	void deleteComment(long commentID);
 }

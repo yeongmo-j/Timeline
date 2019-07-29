@@ -67,7 +67,7 @@ class Article extends Component {
 
     //소식에 등록되어 있는 여러개의 사진 받아와서 FbImageLibrary로 출력
     getPhoto = (photoArr) => {
-        if (photoArr == null || photoArr == []) {
+        if (photoArr == null || photoArr == [] || photoArr =="") {
             return null;
         }
         let result = []
@@ -85,7 +85,7 @@ class Article extends Component {
 
     //날짜를 형식에 맞춰서 문자열로 리턴
     getDate = (date) => {
-        return "" + date.date.year + "/" + date.date.month + "/" + date.date.day + " " + date.time.hour + ":" + date.time.minute
+        return date
     }
 
     //글 삭제

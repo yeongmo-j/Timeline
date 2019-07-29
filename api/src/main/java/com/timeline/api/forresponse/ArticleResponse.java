@@ -1,15 +1,13 @@
 package com.timeline.api.forresponse;
 
-import java.time.LocalDateTime;
-
 import lombok.Getter;
 
 @Getter
 public class ArticleResponse {
 	
-	private int articleID;
+	private long articleID;
 	
-	private int userID;
+	private long userID;
 	
 	private String username;
 	
@@ -23,14 +21,14 @@ public class ArticleResponse {
 	
 	private String liked;
 
-	private LocalDateTime createdtime;
+	private long createdtime;
 	
-	public ArticleResponse setArticleID(int articleID) {
+	public ArticleResponse setArticleID(long articleID) {
 		this.articleID = articleID;
 		return this;
 	}
 
-	public ArticleResponse setUserID(int userID) {
+	public ArticleResponse setUserID(long userID) {
 		this.userID = userID;
 		return this;
 	}
@@ -68,7 +66,7 @@ public class ArticleResponse {
 		return this;
 	}
 	
-	public ArticleResponse setCreatedtime(LocalDateTime createdtime) {
+	public ArticleResponse setCreatedtime(long createdtime) {
 		this.createdtime = createdtime;
 		return this;
 	}

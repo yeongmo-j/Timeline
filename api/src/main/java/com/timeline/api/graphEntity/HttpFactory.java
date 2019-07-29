@@ -27,12 +27,12 @@ public class HttpFactory {
     private final String deleteEdgeUrl = graphUrl + "graphs/edges/deleteWithWait";
     
     private final String deleteAllEdgeUrl = graphUrl + "graphs/edges/deleteAllWithWait";
-    
+        
     private final String userIDColumn = "user_id";
     
     private final String articleIDColumn = "article_id";
     
-    private final String postedLabel = "posted2";
+    private final String postedLabel = "posted3";
     
     private final String commentedLabel = "commented2";
     

@@ -46,9 +46,9 @@ public class CommentController {
 	 * json으로 반환
 	 */
 	@RequestMapping(value="/comment/{articleID}", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
-	public String getComments(@PathVariable int articleID, HttpServletResponse response) {
+	public String getComments(@PathVariable long articleID, HttpServletResponse response) {
 		try {
-			CommentResponse[] formmedCommentList = commentService.getCommentList(articleID);
+			CommentResponse[] formmedCommentList = commentService.findByArticleID(articleID);
 			//json으로 반환
 			response.setStatus(HttpServletResponse.SC_OK);
 			return new Gson().toJson(formmedCommentList);
@@ -65,7 +65,7 @@ public class CommentController {
 	 * 댓글의 id만을 받아준다
 	 */
 	@RequestMapping(value="/comment/{commentID}", method=RequestMethod.DELETE)
-	public String deleteComment(@PathVariable int commentID, HttpServletResponse response) {
+	public String deleteComment(@PathVariable long commentID, HttpServletResponse response) {
 		try {
 			commentService.deleteComment(commentID);
 			response.setStatus(HttpServletResponse.SC_OK);

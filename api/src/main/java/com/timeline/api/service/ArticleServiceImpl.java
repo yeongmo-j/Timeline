@@ -6,16 +6,20 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.timeline.api.entity.ArticleEntity;
 import com.timeline.api.entity.UserEntity;
 import com.timeline.api.forresponse.ArticleResponse;
 import com.timeline.api.graphEntity.CheckEdgeEntity;
+import com.timeline.api.graphEntity.DeleteEdgeEntity;
 import com.timeline.api.graphEntity.GetEdgeEntity;
 import com.timeline.api.graphEntity.GetEdgeStep;
 import com.timeline.api.graphEntity.HttpFactory;
 import com.timeline.api.graphEntity.InsertEdgeEntity;
 import com.timeline.api.graphEntity.PostedEdgeProps;
+import com.timeline.api.graphEntity.RequestEdgeEntity;
+import com.timeline.api.repository.CommentRepository;
 import com.timeline.api.repository.UserRepository;
 
 
@@ -30,6 +34,9 @@ public class ArticleServiceImpl implements ArticleService {
 		
 	@Autowired 
 	UserRepository userRepository;
+	
+	@Autowired
+	CommentRepository commentRepository;
 	
 	/*
 	 * 저장된 entity 혹은 불러온 entity를 뷰에서 필요로 하는 데이터들과 함께 조합 해서 
@@ -112,7 +119,7 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 	
 	@Override
-	public ArticleResponse[] getTimeline(int userID) {
+	public ArticleResponse[] getTimeline(long userID) {
 		
 		GetEdgeEntity getEdgeEntity = new GetEdgeEntity();
 		getEdgeEntity.setSrcVerticesServiceName(factory.getServiceName());
@@ -151,18 +158,29 @@ public class ArticleServiceImpl implements ArticleService {
 
 	
 	@Override
-	//@Transactional
-	public void deleteArticle(int articleID) {
-		/*
-		//삭제의 과정은 1.소식 삭제 -> 2.해당 좋아요 전체 삭제 -> 3.해당 소식의 모든 댓글 삭제 로 이루어진다. 
-		articleRepository.deleteById(articleID);
-		likedRepository.deleteByArticleID(articleID);
+	@Transactional
+	public void deleteArticle(long articleID, long userID) {
+		//삭제의 과정은 1.소식 삭제 -> 2.해당 소식의 모든 댓글 삭제 로 이루어진다. 
+		//해당 소식 삭제
+		DeleteEdgeEntity deleteEdgeEntity = new DeleteEdgeEntity();
+		deleteEdgeEntity.setLabel(factory.getPostedLabel());
+		deleteEdgeEntity.setTimestamp(factory.getTimeStamp());
+		deleteEdgeEntity.setFrom(userID);
+		deleteEdgeEntity.setTo(articleID);
+		
+		System.out.println(deleteEdgeEntity.toString());
+		
+		List<RequestEdgeEntity> edgeList = new LinkedList<>();
+		edgeList.add(deleteEdgeEntity);
+		
+		factory.getRestTemplate().postForObject(factory.getDeleteEdgeUrl(), edgeList, List.class);
+
 		commentRepository.deleteByArticleID(articleID);
-		*/
+
 	}
 
 	@Override
-	public ArticleResponse[] getHomeList(int userID) {
+	public ArticleResponse[] getHomeList(long userID) {
 		
 		GetEdgeEntity getEdgeEntity = new GetEdgeEntity();
 		getEdgeEntity.setSrcVerticesServiceName(factory.getServiceName());

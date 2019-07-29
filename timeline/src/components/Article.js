@@ -90,7 +90,7 @@ class Article extends Component {
 
     //글 삭제
     confirm = (e) => { 
-        fetch("http://localhost:8080/article/"+this.state.articleID, {
+        fetch("http://localhost:8080/article/"+this.state.articleID+"/"+getUser().userID, {
             method: 'DELETE',
             headers: {
                 'token': getToken()

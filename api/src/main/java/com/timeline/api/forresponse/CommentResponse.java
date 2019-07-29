@@ -5,6 +5,8 @@ import lombok.Getter;
 @Getter
 public class CommentResponse {
 	
+	private long commentID;
+	
 	private long articleID;
 	
 	private long userID;
@@ -17,6 +19,11 @@ public class CommentResponse {
 	
 	private long createdtime;
 
+	public CommentResponse setCommentID(long commentID) {
+		this.commentID = commentID;
+		return this;
+	}
+	
 	public CommentResponse setArticleID(long articleID) {
 		this.articleID = articleID;
 		return this;

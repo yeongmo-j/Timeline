@@ -12,15 +12,15 @@ public interface ArticleService {
 	/*
 	 * 친구들의 소식들을 리스트로 불러오기
 	 */
-	ArticleResponse[] getTimeline(int userID);
+	ArticleResponse[] getTimeline(long userID);
 	
 	/*
 	 * 소식 삭제하기
 	 */
-	void deleteArticle(int articleID);
+	void deleteArticle(long articleID, long userID);
 	
 	/*
 	 * 홈 불러오기
 	 */
-	ArticleResponse[] getHomeList(int userID);
+	ArticleResponse[] getHomeList(long userID);
 }

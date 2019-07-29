@@ -52,13 +52,13 @@ public class ArticleController {
 	
 	/*
 	 * 본인이 본인의 소식을 삭제
-	 * 삭제의 과정은 1.소식 삭제 -> 2.해당 좋아요 전체 삭제 -> 3.해당 소식의 모든 댓글 삭제 로 이루어진다. 
+	 * 삭제의 과정은 1.소식 삭제 -> 2.해당 소식의 모든 댓글 삭제 로 이루어진다. 
 	 */
-	@RequestMapping(value="/article/{articleID}", method=RequestMethod.DELETE)
-	public String deleteArticle(@PathVariable int articleID, HttpServletResponse response) {
+	@RequestMapping(value="/article/{articleID}/{userID}", method=RequestMethod.DELETE)
+	public String deleteArticle(@PathVariable long articleID,@PathVariable long userID, HttpServletResponse response) {
 		try {
 			//삭제
-			articleService.deleteArticle(articleID);
+			articleService.deleteArticle(articleID, userID);
 			response.setStatus(HttpServletResponse.SC_OK);
 			return null;
 		} catch(Exception e) {
@@ -74,7 +74,7 @@ public class ArticleController {
 	 * 
 	 */
 	@RequestMapping(value="/article/timeline/{userID}", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
-	public String getTimelineList(@PathVariable int userID, HttpServletResponse response) {
+	public String getTimelineList(@PathVariable long userID, HttpServletResponse response) {
 		try {
 			ArticleResponse[] formmedArticleList = articleService.getTimeline(userID);
 			response.setStatus(HttpServletResponse.SC_OK);
@@ -91,7 +91,7 @@ public class ArticleController {
 	 * 자신 혹은 친구의 홈 불러오기 
 	 */
 	@RequestMapping(value="/article/home/{userID}", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
-	public String getHomeList(@PathVariable int userID, HttpServletResponse response) {
+	public String getHomeList(@PathVariable long userID, HttpServletResponse response) {
 		try {
 			ArticleResponse[] formmedArticleList = articleService.getHomeList(userID);
 			response.setStatus(HttpServletResponse.SC_OK);

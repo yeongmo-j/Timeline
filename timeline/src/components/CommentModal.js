@@ -4,6 +4,7 @@ import { Modal, Button } from 'antd';
 import { getToken } from '../authentication';
 import CommentForm from './CommentForm';
 import Comment from './Comment';
+import { serverUrl } from '../setting'
 
 class CommentModal extends Component {
   state = {
@@ -35,7 +36,7 @@ class CommentModal extends Component {
   //댓글 불러오기
   loadComments = () => {
     //http요청
-    const requesturl = 'http://localhost:8080/comment/' + this.props.articleID;
+    const requesturl = serverUrl + '/comment/' + this.props.articleID;
     fetch(requesturl, {
       method: 'GET',
       headers: {

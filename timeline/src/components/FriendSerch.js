@@ -3,6 +3,7 @@ import { Input } from 'antd';
 
 import { getToken } from '../authentication';
 import FriendArray from './FriendArray';
+import { serverUrl } from '../setting'
 
 import './FriendUnit.css';
 
@@ -27,7 +28,7 @@ class FriendSearch extends Component {
             <Search placeholder="찾고 싶은 친구 이름" onSearch={value => {
                 //검색 버튼을 눌렀을 경우 결과를 찾아옴
                 if (value!==""){
-                    const requesturl = 'http://localhost:8080/friend/search/' + value
+                    const requesturl = serverUrl + '/friend/search/' + value
                     fetch(requesturl, {
                         method: 'GET',
                         headers: {

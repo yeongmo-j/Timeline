@@ -5,6 +5,7 @@ import { logout, getUser, getToken } from '../authentication';
 import { Link } from "react-router-dom";
 
 import ChangeProfile from './ChangeProfile';
+import { serverUrl } from '../setting'
 
 import './Header.css';
 import './Box.css';
@@ -23,7 +24,7 @@ class Header extends Component {
     //현재 로그인 된 유저의 정보
     loadingUser = () => {
         const userID = getUser().userID
-        const requesturl = 'http://localhost:8080/user/getinfo/' + userID
+        const requesturl = serverUrl + '/user/getinfo/' + userID
         fetch(requesturl, {
             method: 'GET',
             headers: {
@@ -45,7 +46,7 @@ class Header extends Component {
         if (fileName === "" || fileName == null)
             return <Avatar size='large'>{username}</Avatar>
         else
-            return <Avatar size='large' src={'http://localhost:8080/photo/download?filename=' + fileName} />
+            return <Avatar size='large' src={serverUrl + '/photo/download?filename=' + fileName} />
     }
 
     //로그아웃

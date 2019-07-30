@@ -3,6 +3,7 @@ import { Form, Icon, Input, Button, message, Select } from 'antd';
 import { Link } from "react-router-dom";
 
 import { history } from '../History';
+import { serverUrl } from '../setting'
 
 const { Option } = Select;
 
@@ -22,7 +23,7 @@ class Register extends Component {
                     answer : values.answer
                 }
                 //http요청
-                fetch('http://localhost:8080/regist', {
+                fetch(serverUrl + '/regist', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(registInformation)

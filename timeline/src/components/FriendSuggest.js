@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { getUser, getToken } from '../authentication';
 import FriendArray from './FriendArray';
+import { serverUrl } from '../setting'
 
 import './FriendUnit.css';
 
@@ -19,7 +20,7 @@ class FriendSuggest extends Component {
 
     //친구추천 리스트를 불러옴
     loadingFriendSuggests = () => {
-        const requesturl = 'http://localhost:8080/friend/suggest/' + getUser().userID
+        const requesturl = serverUrl + '/friend/suggest/' + getUser().userID
         fetch(requesturl, {
             method: 'GET',
             headers: {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Icon, Popover, Button, Upload, Modal, message } from 'antd';
 
 import { getUser, getToken } from '../authentication';
+import { serverUrl } from '../setting'
 
 //사진 업로드
 function getBase64(file) {
@@ -55,7 +56,7 @@ class ChangeProfile extends Component {
                     'profile': this.state.fileList[0].response.name
                 }
                 //http요청
-                fetch('http://localhost:8080/user/profile', {
+                fetch(serverUrl + '/user/profile', {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -117,7 +118,7 @@ class ChangeProfile extends Component {
                                     <div className="clearfix">
                                         <Upload
                                             name="file"
-                                            action={"http://localhost:8080/photo/upload/" + this.userID}
+                                            action={serverUrl + "/photo/upload/" + this.userID}
                                             listType="picture-card"
                                             fileList={fileList}
                                             onPreview={this.handlePreview}

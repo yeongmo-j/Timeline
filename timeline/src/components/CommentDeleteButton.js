@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { message, Popconfirm, Button} from 'antd'
 
 import { getUser, getToken } from '../authentication';
+import { serverUrl } from '../setting'
 
 class CommentDeleteButton extends Component {
 
     //댓글 삭제
     confirm = (item) => {    
         //http요청
-        fetch("http://localhost:8080/comment/" + this.props.commentID, {
+        fetch(serverUrl + "/comment/" + this.props.commentID, {
             method: 'DELETE',
             headers: {
                 'token': getToken()

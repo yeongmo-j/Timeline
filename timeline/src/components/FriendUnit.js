@@ -3,6 +3,7 @@ import { Avatar, Button, message, Popconfirm } from 'antd';
 import { Link } from "react-router-dom";
 
 import { getUser, getToken } from '../authentication';
+import { serverUrl } from '../setting'
 
 import './FriendUnit.css';
 
@@ -18,7 +19,7 @@ class FriendUnit extends Component {
 
         //현재 받은 친구 원소와 나와의 관계가 무엇인지 확인 
         //친구면 1, 친구요청 이미 보낸상태면 2, 친구요청 받은 상태면 3, 아무것도 아니면 4
-        const requesturl = 'http://localhost:8080/friend/request/check/' + getUser().userID + '/' + this.props.friend.id
+        const requesturl = serverUrl + '/friend/request/check/' + getUser().userID + '/' + this.props.friend.id
         fetch(requesturl, {
             method: 'GET',
             headers: {
@@ -40,7 +41,7 @@ class FriendUnit extends Component {
         if (fileName === "" || fileName == null)
             return <Avatar size='large'>{username}</Avatar>
         else
-            return <Avatar size='large' src={'http://localhost:8080/photo/download?filename=' + fileName} />
+            return <Avatar size='large' src={serverUrl + '/photo/download?filename=' + fileName} />
     }
 
     //친구 관계에 따라 노출되는 버튼이 다름
@@ -94,7 +95,7 @@ class FriendUnit extends Component {
     //친구 관계 끊을 때
     confirm = (e) => {
         console.log(e);
-        const requesturl = 'http://localhost:8080/friends/' + this.props.friend.id + '/' + getUser().userID;
+        const requesturl = serverUrl + '/friends/' + this.props.friend.id + '/' + getUser().userID;
         fetch(requesturl, {
             method: 'DELETE',
             headers: {
@@ -118,7 +119,7 @@ class FriendUnit extends Component {
 
     //친구 요청
     sendRequest = () => {
-        fetch("http://localhost:8080/friend/request/" + getUser().userID + "/" + this.props.friend.id, {
+        fetch(serverUrl + "/friend/request/" + getUser().userID + "/" + this.props.friend.id, {
             method: 'POST',
             headers: {
                 'token': getToken()
@@ -138,7 +139,7 @@ class FriendUnit extends Component {
 
     //친구 신청 받을 때
     acceptRequest = () => {
-        fetch("http://localhost:8080/friend/request/response/" + 1 + "/" + this.props.friend.id + "/" + getUser().userID, {
+        fetch(serverUrl + "/friend/request/response/" + 1 + "/" + this.props.friend.id + "/" + getUser().userID, {
             method: 'GET',
             headers: {
                 'token': getToken()
@@ -157,7 +158,7 @@ class FriendUnit extends Component {
 
     //친구 요청 거부
     denyRequest = () => {
-        fetch("http://localhost:8080/friend/request/response/" + 2 + "/" + this.props.friend.id + "/" + getUser().userID, {
+        fetch(serverUrl + "/friend/request/response/" + 2 + "/" + this.props.friend.id + "/" + getUser().userID, {
             method: 'GET',
             headers: {
                 'token': getToken()

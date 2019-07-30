@@ -133,7 +133,7 @@ public class ArticleServiceImpl implements ArticleService {
 		postedStep.setDirection("out");
 		postedStep.setLabel(factory.getPostedLabel());
 		postedStep.setOffset(0);
-		postedStep.setLimit(100);
+		postedStep.setLimit(150);
 		getEdgeEntity.setNextStep(friendStep);
 		getEdgeEntity.setNextStep(postedStep);
 		

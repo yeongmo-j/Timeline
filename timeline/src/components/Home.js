@@ -3,6 +3,7 @@ import { Avatar, Button, message, Popconfirm } from 'antd';
 
 import ArticleArray from './ArticleArray';
 import { getUser, getToken } from '../authentication';
+import { serverUrl } from '../setting'
 
 import './Box.css';
 
@@ -39,7 +40,7 @@ class Home extends Component {
 
     //나와의 관계가 무엇인지?
     loadingRelationship = (others) => {
-        const requesturl = 'http://localhost:8080/friend/request/check/' + getUser().userID + '/' + others
+        const requesturl = serverUrl + '/friend/request/check/' + getUser().userID + '/' + others
         fetch(requesturl, {
             method: 'GET',
             headers: {
@@ -59,7 +60,7 @@ class Home extends Component {
 
     //해당 사람의 프로필 얻어오기
     loadingUser = ( others) => {
-        const requesturl = 'http://localhost:8080/user/getinfo/' + others
+        const requesturl = serverUrl + '/user/getinfo/' + others
         fetch(requesturl, {
             method: 'GET',
             headers: {
@@ -78,7 +79,7 @@ class Home extends Component {
 
     //해당 사람의 소식 모아보기
     loadingArticles = (others) => {
-        const requesturl = 'http://localhost:8080/article/home/' + others
+        const requesturl = serverUrl + '/article/home/' + others
         fetch(requesturl, {
             method: 'GET',
             headers: {
@@ -107,7 +108,7 @@ class Home extends Component {
         if (fileName === "" || fileName == null)
             return <Avatar size='large'>{username}</Avatar>
         else
-            return <Avatar size='large' src={'http://localhost:8080/photo/download?filename=' + fileName} />
+            return <Avatar size='large' src={serverUrl + '/photo/download?filename=' + fileName} />
     }
 
     //그사람과의 관계에 따라 버튼이 달라짐
@@ -149,7 +150,7 @@ class Home extends Component {
     //친구 요청을 보낼 떄
     sendRequest = () => {
         const { userID } = this.props.match.params
-        fetch("http://localhost:8080/friend/request/"+getUser().userID+"/"+userID, {
+        fetch(serverUrl + "/friend/request/"+getUser().userID+"/"+userID, {
             method: 'POST',
             headers: {
                 'token': getToken()
@@ -169,7 +170,7 @@ class Home extends Component {
     //친구 취소할 때
     confirm = (e) => {
         const { userID } = this.props.match.params;
-        const requesturl = 'http://localhost:8080/friends/' + userID + '/' + getUser().userID;
+        const requesturl = serverUrl + '/friends/' + userID + '/' + getUser().userID;
         fetch(requesturl, {
             method: 'DELETE',
             headers: {

@@ -240,8 +240,8 @@ public class FriendRelationshipServiceImpl implements FriendRelationshipService{
 		if (findedList.isEmpty())
 			return null;
 		int size = findedList.size();
-		if (size>10)
-			size = 10;
+		if (size>30)
+			size = 30;
 		UserResponse[] result = new UserResponse[size];
 		UserResponse user;
 		UserEntity userEntity;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Upload, Modal, message } from 'antd';
 
 import { getUser, getToken } from '../authentication';
+import { serverUrl } from '../setting'
 
 import './ArticleForm.css';
 
@@ -50,40 +51,44 @@ class ArticleForm extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                //파일명을 /로 묶어주기
-                //db에는 파일명이 저장됨. 파일명의 리스트를 만들어서 그들 사이를 /로 조인해줌. 나중에 split해서 쓸 것임
-                let fileList = []
-                this.state.fileList.map(file => fileList.push(file.response.name) )
-                let fileNames = fileList.join('/')
+                if (values.content.length > 250) {
+                    message.error("말이 너무 깁니다!")
+                } else {
+                    //파일명을 /로 묶어주기
+                    //db에는 파일명이 저장됨. 파일명의 리스트를 만들어서 그들 사이를 /로 조인해줌. 나중에 split해서 쓸 것임
+                    let fileList = []
+                    this.state.fileList.map(file => fileList.push(file.response.name))
+                    let fileNames = fileList.join('/')
 
-                //폼 묶어주기
-                let article = {
-                    'userID': this.userID,
-                    'content': values.content.replace(/\n/gi,'<br>'), //줄바꿈 표시를 <br/>로 바꿔줌
-                    'photo': fileNames
-                }
-
-                //요청
-                fetch('http://localhost:8080/article', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'token': getToken()
-                    },
-                    body: JSON.stringify(article)
-                }).then(response => {
-                    if (response.status === 200) {
-                        //글올리기 성공
-                        response.json().then( rsp => {
-                            message.success("소식이 성공적으로 공유 되었습니다.")
-                            this.props.form.resetFields()                
-                            this.props.addArticle(rsp)
-                            this.handleCancel();
-                        })
-                    } else {
-                        console.log("글올리기 실패")
+                    //폼 묶어주기
+                    let article = {
+                        'userID': this.userID,
+                        'content': values.content.replace(/\n/gi, '<br>'), //줄바꿈 표시를 <br/>로 바꿔줌
+                        'photo': fileNames
                     }
-                });
+
+                    //요청
+                    fetch(serverUrl + '/article', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'token': getToken()
+                        },
+                        body: JSON.stringify(article)
+                    }).then(response => {
+                        if (response.status === 200) {
+                            //글올리기 성공
+                            response.json().then(rsp => {
+                                message.success("소식이 성공적으로 공유 되었습니다.")
+                                this.props.form.resetFields()
+                                this.props.addArticle(rsp)
+                                this.handleCancel();
+                            })
+                        } else {
+                            console.log("글올리기 실패")
+                        }
+                    });
+                }
             }
         });
     };
@@ -98,14 +103,14 @@ class ArticleForm extends Component {
                 <div className="ant-upload-text">Upload</div>
             </div>
         );
-        
+
         const { getFieldDecorator } = this.props.form;
 
         return (
             <div className="articleform" id='box'>
 
                 {/* 타이틀 */}
-                <center>당신의 소식을 친구들에게 알려주세요!</center> <br/>
+                <center>당신의 소식을 친구들에게 알려주세요!</center> <br />
 
                 {/* 폼 */}
                 <Form onSubmit={this.handleSubmit} className="article-form">
@@ -130,7 +135,7 @@ class ArticleForm extends Component {
                             <div className="clearfix">
                                 <Upload
                                     name="file"
-                                    action={"http://localhost:8080/photo/upload/"+this.userID}
+                                    action={serverUrl + "/photo/upload/" + this.userID}
                                     listType="picture-card"
                                     fileList={fileList}
                                     onPreview={this.handlePreview}

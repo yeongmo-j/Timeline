@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { getUser, getToken } from '../authentication';
 import FriendArray from './FriendArray';
+import { serverUrl } from '../setting'
 
 import './FriendUnit.css';
 
@@ -19,7 +20,7 @@ class FriendRequest extends Component {
 
     //친구 요청들 불러오기
     loadingFriendRequests = () => {
-        const requesturl = 'http://localhost:8080/friend/request/' + getUser().userID
+        const requesturl = serverUrl + '/friend/request/' + getUser().userID
         //http요청
         fetch(requesturl, {
             method: 'GET',
@@ -36,8 +37,6 @@ class FriendRequest extends Component {
                 }
             }).then(response => {
                 this.setState({ requestList: response })
-                console.log("친구 요청들")
-                console.log(response)
             })
     }
 

@@ -6,6 +6,7 @@ import FbImageLibrary from 'react-fb-image-grid'
 import CommentModal from './CommentModal';
 import { history } from '../History';
 import { getToken, getUser } from '../authentication';
+import { serverUrl } from '../setting'
 
 import './Article.css';
 
@@ -35,7 +36,7 @@ class Article extends Component {
 
     //좋아요 클릭했을 때 : 취소 혹은 좋아요
     likeClick = () => {
-        fetch("http://localhost:8080/liked/" + this.state.articleID + "/" + getUser().userID, {
+        fetch( serverUrl + "/liked/" + this.state.articleID + "/" + getUser().userID, {
             method: 'PUT',
             headers: {
                 'token': getToken()
@@ -62,7 +63,7 @@ class Article extends Component {
             return null;
         }
         let result = []
-        photoArr.map(photo => result.push('http://localhost:8080/photo/download?filename=' + photo))
+        photoArr.map(photo => result.push(serverUrl + '/photo/download?filename=' + photo))
         return (<FbImageLibrary images={result} />);
     }
 
@@ -71,7 +72,7 @@ class Article extends Component {
         if (fileName === "" || fileName === null)
             return <Avatar size='large'>{username}</Avatar>
         else
-            return <Avatar size='large' src={'http://localhost:8080/photo/download?filename=' + fileName} />
+            return <Avatar size='large' src={serverUrl + '/photo/download?filename=' + fileName} />
     }
 
     //날짜를 형식에 맞춰서 문자열로 리턴
@@ -82,7 +83,7 @@ class Article extends Component {
 
     //글 삭제
     confirm = (e) => {
-        fetch("http://localhost:8080/article/" + this.state.articleID + "/" + getUser().userID, {
+        fetch(serverUrl + "/article/" + this.state.articleID + "/" + getUser().userID, {
             method: 'DELETE',
             headers: {
                 'token': getToken()

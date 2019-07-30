@@ -3,6 +3,8 @@ import ArticleArray from './ArticleArray';
 import { getUser, getToken } from '../authentication';
 import ArticleForm from './ArticleForm';
 
+import { serverUrl } from '../setting'
+
 class Timeline extends Component {
     state = {
         articles: []
@@ -22,7 +24,7 @@ class Timeline extends Component {
     //ArticleArray 컴포넌트에서 하지 않고 timeline에서 하는 이유는 ?
     //form에서 입력받은 소식을 업데이트 해줘야 하므로, 여기서 state를 바꿔주어야 한다. 
     loadingArticles = () => {
-        const requesturl = 'http://localhost:8080/article/timeline/' + getUser().userID
+        const requesturl = serverUrl + '/article/timeline/' + getUser().userID
         fetch(requesturl, {
             method: 'GET',
             headers: {

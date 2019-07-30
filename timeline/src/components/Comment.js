@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { List, Avatar} from 'antd'
 
 import CommentDeleteButton from './CommentDeleteButton';
+import { serverUrl } from '../setting'
 
 import './Comment.css'
 
@@ -34,7 +35,7 @@ class Comment extends Component {
         if (fileName === "" || fileName == null)
             return <Avatar size='large'>{username}</Avatar>
         else
-            return <Avatar size='large' src={'http://localhost:8080/photo/download?filename=' + fileName} />
+            return <Avatar size='large' src={serverUrl + '/photo/download?filename=' + fileName} />
     }
 
     render() {

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, message } from 'antd';
 import { Link } from "react-router-dom";
+
 import { history } from '../History';
 import { login } from '../authentication';
+import { serverUrl } from '../setting'
 
 class Login extends Component {
 
@@ -13,7 +15,7 @@ class Login extends Component {
             if (!err) {
                 //요청 양식은 이미 values에 동일하게 맞춰져 있는 상태이므로
                 //따로 가공해줄 필요 없이 바로 http 요청 을 보낸다
-                fetch('http://localhost:8080/login', {
+                fetch(serverUrl + '/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(values)

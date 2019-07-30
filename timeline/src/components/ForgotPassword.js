@@ -3,6 +3,7 @@ import { Form, Icon, Input, Button, message } from 'antd';
 import { Link } from "react-router-dom";
 
 import { history } from '../History';
+import { serverUrl } from '../setting'
 
 class ForgotPassword extends Component {
 
@@ -24,7 +25,7 @@ class ForgotPassword extends Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 //http요청
-                fetch('http://localhost:8080/login/forgot/question', {
+                fetch(serverUrl + '/login/forgot/question', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(values)
@@ -89,7 +90,7 @@ class ForgotPassword extends Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 //http요청
-                fetch('http://localhost:8080/login/forgot/answer', {
+                fetch(serverUrl + '/login/forgot/answer', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -168,7 +169,7 @@ class ForgotPassword extends Component {
         this.props.form.validateFields((err, values) => {
             if (!err) {
                 console.log('Received values of form: ', values);
-                fetch('http://localhost:8080/login/forgot/reset', {
+                fetch(serverUrl + '/login/forgot/reset', {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -197,6 +198,7 @@ class ForgotPassword extends Component {
         return (
             <span>
                 <Form onSubmit={this.resetSubmit} className="form">
+                새로운 비밀번호를 입력해 주세요
                 <Form.Item hasFeedback>
                     {getFieldDecorator('password', {
                         rules: [

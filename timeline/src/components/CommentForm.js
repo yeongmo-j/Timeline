@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Button, Icon, Input, message } from 'antd'
 
 import { getToken, getUser } from '../authentication';
+import { serverUrl } from '../setting'
 
 import './CommentForm.css';
 
@@ -12,37 +13,41 @@ class CommentForm extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
-                //원하는 폼으로 가공
-                const content = {
-                    articleID : this.props.articleID,
-                    userID : getUser().userID,
-                    content : values.comment
-                }
-                //http요청 보내기
-                fetch('http://localhost:8080/comment', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'token': getToken()
-                    },
-                    body: JSON.stringify(content)
-                }).then(response => {
-                    if (response.status === 200) {
-                        //글올리기 성공
-                        message.success('댓글이 업로드 되었습니다.');
-                        //댓글 창 리셋
-                        this.props.form.resetFields()      
-                        return response.json()
-                    } else {
-                        //오류 처리
-                        return null;
+                if (values.comment.length > 100) {
+                    message.error("댓글 길이가 너무 깁니다!")
+                } else {
+                    //원하는 폼으로 가공
+                    const content = {
+                        articleID: this.props.articleID,
+                        userID: getUser().userID,
+                        content: values.comment
                     }
-                })
-                .then(response => {
-                    //다시 렌더링 하기 위해
-                    this.props.addComment(response);
-                })
+                    //http요청 보내기
+                    fetch(serverUrl + '/comment', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'token': getToken()
+                        },
+                        body: JSON.stringify(content)
+                    }).then(response => {
+                        if (response.status === 200) {
+                            //글올리기 성공
+                            message.success('댓글이 업로드 되었습니다.');
+                            //댓글 창 리셋
+                            this.props.form.resetFields()
+                            return response.json()
+                        } else {
+                            //오류 처리
+                            return null;
+                        }
+                    })
+                        .then(response => {
+                            //다시 렌더링 하기 위해
+                            this.props.addComment(response);
+                        })
+                }
+
             }
         });
     };
@@ -55,7 +60,7 @@ class CommentForm extends Component {
                 <Form layout="inline" onSubmit={this.handleSubmit}>
                     <Form.Item >
                         {getFieldDecorator('comment', {
-                            rules: [{ required: true, message: 'Please input comment!' }],
+                            rules: [{ required: true, message: '댓글을 입력 해 주세요!' }],
                         })(
                             <Input
                                 prefix={<Icon type="message" style={{ color: 'rgba(0,0,0,.25)' }} />}

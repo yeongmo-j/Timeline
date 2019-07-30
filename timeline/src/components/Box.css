@@ -12,10 +12,30 @@
     background-color: white
 }
 
+.left-box {
+    width : 50%;
+    float: left;
+  }
+  .right-box {
+    width : 50%;
+    float: right;
+    text-align: right;
+  }
+
 .onTop{
     position : fixed;
 }
 
 .friendBox{
     align-content: center;
+}
+
+
+#margin{ 
+    margin : 10px;
+}
+
+#marginLeftRight{
+    margin-left: 4px;
+    margin-right: 4px;
 }

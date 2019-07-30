@@ -42,10 +42,10 @@ public class ArticleServiceImpl implements ArticleService {
 	 * 저장된 entity 혹은 불러온 entity를 뷰에서 필요로 하는 데이터들과 함께 조합 해서 
 	 * ArticleResponse 인스턴스에 담아서 리턴해준다
 	 */
-	private ArticleResponse formattingArticle(long articleID, Map<String, Object> articleProps, int userID) {
+	private ArticleResponse formattingArticle(long articleID, Map<String, Object> articleProps, long articleUserID, long userID) {
 		//ArticleEntity에는 유저의 id만 존재 할 뿐이지, 유저의 이름, 프로필사진이 정보가 존재하지 않는다.
 		//따라서 글을 작성한유저의 정보를 받아온다
-		UserEntity user = userRepository.findById(userID);
+		UserEntity user = userRepository.findById(articleUserID);
 		
 		//이 글을 불러오기를 요청한 유저가 좋아요를 눌렀으면, liked를 true로 주고, 좋아요를 안눌렀으면 false로 둔다.
 		String liked = "true";
@@ -60,7 +60,7 @@ public class ArticleServiceImpl implements ArticleService {
 		//뷰에서 필요로 하는 정보들로 조합 해서 리턴 해준다. 
 		ArticleResponse responseElement = new ArticleResponse()
 				.setArticleID(articleID)
-				.setUserID(userID)
+				.setUserID(articleUserID)
 				.setUsername(user.getUsername()) 
 				.setProfile(user.getProfile()) 
 				.setContent((String)articleProps.get("content"))
@@ -113,7 +113,7 @@ public class ArticleServiceImpl implements ArticleService {
 		Map<String, Object> props2 = (Map<String, Object>)response2.get(0).get("props");
 		
 		//뷰에서 필요로 하는 정보들로 조합 해준다.
-		ArticleResponse responseElement = formattingArticle(newArticleID, props2, articleEntity.getUserID());
+		ArticleResponse responseElement = formattingArticle(newArticleID, props2, articleEntity.getUserID(), articleEntity.getUserID());
 
 		return responseElement;
 	}
@@ -127,7 +127,7 @@ public class ArticleServiceImpl implements ArticleService {
 		getEdgeEntity.setSrcVerticesID(userID);
 		GetEdgeStep friendStep = new GetEdgeStep();
 		friendStep.setDirection("out");
-		friendStep.setLabel(factory.getFiendLabel());
+		friendStep.setLabel(factory.getFriendLabel());
 		friendStep.setOffset(0);
 		friendStep.setLimit(100);
 		GetEdgeStep postedStep = new GetEdgeStep();
@@ -141,6 +141,8 @@ public class ArticleServiceImpl implements ArticleService {
 		Map<String, Object>response = factory.getRestTemplate().postForObject(factory.getGetEdgesUrl(), getEdgeEntity, Map.class);
 		List<Map<String, Object>> results = (List<Map<String, Object>>) response.get("results");
 		
+		System.out.println(results.toString());
+		
 		int size = results.size();
 		ArticleResponse[] formmedArticleList = new ArticleResponse[size];
 
@@ -151,7 +153,7 @@ public class ArticleServiceImpl implements ArticleService {
 			article = results.get(i);
 			articleUserID = (int)article.get("from");
 			articleID = (long)((int)article.get("to"));
-			formmedArticleList[i] = this.formattingArticle(articleID, (Map<String, Object>)article.get("props"), articleUserID);
+			formmedArticleList[i] = this.formattingArticle(articleID, (Map<String, Object>)article.get("props"), articleUserID, userID);
 		}
 		return formmedArticleList;
 	}
@@ -206,7 +208,7 @@ public class ArticleServiceImpl implements ArticleService {
 			article = results.get(i);
 			articleUserID = (int)article.get("from");
 			articleID = (long)((int)article.get("to"));
-			formmedArticleList[i] = this.formattingArticle(articleID, (Map<String, Object>)article.get("props"), articleUserID);
+			formmedArticleList[i] = this.formattingArticle(articleID, (Map<String, Object>)article.get("props"), articleUserID, userID);
 		}
 		return formmedArticleList;
 	}

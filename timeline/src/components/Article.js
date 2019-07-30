@@ -1,23 +1,13 @@
 import React, { Component } from 'react';
-import { getToken, getUser } from '../authentication';
-import { Avatar, Icon, Row, Col, Button, Popconfirm, notification } from 'antd';
-import FbImageLibrary from 'react-fb-image-grid'
-import CommentModal from './CommentModal';
-import {history} from '../History';
-
 import { Link } from "react-router-dom";
+import { Avatar, Icon, Row, Col, Button, Popconfirm, notification, message } from 'antd';
+import FbImageLibrary from 'react-fb-image-grid'
 
+import CommentModal from './CommentModal';
+import { history } from '../History';
+import { getToken, getUser } from '../authentication';
 
 import './Article.css';
-
-//소식 삭제 알림
-const openNotificationWithIcon = type => {
-    notification[type]({
-      message: '소식 삭제 성공!',
-      description:
-        '당신의 소식이 더이상 친구들에게 공유되지 않습니다!',
-    });
-  };  
 
 class Article extends Component {
 
@@ -33,7 +23,7 @@ class Article extends Component {
             articleUsername: this.props.article.username,
             articleUserprofile: this.props.article.profile,
             articleID: this.props.article.articleID,
-            content: this.props.article.content.split('<br>').map((line,i) => {
+            content: this.props.article.content.split('<br>').map((line, i) => {
                 return (<span key={i}>{line}<br /></span>);
             }), //줄바꾸기 변환 : 글 입력할 때 db에는 \n을 <br>로 바꾸어 저장 한 다음에 이걸 다시 줄바꿈 해서 출력해줘야 하므로
             like: this.props.article.like,
@@ -43,7 +33,7 @@ class Article extends Component {
         };
     }
 
-    //좋아요 클릭했을 경우
+    //좋아요 클릭했을 때 : 취소 혹은 좋아요
     likeClick = () => {
         fetch("http://localhost:8080/liked/" + this.state.articleID + "/" + getUser().userID, {
             method: 'PUT',
@@ -58,6 +48,7 @@ class Article extends Component {
                 liked: "false"
             })
         } else {
+            //좋아요
             this.setState({
                 like: this.state.like + 1,
                 liked: "true"
@@ -67,11 +58,11 @@ class Article extends Component {
 
     //소식에 등록되어 있는 여러개의 사진 받아와서 FbImageLibrary로 출력
     getPhoto = (photoArr) => {
-        if (photoArr == null || photoArr == [] || photoArr =="") {
+        if (photoArr == null || photoArr == [] || photoArr == "") {
             return null;
         }
         let result = []
-        photoArr.map(photo => result.push('http://localhost:8080/photo/download?filename='+photo))
+        photoArr.map(photo => result.push('http://localhost:8080/photo/download?filename=' + photo))
         return (<FbImageLibrary images={result} />);
     }
 
@@ -84,13 +75,14 @@ class Article extends Component {
     }
 
     //날짜를 형식에 맞춰서 문자열로 리턴
-    getDate = (date) => {
-        return date
+    getDate = (timestamp) => {
+        var date = new Date(timestamp);
+        return date.getFullYear() + '/' + (date.getMonth()+1) + '/' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes();
     }
 
     //글 삭제
-    confirm = (e) => { 
-        fetch("http://localhost:8080/article/"+this.state.articleID+"/"+getUser().userID, {
+    confirm = (e) => {
+        fetch("http://localhost:8080/article/" + this.state.articleID + "/" + getUser().userID, {
             method: 'DELETE',
             headers: {
                 'token': getToken()
@@ -98,14 +90,15 @@ class Article extends Component {
         })
             .then(response => {
                 if (response.status == 200) {
-                    openNotificationWithIcon('success')
+                    message.success("소식이 삭제 되었습니다.")
                     this.props.deleteArticle(this.props.article)
                 } else {
                     //오류 처리
                 }
             })
     }
-
+    
+    //글 삭제 안함
     cancel = (e) => {
         console.log(e);
     }
@@ -129,42 +122,54 @@ class Article extends Component {
         }
     }
 
-    //이름클릭했을 때
+    //이름클릭했을 때 : 소식 모아보기로 이동
     clickName = () => {
-        history.push('/home/'+this.state.articleUserID)
+        history.push('/home/' + this.state.articleUserID)
     }
 
     render() {
 
         return (
-            <div className="article" id='box'>
+            <div id='box'>
+                {/* 타이틀 */}
                 <div>
+                    {/* 사진 */}
                     <div className='inline' >
                         {this.getOnePhoto(this.state.articleUserprofile, this.state.articleUsername)}
                     </div>
-                    <div className='inline'>
-                        <div className='titlAndDate' id='title'>
-                            <Link onClick={this.clickName} ><b>{this.state.articleUserID}</b></Link>
-                            <div className='inline rightAlign'>
-                                {this.deleteButton(getUser().userID, this.state.articleUserID)}
-                            </div>
-                        </div>
-                        <div className='titlAndDate' id='date'>
-                            {this.getDate(this.state.createdtime)}
-                        </div>
+                    {/* 제목 */}
+                    <div className='inline title marginLeftRight'>
+                        <Link onClick={this.clickName} ><b>{this.state.articleUsername}</b></Link>
+                    </div>
+                    {/* 삭제표시 */}
+                    <div className='inline rightAlign'>
+                        {this.deleteButton(getUser().userID, this.state.articleUserID)}
                     </div>
                 </div>
-                <div className='margin'>
-                    {this.state.content}
+
+                {/* 날짜 */}
+                <div className='marginTopBottom date'>
+                    {this.getDate(this.state.createdtime)}
                 </div>
+
+                {/* 본문 */}
+                <div className='marginTopBottom'>
+                    <b>{this.state.content}</b>
+                </div>
+
+                {/* 사진 */}
                 <div>
                     {this.getPhoto(this.state.photo)}
                 </div>
-                <div className='margin'>
+
+                {/* 좋아요 카운트*/}
+                <div className='marginTopBottom'>
                     <Icon type="like" theme="twoTone" twoToneColor="#eb2f96" width='200px' />
-                    <span className='margin'>{this.state.like}</span>
+                    <span className='marginLeftRight'>{this.state.like}</span>
                 </div>
-                <div className='margin'>
+
+                {/* 좋아요 버튼 및 댓글 버튼 */}
+                <div className='marginTopBottom'>
                     <Row>
                         <Col span={12}>
                             <center><Button type={this.state.liked == "true" ? "primary" : "default"} icon="like" onClick={this.likeClick}>좋아요</Button></center>
@@ -174,6 +179,7 @@ class Article extends Component {
                         </Col>
                     </Row>
                 </div>
+
             </div>
         );
     }

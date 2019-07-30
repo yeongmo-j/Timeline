@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { getUser, getToken } from '../authentication';
 import { Modal, Button } from 'antd';
 
+import { getUser, getToken } from '../authentication';
 import CommentForm from './CommentForm';
 import Comment from './Comment';
 
@@ -24,22 +24,21 @@ class CommentModal extends Component {
     this.loadComments()
   };
 
+  //댓글 창 없애주기
   handleOk = e => {
     this.setState({
       visible: false,
     });
   };
-
   handleCancel = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
   };
 
-
   //댓글 불러오기
   loadComments = () => {
+    //http요청
     const requesturl = 'http://localhost:8080/comment/' + this.props.articleID;
     fetch(requesturl, {
       method: 'GET',
@@ -60,19 +59,19 @@ class CommentModal extends Component {
       })
   }
 
-      //새로 입력한 댓글을 리스트의 맨뒤에 넣어주어 렌더링
-      addComment = (comment) => {
-        let comments = this.state.comments
-        comments.push(comment)
-        this.setState({comments : comments})
-    }
+  //새로 입력한 댓글을 리스트의 맨뒤에 넣어주어 렌더링
+  addComment = (comment) => {
+    let comments = this.state.comments
+    comments.push(comment)
+    this.setState({ comments: comments })
+  }
 
-    //삭제한 소식을 state의 리스트에서 삭제해 주어 다시 렌더링
-    deleteComment = (comment) => {
-        let comments = this.state.comments
-        comments.splice(comments.indexOf(comment),1);
-        this.setState({comments : comments})
-    }
+  //삭제한 소식을 state의 리스트에서 삭제해 주어 다시 렌더링
+  deleteComment = (comment) => {
+    let comments = this.state.comments
+    comments.splice(comments.indexOf(comment), 1);
+    this.setState({ comments: comments })
+  }
 
   render() {
     return (
@@ -86,8 +85,8 @@ class CommentModal extends Component {
           width="750px"
           footer={null}
         >
-          <Comment articleID={this.state.articleID} comments={this.state.comments} deleteComment={this.deleteComment}/>
-          <CommentForm loadComments={this.loadComments} articleID={this.state.articleID} addComment={this.addComment}/>
+          <Comment articleID={this.state.articleID} comments={this.state.comments} deleteComment={this.deleteComment} />
+          <CommentForm loadComments={this.loadComments} articleID={this.state.articleID} addComment={this.addComment} />
         </Modal>
       </div>
     );

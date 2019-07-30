@@ -1,6 +1,7 @@
 package com.timeline.api.service;
 
 import com.timeline.api.entity.UserEntity;
+import com.timeline.api.forresponse.UserResponse;
 
 public interface UserService {
 	
@@ -39,4 +40,9 @@ public interface UserService {
 	 * id로 db에 저장된 회원을 찾은 뒤에, 프로필을 변경 해 준다.
 	 */
 	UserEntity changeProfile(UserEntity userEntity);
+	
+	/*
+	 * 원하는 유저의 정보 가져오기
+	 */
+	UserResponse getInfo(long userID);
 }

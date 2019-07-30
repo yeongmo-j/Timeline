@@ -37,6 +37,6 @@ public class GetEdgeEntity implements RequestEdgeEntity{
 		nextStepList.add(nextStep);
 		Map<String, LinkedList<GetEdgeStep>> step = new HashMap<String, LinkedList<GetEdgeStep>>();
 		step.put("step", nextStepList);
-		steps.add(step);
+		steps.addLast(step);
 	}
 }

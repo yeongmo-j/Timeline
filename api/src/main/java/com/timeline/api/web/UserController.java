@@ -6,13 +6,16 @@ import java.util.Map;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.timeline.api.entity.UserEntity;
+import com.timeline.api.forresponse.UserResponse;
 import com.timeline.api.service.JwtService;
 import com.timeline.api.service.UserService;
 
@@ -171,6 +174,22 @@ public class UserController {
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			return null;
+		}
+	}
+	
+	/*
+	 * 유저 정보 불러오기
+	 */
+	@RequestMapping(value="/user/getinfo/{userID}", method=RequestMethod.GET)
+	public String getInfo(@PathVariable long userID, HttpServletResponse response) {
+		try {
+			UserResponse result = userService.getInfo(userID);
+			response.setStatus(HttpServletResponse.SC_OK);
+			return new ObjectMapper().writeValueAsString(result);					
+		} catch (Exception e) {
+			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			e.printStackTrace(System.out);
 			return null;
 		}
 	}

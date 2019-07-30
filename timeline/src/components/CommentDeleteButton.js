@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { getUser, getToken } from '../authentication';
-
 import { message, Popconfirm} from 'antd'
+
+import { getUser, getToken } from '../authentication';
 
 class CommentDeleteButton extends Component {
 
     //댓글 삭제
     confirm = (item) => {    
+        //http요청
         fetch("http://localhost:8080/comment/" + this.props.commentID, {
             method: 'DELETE',
             headers: {
@@ -23,6 +24,8 @@ class CommentDeleteButton extends Component {
                 }
             })
     }
+
+    //취소
     cancel = (e) => {
         console.log(e);
     }
@@ -30,6 +33,7 @@ class CommentDeleteButton extends Component {
     //댓글 삭제 버튼
     deleteButton = () => {
 
+        //댓글쓴이와 현재 유저가 같은사람이면 삭제 버튼을 노출
         if (getUser().userID === this.props.commentUserID) {
             return (
                 <Popconfirm

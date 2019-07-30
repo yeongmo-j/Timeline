@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
+
 import Login from './Login';
 import Register from './Register';
-
 import './LoginAndRegister.css';
 import ForgotPassword from './ForgotPassword';
 

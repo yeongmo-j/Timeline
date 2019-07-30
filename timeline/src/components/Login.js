@@ -11,7 +11,6 @@ class Login extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
                 //요청 양식은 이미 values에 동일하게 맞춰져 있는 상태이므로
                 //따로 가공해줄 필요 없이 바로 http 요청 을 보낸다
                 fetch('http://localhost:8080/login', {
@@ -45,9 +44,10 @@ class Login extends Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <Form onSubmit={this.handleSubmit} className="form">
+                {/* 이메일 폼*/}
                 <Form.Item>
                     {getFieldDecorator('email', {
-                        rules: [{ required: true, message: 'Please input your username!' }],
+                        rules: [{ required: true, message: '이메일을 입력 해 주세요!' }],
                     })(
                         <Input
                             prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -55,9 +55,11 @@ class Login extends Component {
                         />,
                     )}
                 </Form.Item>
+
+                {/* 비밀번호 폼*/}
                 <Form.Item>
                     {getFieldDecorator('password', {
-                        rules: [{ required: true, message: 'Please input your Password!' }],
+                        rules: [{ required: true, message: '비밀번호를 입력 해 주세요!' }],
                     })(
                         <Input
                             prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -66,21 +68,19 @@ class Login extends Component {
                         />,
                     )}
                 </Form.Item>
+
+                {/* 비밀번호 잃어버림, 로그인, 가입 버튼*/}
                 <Form.Item>
-                    {getFieldDecorator('remember', {
-                        valuePropName: 'checked',
-                        initialValue: true,
-                    })(<Checkbox>Remember me</Checkbox>)}
                     <Link to='/login/forgot' className="login-form-forgot">Forgot password</Link>
                     <Button type="primary" htmlType="submit" className="button">
                         Log in
-              </Button>
+                    </Button>
                     Or <Link to="/register">register now!</Link>
                 </Form.Item>
+
             </Form>
         );
     }
-
 }
 
 export default Form.create()(Login);

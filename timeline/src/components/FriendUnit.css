@@ -1,0 +1,19 @@
+.marginTopBottom {
+    margin-top : 10px;
+    margin-bottom : 10px;
+}
+
+.rightAlign{
+    float: right;
+    padding-top : 7px;
+}
+
+.marginLeftRight{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.grayColor {
+    color : gray;
+    font-size: 12px;
+}

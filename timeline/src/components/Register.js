@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, message, Select } from 'antd';
 import { Link } from "react-router-dom";
+
 import { history } from '../History';
 
 const { Option } = Select;
@@ -12,7 +13,6 @@ class Register extends Component {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
                 //회원 가입 정보
                 const registInformation = {
                     email : values.email,
@@ -67,6 +67,8 @@ class Register extends Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <Form onSubmit={this.handleSubmit} className="form">
+
+                {/* 이메일 */}
                 <Form.Item>
                     {getFieldDecorator('email', {
                         rules: [{ required: true, message: '이메일 주소를 입력 해 주세요!' }],
@@ -78,6 +80,7 @@ class Register extends Component {
                     )}
                 </Form.Item>
 
+                {/* 이름 */}
                 <Form.Item>
                     {getFieldDecorator('username', {
                         rules: [{ required: true, message: '이름을 입력 해 주세요!' }],
@@ -88,6 +91,8 @@ class Register extends Component {
                         />,
                     )}
                 </Form.Item>
+
+                {/* 비밀번호1 */}
                 <Form.Item hasFeedback>
                     {getFieldDecorator('password', {
                         rules: [
@@ -103,6 +108,8 @@ class Register extends Component {
                         prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                         placeholder="Password" />)}
                 </Form.Item>
+
+                {/* 비밀번호2 */}
                 <Form.Item hasFeedback>
                     {getFieldDecorator('confirm', {
                         rules: [
@@ -120,6 +127,7 @@ class Register extends Component {
                         onBlur={this.handleConfirmBlur} />)}
                 </Form.Item>
 
+                {/* 비밀번호 초기화 질문 */}
                 <Form.Item hasFeedback>
                     {getFieldDecorator('question', {
                         rules: [{ required: true, message: '비밀번호 초기화 시 사용될 질문을 골라주세요!' }],
@@ -134,6 +142,7 @@ class Register extends Component {
                     )}
                 </Form.Item>
 
+                {/* 비밀번호 초기화 대답 */}
                 <Form.Item>
                     {getFieldDecorator('answer', {
                         rules: [{ required: true, message: '질문에 대한 정답을 입력 해 주세요!' }],
@@ -145,10 +154,11 @@ class Register extends Component {
                     )}
                 </Form.Item>
 
+                {/* 회원가입 버튼 */}
                 <Form.Item>
                     <Button type="primary" htmlType="submit" className="button">
                         Register Now!
-              </Button>
+                    </Button>
                     Or <Link to="/login">login now!</Link>
                 </Form.Item>
             </Form>

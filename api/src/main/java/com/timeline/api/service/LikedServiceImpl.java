@@ -22,7 +22,7 @@ public class LikedServiceImpl implements LikedService{
     HttpFactory factory;
 	
 	@Override
-	public void likeOrUnlike(long articleID, int userID) {
+	public void likeOrUnlike(long articleID, long userID) {
 		boolean liked = this.heOrSheLikesIt(articleID, userID);
 		if (liked) {
 			//좋아요가 존재한다는 의미이므로 취소 : 삭제
@@ -69,7 +69,7 @@ public class LikedServiceImpl implements LikedService{
 	}
 
 	@Override
-	public boolean heOrSheLikesIt(long articleID, int userID) {
+	public boolean heOrSheLikesIt(long articleID, long userID) {
 		//좋아요 눌렀으면 true 아니면 false를 리턴
 		CheckEdgeEntity edge = new CheckEdgeEntity();
 		edge.setDirection("out");

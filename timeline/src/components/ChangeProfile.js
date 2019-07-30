@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Form, Icon, Popover, Button, Upload, Modal, notification } from 'antd';
+import { Form, Icon, Popover, Button, Upload, Modal, message } from 'antd';
+
 import { getUser, getToken } from '../authentication';
 
-
+//사진 업로드
 function getBase64(file) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -23,10 +24,13 @@ class ChangeProfile extends Component {
         visible: false,
     };
 
+    //유저아이디
     userID = getUser().userID
 
+    //사진 취소 
     handleCancel = () => this.setState({ previewVisible: false });
 
+    //프리뷰
     handlePreview = async file => {
         if (!file.url && !file.preview) {
             file.preview = await getBase64(file.originFileObj);
@@ -38,21 +42,19 @@ class ChangeProfile extends Component {
         });
     };
 
+    //파일 추가되었을 때
     handleChange = ({ fileList }) => this.setState({ fileList });
 
+    //업로드 버튼 눌렀을 때
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
-                console.log(this.state.fileList) //여기서 각 원소의 response.name이 파일이름이고, 이를 db에 저장시켜주면 됨
-                console.log(this.state.fileList[0].response.name)
-
                 let user = {
                     'id': this.userID,
                     'profile': this.state.fileList[0].response.name
                 }
-
+                //http요청
                 fetch('http://localhost:8080/user/profile', {
                     method: 'PUT',
                     headers: {
@@ -62,8 +64,8 @@ class ChangeProfile extends Component {
                     body: JSON.stringify(user)
                 }).then(response => {
                     if (response.status === 200) {
-                        //글올리기 성공
-                        console.log("성공")
+                        //사진 업로드 성공
+                        message.success('프로필 사진 업로드에 성공하였습니다.')
                         this.props.form.resetFields()
                         this.hide()
                     } else {
@@ -74,12 +76,14 @@ class ChangeProfile extends Component {
         });
     };
 
+    //폼 없애기
     hide = () => {
         this.setState({
             visible: false,
         });
     };
 
+    //폼 보이기
     handleVisibleChange = visible => {
         this.setState({ visible });
     };
@@ -88,6 +92,7 @@ class ChangeProfile extends Component {
         const { previewVisible, previewImage, fileList } = this.state;
         const { getFieldDecorator } = this.props.form;
 
+        //업로드 버튼
         const uploadButton = (
             <div>
                 <Icon type="plus" />
@@ -96,11 +101,15 @@ class ChangeProfile extends Component {
         );
 
         return (
+
             <Popover
                 content={
-
                     <div className="articleform" id='box'>
+
+                        {/* 폼 */}
                         <Form onSubmit={this.handleSubmit} className="article-form">
+
+                            {/* 사진 업로드 폼 */}
                             <Form.Item>
                                 {getFieldDecorator('photo', {
                                     rules: [{ required: false }],
@@ -122,21 +131,27 @@ class ChangeProfile extends Component {
                                     </div>
                                 )}
                             </Form.Item>
+
+                            {/* 버튼 */}
                             <Form.Item>
-                                <center><Button type="primary" htmlType="submit" className="article-form-button" >
-                                    Upload
-                    </Button></center>
+                                <center>
+                                    <Button type="primary" htmlType="submit" className="article-form-button" >
+                                        Upload
+                                    </Button>
+                                </center>
                             </Form.Item>
+
                         </Form>
                     </div>
 
                 }
-                title="Title"
+                title="프로필 사진 변경"
                 trigger="click"
                 visible={this.state.visible}
                 onVisibleChange={this.handleVisibleChange}
             >
-                <Button type="primary">Click me</Button>
+                {/* 이 폼을 열기 위한 버튼 */}
+                <Button type="default" icon="smile" shape="circle" />
             </Popover>
 
         );

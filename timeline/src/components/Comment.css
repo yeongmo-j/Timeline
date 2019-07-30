@@ -8,3 +8,8 @@
     font-size: 11px;
     color : gray;
 }
+
+.rightAlign {
+    float: right;
+    padding-right : 10px;
+}

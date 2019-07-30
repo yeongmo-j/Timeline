@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
 import {history} from './History';
 import { Router, Route, Switch } from "react-router-dom";
-import { PrivateRoute } from './PrivateRoute';
 
+import { PrivateRoute } from './PrivateRoute';
 import LoginAndRegister from './components/LoginAndRegister';
 import Main from './components/Main';
-
-//material ui font
-import 'typeface-roboto';
 
 import './App.css';
 

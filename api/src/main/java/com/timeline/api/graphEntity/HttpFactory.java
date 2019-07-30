@@ -38,7 +38,9 @@ public class HttpFactory {
     
     private final String likedLabel = "liked2";
     
-    private final String fiendLabel = "friend2";
+    private final String friendLabel = "friend2";
+    
+    private final String friendRequestLabel = "friendRequest";
     
     private final long maximumTimeStamp = 9999999999999l;
     

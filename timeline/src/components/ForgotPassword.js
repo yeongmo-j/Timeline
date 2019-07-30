@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, message } from 'antd';
 import { Link } from "react-router-dom";
+
 import { history } from '../History';
 
-
 class ForgotPassword extends Component {
+
+    //visibleEmail : 이메일 입력 폼
+    //visibieQuestion : 이메일이 성공적으로 확인되었을 때, 질문에 대한 답을 입력하는 폼
+    //visibleReset : 비밀번호 리셋 질문이 성공하였을 때 리셋하기 위한 폼
     state = {
         visibleEmail: true,
         visibleQuestion: false,
@@ -12,12 +16,14 @@ class ForgotPassword extends Component {
         question :"",
         email:""
     }
+
     //이메일 입력 하고 버튼을 눌렀을 때 : 비밀번호 초기화 질문을 불러와서 물어본다
     emailSubmit = e => {
         e.preventDefault();
+        //이메일 주소 입력해서 이메일을 가진 회원이 존재하는지 확인. 확인 되면, 비밀번호 질문을 불러온다
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
+                //http요청
                 fetch('http://localhost:8080/login/forgot/question', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -27,6 +33,7 @@ class ForgotPassword extends Component {
                         const result = response.status;
                         if (result === 200) {
                             //이메일이 존재 할 경우 성공하였을 경우
+                            //질문을 받아오고, 대답을 입력하는 폼을 보여준다. 
                             response.json().then(response => {
                                 console.log(response)
                                 this.setState({
@@ -46,6 +53,8 @@ class ForgotPassword extends Component {
             }
         });
     };
+
+    //이메일 주소 입력하는 폼
     emailForm = () => {
         const { getFieldDecorator } = this.props.form;
         return (
@@ -54,7 +63,7 @@ class ForgotPassword extends Component {
                     <Form.Item>
                         이메일 주소를 입력 해 주세요
                         {getFieldDecorator('email', {
-                            rules: [{ required: true, message: 'Please input your email address!' }],
+                            rules: [{ required: true, message: '이메일 주소를 입력 해 주세요!' }],
                         })(
                             <Input
                                 prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -72,12 +81,13 @@ class ForgotPassword extends Component {
             </span>
         );
     }
+
     //질문에 대한 답 입력 하고 버튼을 눌렀을 때 : 맞다면 비밀번호 초기화 폼을 불러온다
     questionSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
+                //http요청
                 fetch('http://localhost:8080/login/forgot/answer', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -89,7 +99,7 @@ class ForgotPassword extends Component {
                     .then(response => {
                         const result = response.status;
                         if (result === 200) {
-                            //성공하였을 경우
+                            //성공하였을 경우 : 비밀번호 초기화 폼을 보여준다
                             this.setState({
                                 visibleQuestion : false,
                                 visibleReset : true
@@ -104,6 +114,8 @@ class ForgotPassword extends Component {
             }
         });
     };
+
+    //질문에 대한 답을 입력하는 폼
     questionForm = () => {
         const { getFieldDecorator } = this.props.form;
         return (
@@ -112,7 +124,7 @@ class ForgotPassword extends Component {
                     <Form.Item>
                         {this.state.question}
                         {getFieldDecorator('answer', {
-                            rules: [{ required: true, message: 'Please input your answer!' }],
+                            rules: [{ required: true, message: '대답을 입력 해 주세요!' }],
                         })(
                             <Input
                                 prefix={<Icon type="question" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -149,8 +161,6 @@ class ForgotPassword extends Component {
         callback();
     };
 
-
-
     //비밀번호 초기화
     resetSubmit = e => {
         e.preventDefault();
@@ -179,6 +189,8 @@ class ForgotPassword extends Component {
             }
         });
     };
+
+    //비밀번호 초기화 폼
     resetForm = () => {
         const { getFieldDecorator } = this.props.form;
         return (
@@ -226,9 +238,7 @@ class ForgotPassword extends Component {
         );
     }
 
-
     render() {
-
         return (
             <div>
                 {this.state.visibleEmail && this.emailForm()}
@@ -239,7 +249,4 @@ class ForgotPassword extends Component {
     }
 }
 
-
 export default Form.create()(ForgotPassword);
-
-//해야할일 : 비밀번호 찾기 페이지, 유저 프로필 등록 페이지, 홈 페이지

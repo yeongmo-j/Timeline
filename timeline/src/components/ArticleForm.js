@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
-import { Form, Icon, Input, Button, Upload, Modal, notification } from 'antd';
+import { Form, Icon, Input, Button, Upload, Modal, message } from 'antd';
+
 import { getUser, getToken } from '../authentication';
 
 import './ArticleForm.css';
-
-const openNotificationWithIcon = type => {
-    notification[type]({
-      message: '소식 업로드 성공!',
-      description:
-        '당신의 소식이 친구들에게 공유 되었어요!',
-    });
-  };  
 
 function getBase64(file) {
     return new Promise((resolve, reject) => {
@@ -29,12 +22,13 @@ class ArticleForm extends Component {
         previewVisible: false,
         previewImage: '',
         fileList: [
-
         ],
     };
 
+    //유저아이디
     userID = getUser().userID
 
+    //사진 업로드용
     handleCancel = () => this.setState({ previewVisible: false });
 
     handlePreview = async file => {
@@ -50,27 +44,28 @@ class ArticleForm extends Component {
 
     handleChange = ({ fileList }) => this.setState({ fileList });
 
-    //여기위까지가 사진 폼 
 
+    //글쓰기 버튼 눌렀을 떄
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
-                console.log(this.state.fileList) //여기서 각 원소의 response.name이 파일이름이고, 이를 db에 저장시켜주면 됨
+                //파일명을 /로 묶어주기
+                //db에는 파일명이 저장됨. 파일명의 리스트를 만들어서 그들 사이를 /로 조인해줌. 나중에 split해서 쓸 것임
                 let fileList = []
                 this.state.fileList.map(file => {
                     fileList.push(file.response.name)
                 })
                 let fileNames = fileList.join('/')
-                //db에는 파일명이 저장됨. 파일명의 리스트를 만들어서 그들 사이를 /로 조인해줌. 나중에 split해서 쓸 것임
 
+                //폼 묶어주기
                 let article = {
                     'userID': this.userID,
                     'content': values.content.replace(/\n/gi,'<br>'), //줄바꿈 표시를 <br/>로 바꿔줌
                     'photo': fileNames
                 }
 
+                //요청
                 fetch('http://localhost:8080/article', {
                     method: 'POST',
                     headers: {
@@ -82,10 +77,10 @@ class ArticleForm extends Component {
                     if (response.status === 200) {
                         //글올리기 성공
                         response.json().then( rsp => {
-                            console.log(rsp)
-                            openNotificationWithIcon('success')
+                            message.success("소식이 성공적으로 공유 되었습니다.")
                             this.props.form.resetFields()                
-                            this.props.addArticle(rsp)    
+                            this.props.addArticle(rsp)
+                            this.handleCancel();
                         })
                     } else {
                         console.log("글올리기 실패")
@@ -97,8 +92,7 @@ class ArticleForm extends Component {
 
     render() {
 
-        //여기부터 사진폼
-
+        //사진 업로드용
         const { previewVisible, previewImage, fileList } = this.state;
         const uploadButton = (
             <div>
@@ -106,18 +100,22 @@ class ArticleForm extends Component {
                 <div className="ant-upload-text">Upload</div>
             </div>
         );
-
-        //여기까지가 사진 폼 
-
+        
         const { getFieldDecorator } = this.props.form;
 
         return (
             <div className="articleform" id='box'>
+
+                {/* 타이틀 */}
                 <center>당신의 소식을 친구들에게 알려주세요!</center> <br/>
+
+                {/* 폼 */}
                 <Form onSubmit={this.handleSubmit} className="article-form">
+
+                    {/* 글 작성 폼*/}
                     <Form.Item>
                         {getFieldDecorator('content', {
-                            rules: [{ required: true, message: 'Please input your story!' }],
+                            rules: [{ required: true, message: '한마디를 작성 해 주세요!' }],
                         })(
                             <TextArea
                                 placeholder="오늘 무슨 일이 일어났나요?"
@@ -125,6 +123,8 @@ class ArticleForm extends Component {
                             />,
                         )}
                     </Form.Item>
+
+                    {/* 사진 업로드 폼 */}
                     <Form.Item>
                         {getFieldDecorator('photo', {
                             rules: [{ required: false }],
@@ -146,12 +146,18 @@ class ArticleForm extends Component {
                             </div>
                         )}
                     </Form.Item>
+
+                    {/* 업로드 버튼 */}
                     <Form.Item>
-                        <center><Button type="primary" htmlType="submit" className="article-form-button" >
-                            Upload
-                    </Button></center>
+                        <center>
+                            <Button type="primary" htmlType="submit" className="article-form-button" >
+                                Upload
+                            </Button>
+                        </center>
                     </Form.Item>
+
                 </Form>
+
             </div>
         );
     }

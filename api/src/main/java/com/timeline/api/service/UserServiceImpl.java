@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.timeline.api.entity.FriendRelationshipEntity;
 import com.timeline.api.entity.UserEntity;
+import com.timeline.api.forresponse.UserResponse;
 import com.timeline.api.graphEntity.HttpFactory;
 import com.timeline.api.repository.UserRepository;
 
@@ -26,6 +27,9 @@ public class UserServiceImpl implements UserService{
 		
 	@Override
 	public UserEntity registUser(UserEntity userEntity) {		
+		
+		long newUserId = factory.getAutoIncreasedID();
+		
 		boolean available = userRepository.existsByEmail(userEntity.getEmail()); //이메일이 존재하면 true가 리턴됨
 		if (available) {
 			//이미 존재하는 이름이므로 실패
@@ -33,13 +37,13 @@ public class UserServiceImpl implements UserService{
 		}
 		userEntity.setPassword(passwordEncoder.encode(userEntity.getPassword())); //패스워드 암호화
 		userEntity.setAnswer(passwordEncoder.encode(userEntity.getAnswer())); //비밀번호 초기화 질문 암호화
-		userEntity.setId((int)factory.getAutoIncreasedID());
+		userEntity.setId(newUserId);
 		UserEntity savedUser = userRepository.save(userEntity); //저장완료
 		
 		//자기자신을 친구에 넣어놓음
 		FriendRelationshipEntity friendRelationshipEntity = new FriendRelationshipEntity();
-		friendRelationshipEntity.setUserID1(savedUser.getId());
-		friendRelationshipEntity.setUserID2(savedUser.getId());
+		friendRelationshipEntity.setUserID1(newUserId);
+		friendRelationshipEntity.setUserID2(newUserId);
 		friendRelationshipService.insert(friendRelationshipEntity);
 		
 		//저장된 Entity 리턴
@@ -103,6 +107,17 @@ public class UserServiceImpl implements UserService{
 		findedEntity.setProfile(userEntity.getProfile());
 		userRepository.save(findedEntity);
 		return findedEntity;
+	}
+
+	@Override
+	public UserResponse getInfo(long userID) {
+		UserEntity user = userRepository.findById(userID);
+		UserResponse response = new UserResponse();
+		response.setId(userID);
+		response.setEmail(user.getEmail());
+		response.setProfile(user.getProfile());
+		response.setUsername(user.getUsername());
+		return response;
 	}
 	
 }

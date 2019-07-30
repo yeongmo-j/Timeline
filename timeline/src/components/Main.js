@@ -1,39 +1,25 @@
 import React, { Component } from 'react';
-import { Layout, Button, Row, Col } from 'antd';
-import Timeline from './Timeline';
-import { logout, getUser } from '../authentication';
-import { history } from '../History';
-import PrimarySearchAppBar from './Appbar';
-import Home from './Home';
+import { Layout, Row, Col } from 'antd';
 import { Route, Switch } from "react-router-dom";
-import ChangeProfile from './ChangeProfile';
-import Friend from './Friend';
 
+import Friend from './Friend';
+import Timeline from './Timeline';
+import Header from './Header';
+import Home from './Home';
 
 import './Main.css';
 
-const { Header, Footer, Content } = Layout;
+const { Footer, Content } = Layout;
 
 class Main extends Component {
-
-    logOut = () => {
-        logout()
-        history.push('/login')
-    }
-
-    goMain = () => {
-        history.push('/main')
-    }
 
     render() {
         return (
             <div>
                 <Layout>
-                    <PrimarySearchAppBar/>
-                    <Content className='MarginTop'>
-                        <Button type="danger" onClick={this.logOut} >로그아웃</Button>
-                        <Button type="primary" onClick={this.goMain} >Main</Button>
-                        <ChangeProfile />
+                    <Header/>
+                    <Content >
+                        <div className='MarginTop'>
                         <Row>
                             <Col span={2}></Col>
                             <Col span={12}>
@@ -46,6 +32,7 @@ class Main extends Component {
                             <Col span={7}><Friend /></Col>
                             <Col span={2}></Col>
                         </Row>
+                        </div>
                     </Content>
                     <Footer>Footer</Footer>
                 </Layout>

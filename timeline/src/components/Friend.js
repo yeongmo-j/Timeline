@@ -1,16 +1,26 @@
 import React, {Component} from 'react';
 
+import FriendRequest from './FriendRequest';
+import FriendSuggest from './FriendSuggest';
+import FriendSearch from './FriendSerch';
+
 import './Box.css';
 
-
-
+//친구요청, 친구추천, 친구검색
 class Friend extends Component {
 
     render() {
         return (
-            <div id='box' >
-                <div><h1>친구추천 컴포넌트</h1></div>
-                <div><h1>친구검색 컴포넌트</h1></div>
+            <div>
+                <div id='box' >
+                    <FriendRequest />
+                </div>
+                <div id='box' >
+                    <FriendSuggest />
+                </div>
+                <div id='box' >
+                    <FriendSearch />
+                </div>
             </div>
         );
     }

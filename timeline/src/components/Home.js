@@ -29,7 +29,7 @@ class Home extends Component {
 
     //현재 페이지 내에서 파라미터만 변경되었을 경우 (소식 모아보기 -> 다른사람 소식 모아보기)
     componentWillReceiveProps(newProps){
-        if (this.props.match.params != newProps.match.params){
+        if (this.props.match.params !== newProps.match.params){
             const { userID } = newProps.match.params;
             this.loadingUser(userID);
             this.loadingArticles(userID)
@@ -115,7 +115,7 @@ class Home extends Component {
         const { userID } = this.props.match.params
         if (getUser().userID == userID) {
             return null;
-        } else if (this.state.relationship == 1) {
+        } else if (this.state.relationship === 1) {
             //이미 친구인 상태
             return (
                 <Popconfirm
@@ -129,12 +129,12 @@ class Home extends Component {
                     <Button type="danger" size="small" ghost>친구끊기</Button>
                 </Popconfirm>
             )
-        } else if (this.state.relationship == 2) {
+        } else if (this.state.relationship === 2) {
             //이미 친구요청 보낸  상태
             return (
                 <Button size="small" disabled>이미신청했음</Button>
             )
-        } else if (this.state.relationship == 3) {
+        } else if (this.state.relationship === 3) {
             //이미 친구요청 받은 상태
             return (
                 <Button size="small" disabled>친구요청받음</Button>
@@ -156,7 +156,7 @@ class Home extends Component {
             }
         })
             .then(response => {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     message.success("친구 요청을 보냈습니다!")
                     this.setState({relationship : 2})
                 } else {

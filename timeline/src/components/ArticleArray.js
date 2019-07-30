@@ -3,10 +3,6 @@ import Article from './Article';
 
 class ArticleArray extends Component {
 
-    constructor(props){
-        super(props)
-    }
-
     shouldComponentUpdate(){
         return true;
     }

@@ -34,7 +34,11 @@ class Main extends Component {
                         </Row>
                         </div>
                     </Content>
-                    <Footer>Footer</Footer>
+                    <Footer>
+                        <div className='footer'>
+                            Copyright Jung Yeongmo All right reserved.
+                        </div>
+                    </Footer>
                 </Layout>
             </div>
         );

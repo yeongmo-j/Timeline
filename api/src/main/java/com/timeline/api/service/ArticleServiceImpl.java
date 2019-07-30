@@ -22,7 +22,7 @@ import com.timeline.api.graphEntity.RequestEdgeEntity;
 import com.timeline.api.repository.CommentRepository;
 import com.timeline.api.repository.UserRepository;
 
-
+@SuppressWarnings("unchecked")
 @Service
 public class ArticleServiceImpl implements ArticleService {
 	    
@@ -80,7 +80,6 @@ public class ArticleServiceImpl implements ArticleService {
 		
 		//새로운 아이디 생성(이부분 바꿔줄 것)
 		long newArticleID = factory.getAutoIncreasedID();
-		System.out.println("이번에 글 아이디 : " + newArticleID);
 		
 		//props 만들어주기 
 		PostedEdgeProps props = new PostedEdgeProps();
@@ -99,7 +98,7 @@ public class ArticleServiceImpl implements ArticleService {
 		edge.setProps(props);
 		
 		//요청 보내기
-		Object response = factory.getRestTemplate().postForObject(factory.getInsertEdgeUrl(), edge, String.class);
+		factory.getRestTemplate().postForObject(factory.getInsertEdgeUrl(), edge, String.class);
 		
 		// 방금 작성한 글 정보 가져오기 
 		List<CheckEdgeEntity> edgeList = new LinkedList<>();
@@ -140,9 +139,7 @@ public class ArticleServiceImpl implements ArticleService {
 		
 		Map<String, Object>response = factory.getRestTemplate().postForObject(factory.getGetEdgesUrl(), getEdgeEntity, Map.class);
 		List<Map<String, Object>> results = (List<Map<String, Object>>) response.get("results");
-		
-		System.out.println(results.toString());
-		
+				
 		int size = results.size();
 		ArticleResponse[] formmedArticleList = new ArticleResponse[size];
 
@@ -169,9 +166,7 @@ public class ArticleServiceImpl implements ArticleService {
 		deleteEdgeEntity.setTimestamp(factory.getTimeStamp());
 		deleteEdgeEntity.setFrom(userID);
 		deleteEdgeEntity.setTo(articleID);
-		
-		System.out.println(deleteEdgeEntity.toString());
-		
+				
 		List<RequestEdgeEntity> edgeList = new LinkedList<>();
 		edgeList.add(deleteEdgeEntity);
 		

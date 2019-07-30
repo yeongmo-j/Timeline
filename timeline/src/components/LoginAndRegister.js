@@ -13,13 +13,13 @@ class LoginAndRegister extends Component {
             <div>
                 <div className='login' >
                     <h1 id='loginHeadline'>TimeLine</h1>
-                    <p style={{ margin: '10px 0' }}>
+                    <div style={{ margin: '10px 0' }}>
                         <Switch >
                             <Route path='/login' exact component={Login} />
                             <Route path='/register' excat component={Register} />
                             <Route path='/login/forgot' exact component={ForgotPassword} />
                         </Switch>
-                    </p>
+                    </div>
                 </div>
             </div>
         );

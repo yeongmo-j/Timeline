@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Avatar, Icon } from 'antd';
+import { Button, Avatar } from 'antd';
 import { history } from '../History';
 import { logout, getUser, getToken } from '../authentication';
 import { Link } from "react-router-dom";
@@ -56,7 +56,7 @@ class Header extends Component {
 
     //프로필 : 사진 + 이름으로 구성
     getProfile = () => {
-        if (this.state.user == {}) {
+        if (this.state.user === {}) {
             return null;
         } else {
             return (

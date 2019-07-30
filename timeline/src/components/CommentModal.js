@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'antd';
 
-import { getUser, getToken } from '../authentication';
+import { getToken } from '../authentication';
 import CommentForm from './CommentForm';
 import Comment from './Comment';
 
@@ -11,10 +11,6 @@ class CommentModal extends Component {
     articleID: this.props.articleID,
     comments: []
   };
-
-  constructor(props) {
-    super(props)
-  }
 
   //버튼 눌렀을 때, visible state를 바꿔 주어 렌더링 한다음, 댓글을 불러와서 state에 저장
   showModal = () => {

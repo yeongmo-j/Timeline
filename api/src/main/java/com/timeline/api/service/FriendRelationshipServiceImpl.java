@@ -42,13 +42,11 @@ public class FriendRelationshipServiceImpl implements FriendRelationshipService{
 
 		List<RequestEdgeEntity> edgeList = new LinkedList<>();
 		edgeList.add(insertEdgeEntity);
-		System.out.println(insertEdgeEntity.toString());
 		factory.getRestTemplate().postForObject(factory.getInsertEdgeUrl(), edgeList, List.class);
 		
 		if (friendRelationshipEntity.getUserID1() != friendRelationshipEntity.getUserID2()) {
 			insertEdgeEntity.setFrom(friendRelationshipEntity.getUserID2());
 			insertEdgeEntity.setTo(friendRelationshipEntity.getUserID1());
-			System.out.println(insertEdgeEntity.toString());
 			factory.getRestTemplate().postForObject(factory.getInsertEdgeUrl(), edgeList, List.class);
 		}
 	}
@@ -238,7 +236,6 @@ public class FriendRelationshipServiceImpl implements FriendRelationshipService{
 
 	@Override
 	public UserResponse[] searchFriend(String userName) {
-		System.out.println(userName);
 		List<UserEntity> findedList = userRepository.findByUserName(userName);
 		if (findedList.isEmpty())
 			return null;

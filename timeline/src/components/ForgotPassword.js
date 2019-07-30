@@ -35,6 +35,7 @@ class ForgotPassword extends Component {
                             //이메일이 존재 할 경우 성공하였을 경우
                             //질문을 받아오고, 대답을 입력하는 폼을 보여준다. 
                             response.json().then(response => {
+                                console.log("@@@@@@");
                                 console.log(response)
                                 this.setState({
                                     question : response.question,

@@ -53,6 +53,7 @@ public class JwtServiceImpl implements JwtService {
 	@Override
 	public boolean checkJwt(String jwt) throws Exception {
 		try {
+			@SuppressWarnings("unused")
 			Claims claims = Jwts.parser().setSigningKey(DatatypeConverter.parseBase64Binary(SECRETKEY))
 					.parseClaimsJws(jwt).getBody(); //수행 되면 정상
 			return true;

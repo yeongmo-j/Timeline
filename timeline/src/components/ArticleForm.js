@@ -53,9 +53,7 @@ class ArticleForm extends Component {
                 //파일명을 /로 묶어주기
                 //db에는 파일명이 저장됨. 파일명의 리스트를 만들어서 그들 사이를 /로 조인해줌. 나중에 split해서 쓸 것임
                 let fileList = []
-                this.state.fileList.map(file => {
-                    fileList.push(file.response.name)
-                })
+                this.state.fileList.map(file => fileList.push(file.response.name) )
                 let fileNames = fileList.join('/')
 
                 //폼 묶어주기

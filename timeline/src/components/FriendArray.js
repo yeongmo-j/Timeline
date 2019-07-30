@@ -4,10 +4,6 @@ import FriendUnit from './FriendUnit';
 
 class FriendArray extends Component {
 
-    constructor(props){
-        super(props)
-    }
-
     shouldComponentUpdate(){
         return true;
     }

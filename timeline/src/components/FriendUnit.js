@@ -13,7 +13,6 @@ class FriendUnit extends Component {
         relationship: 4
     }
 
-
     constructor(props) {
         super(props)
 
@@ -58,9 +57,9 @@ class FriendUnit extends Component {
             )
         } else {
             //자기자신일 경우 아무 버튼 노출 안함
-            if (getUser().userID == this.props.friend.id) {
+            if (getUser().userID === this.props.friend.id) {
                 return null;
-            } else if (this.state.relationship == 1) {
+            } else if (this.state.relationship === 1) {
                 //이미 친구인 상태
                 return (
                     <Popconfirm
@@ -73,12 +72,12 @@ class FriendUnit extends Component {
                         <Button type="danger" size="small" ghost>친구끊기</Button>
                     </Popconfirm>
                 )
-            } else if (this.state.relationship == 2) {
+            } else if (this.state.relationship === 2) {
                 //이미 친구요청 보낸  상태
                 return (
                     <Button size="small" disabled>이미신청했음</Button>
                 )
-            } else if (this.state.relationship == 3) {
+            } else if (this.state.relationship === 3) {
                 //이미 친구요청 받은 상태
                 return (
                     <Button size="small" disabled>친구요청받음</Button>
@@ -126,7 +125,7 @@ class FriendUnit extends Component {
             }
         })
             .then(response => {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     message.success("친구 요청을 보냈습니다!")
                     this.setState({ relationship: 2 })
                 } else {
@@ -146,7 +145,7 @@ class FriendUnit extends Component {
             }
         })
             .then(response => {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     message.success("지금부터 두분은 친구사입니다!")
                     this.deleteUnit();
                 } else {
@@ -165,7 +164,7 @@ class FriendUnit extends Component {
             }
         })
             .then(response => {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     message.success("친구 신청을 거절 하였습니다.")
                     this.deleteUnit();
                 } else {
@@ -182,7 +181,7 @@ class FriendUnit extends Component {
 
     render() {
         const profile = this.props.friend.profile;
-        const email = this.props.friend.email;
+        //const email = this.props.friend.email;
         const userID = this.props.friend.id;
         const username = this.props.friend.username;
         const goToHome = '/home/' + userID;

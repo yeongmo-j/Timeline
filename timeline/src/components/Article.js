@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Avatar, Icon, Row, Col, Button, Popconfirm, notification, message } from 'antd';
+import { Avatar, Icon, Row, Col, Button, Popconfirm, message } from 'antd';
 import FbImageLibrary from 'react-fb-image-grid'
 
 import CommentModal from './CommentModal';
@@ -41,7 +41,7 @@ class Article extends Component {
                 'token': getToken()
             }
         })
-        if (this.state.liked == "true") {
+        if (this.state.liked === "true") {
             //좋아요 취소
             this.setState({
                 like: this.state.like - 1,
@@ -58,7 +58,7 @@ class Article extends Component {
 
     //소식에 등록되어 있는 여러개의 사진 받아와서 FbImageLibrary로 출력
     getPhoto = (photoArr) => {
-        if (photoArr == null || photoArr == [] || photoArr == "") {
+        if (photoArr === null || photoArr === [] || photoArr == "") {
             return null;
         }
         let result = []
@@ -68,7 +68,7 @@ class Article extends Component {
 
     //프로필 사진을 받아오기
     getOnePhoto = (fileName, username) => {
-        if (fileName === "" || fileName == null)
+        if (fileName === "" || fileName === null)
             return <Avatar size='large'>{username}</Avatar>
         else
             return <Avatar size='large' src={'http://localhost:8080/photo/download?filename=' + fileName} />
@@ -89,7 +89,7 @@ class Article extends Component {
             }
         })
             .then(response => {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     message.success("소식이 삭제 되었습니다.")
                     this.props.deleteArticle(this.props.article)
                 } else {
@@ -105,7 +105,7 @@ class Article extends Component {
 
     //소식 삭제 버튼
     deleteButton = (userID, articleUserID) => {
-        if (userID == articleUserID) {
+        if (userID === articleUserID) {
             return (
                 <Popconfirm
                     title="이 소식을 삭제하시겠습니까?"
@@ -114,7 +114,7 @@ class Article extends Component {
                     okText="Yes"
                     cancelText="No"
                 >
-                    <a href="#">X</a>
+                    <Button type='default' shape='circle' size='small'>X</Button>
                 </Popconfirm>
             )
         } else {
@@ -139,7 +139,7 @@ class Article extends Component {
                     </div>
                     {/* 제목 */}
                     <div className='inline title marginLeftRight'>
-                        <Link onClick={this.clickName} ><b>{this.state.articleUsername}</b></Link>
+                        <Link to='#' onClick={this.clickName} ><b>{this.state.articleUsername}</b></Link>
                     </div>
                     {/* 삭제표시 */}
                     <div className='inline rightAlign'>
@@ -172,7 +172,7 @@ class Article extends Component {
                 <div className='marginTopBottom'>
                     <Row>
                         <Col span={12}>
-                            <center><Button type={this.state.liked == "true" ? "primary" : "default"} icon="like" onClick={this.likeClick}>좋아요</Button></center>
+                            <center><Button type={this.state.liked === "true" ? "primary" : "default"} icon="like" onClick={this.likeClick}>좋아요</Button></center>
                         </Col>
                         <Col span={12}>
                             <center><CommentModal articleID={this.state.articleID} /></center>

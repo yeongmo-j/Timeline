@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Avatar} from 'antd';
 
 import { getUser, getToken } from '../authentication';
 import FriendArray from './FriendArray';
@@ -51,7 +50,7 @@ class FriendRequest extends Component {
 
     //친구 리스트가 있으면, 리스트를 분배해주는 array 컴포넌트를 리턴
     getArray = () => {
-        if (this.state.requestList== null || this.state.requestList==[]){
+        if (this.state.requestList=== null || this.state.requestList===[]){
             return (<div className='marginTopBottom grayColor'>친구 요청이 없습니다.</div>);
         } else {
             return (<FriendArray friends={this.state.requestList} from="request" deleteArray={this.deleteArray}/>);

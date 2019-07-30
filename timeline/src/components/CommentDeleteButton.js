@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { message, Popconfirm} from 'antd'
+import { message, Popconfirm, Button} from 'antd'
 
 import { getUser, getToken } from '../authentication';
 
@@ -15,7 +15,7 @@ class CommentDeleteButton extends Component {
             }
         })
             .then(response => {
-                if (response.status == 200) {
+                if (response.status === 200) {
                     //댓글 삭제 처리
                     this.props.deleteComment(this.props.comment);
                     message.success('댓글 삭제가 완료 되었습니다!');
@@ -43,7 +43,7 @@ class CommentDeleteButton extends Component {
                     okText="Yes"
                     cancelText="No"
                 >
-                    <a href="#">X</a>
+                    <Button type='default' shape='circle' size='small'>X</Button>
                 </Popconfirm>
             );
         } else {

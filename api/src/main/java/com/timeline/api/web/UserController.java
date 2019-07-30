@@ -114,7 +114,7 @@ public class UserController {
 				return null;
 			}
 			response.setStatus(HttpServletResponse.SC_OK);
-			return new Gson().toJson(onlyQuestionEntity);
+			return new ObjectMapper().writeValueAsString(onlyQuestionEntity);
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
 			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);

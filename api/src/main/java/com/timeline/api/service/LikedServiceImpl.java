@@ -15,6 +15,8 @@ import com.timeline.api.graphEntity.HttpFactory;
 import com.timeline.api.graphEntity.InsertEdgeEntity;
 import com.timeline.api.graphEntity.RequestEdgeEntity;
 
+
+@SuppressWarnings("unchecked")
 @Service
 public class LikedServiceImpl implements LikedService{
 
@@ -34,7 +36,6 @@ public class LikedServiceImpl implements LikedService{
 			
 			List<RequestEdgeEntity> edgeList = new LinkedList<>();
 			edgeList.add(deleteEdgeEntity);
-			System.out.println("delete Like : " +deleteEdgeEntity.toString());
 			factory.getRestTemplate().postForObject(factory.getDeleteEdgeUrl(), edgeList, List.class);
 			
 		} else {
@@ -78,6 +79,7 @@ public class LikedServiceImpl implements LikedService{
 		edge.setTo(articleID);
 		List<CheckEdgeEntity> edgeList = new LinkedList<>();
 		edgeList.add(edge);
+		@SuppressWarnings("rawtypes")
 		List response = factory.getRestTemplate().postForObject(factory.getCheckEdgeUrl(), edgeList, List.class);
 		if (response.isEmpty())
 			return false;

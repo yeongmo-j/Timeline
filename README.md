@@ -1,5 +1,5 @@
 # Timeline (What is it?)
-This is an application that is kind of SNS, which contains the feature of make a friend relationship, share my post, gathering friends' posts, and react with it through comment it or like it.  
+This is an application that is kind of SNS, which contains the feature of make a friend relationship, share my post(included with photoes), gathering friends' posts, and react with it through comment it or like it.  
 
 This project is mainly consist of some open source framework 
 * Spring boot
@@ -25,8 +25,10 @@ This is the directory's desciption
 ```
 And this is the way to start it
 > **Back-end (Spring boot)**  
-여기다가 스프링 부트 시작하는 법
-  
+(for development mode)
+`cd api/target`  
+`java -jar api-0.0.1-SNAPSHOT.jar`
+
 > **Front-end (React)**  
 (for development mode)  
 `cd timeline`  

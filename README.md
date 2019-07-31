@@ -66,7 +66,7 @@ check [S2Graph official document](https://steamshon.gitbooks.io/s2graph-book/con
 [Click!](http://yeongmoj.timeline.s3-website.ap-northeast-2.amazonaws.com)
 
 # Licence
-MIT
+[MIT](https://github.com/yeongmo-j/Timeline/blob/master/LICENSE.txt)
   
 # Resources
 * [Spring boot](https://github.com/spring-projects/spring-boot) - [Apache License 2.0](https://github.com/spring-projects/spring-boot/blob/master/LICENSE.txt)

@@ -1,6 +1,9 @@
 
 # Created by https://www.gitignore.io/api/scala,intellij,sbt,vagrant,playframework
 
+# temp
+apache-s2graph-0.2.0-incubating-bin.tar.gz
+
 ### Scala ###
 *.class
 *.log

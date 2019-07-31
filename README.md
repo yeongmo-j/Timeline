@@ -63,4 +63,10 @@ MIT
 * [React](https://github.com/facebook/react/) - [MIT License](https://github.com/facebook/react/blob/master/LICENSE)
 * [S2Graph](https://github.com/apache/incubator-s2graph) - [Apache License 2.0](https://github.com/apache/incubator-s2graph/blob/master/LICENSE)
 * [Ant Design](https://github.com/ant-design/ant-design/) - [MIT License](https://github.com/ant-design/ant-design/blob/master/LICENSE)
-* [react-fb-image-grid](https://github.com/Expertizo/react-fb-image-grid) - [MIT License](https://github.com/Expertizo/react-fb-image-grid/blob/master/LICENSE)
+* [react-fb-image-grid](https://github.com/Expertizo/react-fb-image-grid) - [MIT License](https://github.com/Expertizo/react-fb-image-grid/blob/master/LICENSE)  
+
+해야할것 - 더미데이터 넣고 데모영상 녹화,  
+피피티 만들기  
+오류 처리 해주기  
+배포하기  
+신청하기  

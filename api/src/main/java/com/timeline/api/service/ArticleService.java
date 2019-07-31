@@ -22,5 +22,5 @@ public interface ArticleService {
 	/*
 	 * 홈 불러오기
 	 */
-	ArticleResponse[] getHomeList(long userID);
+	ArticleResponse[] getHomeList(long userID, long myID);
 }

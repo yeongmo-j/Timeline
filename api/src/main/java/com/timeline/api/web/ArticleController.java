@@ -89,10 +89,10 @@ public class ArticleController {
 	/*
 	 * 자신 혹은 친구의 홈 불러오기 
 	 */
-	@RequestMapping(value="/article/home/{userID}", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
-	public String getHomeList(@PathVariable long userID, HttpServletResponse response) {
+	@RequestMapping(value="/article/home/{userID}/{myID}", method=RequestMethod.GET, produces="text/plain;charset=UTF-8")
+	public String getHomeList(@PathVariable long userID, @PathVariable long myID, HttpServletResponse response) {
 		try {
-			ArticleResponse[] formmedArticleList = articleService.getHomeList(userID);
+			ArticleResponse[] formmedArticleList = articleService.getHomeList(userID, myID);
 			response.setStatus(HttpServletResponse.SC_OK);
 			return new ObjectMapper().writeValueAsString(formmedArticleList);
 		} catch (Exception e) {

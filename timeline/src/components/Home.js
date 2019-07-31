@@ -79,7 +79,7 @@ class Home extends Component {
 
     //해당 사람의 소식 모아보기
     loadingArticles = (others) => {
-        const requesturl = serverUrl + '/article/home/' + others
+        const requesturl = serverUrl + '/article/home/' + others + '/' + getUser().userID
         fetch(requesturl, {
             method: 'GET',
             headers: {

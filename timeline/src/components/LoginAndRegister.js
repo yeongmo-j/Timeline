@@ -12,7 +12,7 @@ class LoginAndRegister extends Component {
         return (
             <div>
                 <div className='login' >
-                    <h1 id='loginHeadline'>TimeLine</h1>
+                    <h1 id='loginHeadline'>TIMELINE</h1>
                     <div style={{ margin: '10px 0' }}>
                         <Switch >
                             <Route path='/login' exact component={Login} />

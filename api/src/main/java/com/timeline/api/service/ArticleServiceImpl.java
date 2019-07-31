@@ -144,12 +144,12 @@ public class ArticleServiceImpl implements ArticleService {
 		ArticleResponse[] formmedArticleList = new ArticleResponse[size];
 
 		Map<String, Object> article;
-		int articleUserID;
+		long articleUserID;
 		long articleID;
 		for (int i=0; i<size ; i++) {
 			article = results.get(i);
-			articleUserID = (int)article.get("from");
-			articleID = (long)((int)article.get("to"));
+			articleUserID = factory.convertToLong(article.get("from"));
+			articleID = factory.convertToLong(article.get("to"));
 			formmedArticleList[i] = this.formattingArticle(articleID, (Map<String, Object>)article.get("props"), articleUserID, userID);
 		}
 		return formmedArticleList;
@@ -177,7 +177,7 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	@Override
-	public ArticleResponse[] getHomeList(long userID) {
+	public ArticleResponse[] getHomeList(long userID, long myID) {
 		
 		GetEdgeEntity getEdgeEntity = new GetEdgeEntity();
 		getEdgeEntity.setSrcVerticesServiceName(factory.getServiceName());
@@ -197,13 +197,13 @@ public class ArticleServiceImpl implements ArticleService {
 		ArticleResponse[] formmedArticleList = new ArticleResponse[size];
 
 		Map<String, Object> article;
-		int articleUserID;
+		long articleUserID;
 		long articleID;
 		for (int i=0; i<size ; i++) {
 			article = results.get(i);
-			articleUserID = (int)article.get("from");
-			articleID = (long)((int)article.get("to"));
-			formmedArticleList[i] = this.formattingArticle(articleID, (Map<String, Object>)article.get("props"), articleUserID, userID);
+			articleUserID = factory.convertToLong(article.get("from"));
+			articleID = factory.convertToLong(article.get("to"));
+			formmedArticleList[i] = this.formattingArticle(articleID, (Map<String, Object>)article.get("props"), articleUserID, myID);
 		}
 		return formmedArticleList;
 	}

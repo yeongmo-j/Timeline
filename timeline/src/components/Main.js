@@ -24,6 +24,7 @@ class Main extends Component {
                             <Col span={2}></Col>
                             <Col span={12}>
                                 <Switch>
+                                    <Route path ='/' exact component ={Timeline} />
                                     <Route path='/main' exact component={Timeline} />
                                     <Route path='/home/:userID' exact component={Home} />
                                 </Switch>
@@ -36,7 +37,7 @@ class Main extends Component {
                     </Content>
                     <Footer>
                         <div className='footer'>
-                            Copyright Jung Yeongmo All right reserved.
+                            Copyright 2019. Jung Yeongmo All rights reserved.
                         </div>
                     </Footer>
                 </Layout>

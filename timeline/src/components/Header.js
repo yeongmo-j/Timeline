@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Button, Avatar } from 'antd';
-import { history } from '../History';
-import { logout, getUser, getToken } from '../authentication';
 import { Link } from "react-router-dom";
 
 import ChangeProfile from './ChangeProfile';
 import { serverUrl } from '../setting'
+import { history } from '../History';
+import { logout, getUser, getToken } from '../authentication';
 
 import './Header.css';
 import './Box.css';
@@ -63,9 +63,13 @@ class Header extends Component {
             return (
             <span>
                 <span id='margin'>{this.getOnePhoto(this.state.user.profile, this.state.user.username)}</span>
-                <span id='margin'>{this.state.user.username}</span>
+                <Link to='#' onClick={this.toHome} ><span id='margin' className='link'>{this.state.user.username}</span></Link>
             </span>);
         }
+    }
+
+    toHome = () => {
+        history.push('/home/' + getUser().userID)
     }
 
     render() {

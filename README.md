@@ -9,6 +9,9 @@ This project is mainly consist of some open source framework
 
 And this will be sumbmitted to `D2 CAMPUS FEST mini (7th)`  
 
+# Introduce Document
+[PDF slide](https://github.com/yeongmo-j/Timeline/blob/master/Timeline.pdf)
+
 # Why this?
 1. fast  
 It does not use relational database for gathering posts which posted from friends but use graph database. Which means that It is much faster than join in SQL. So users do not have to wait much time in the timeline, and developers do not have to care about the waiting time that much.
@@ -29,13 +32,16 @@ And this is the way to start it
 여기다가 스프링 부트 시작하는 법
   
 > **Front-end (React)**  
-여기다가 리액트 시작하는 법
+(for development mode)  
+`cd timeline`  
+`npm start` or `yarn start`  
 
 > **Graph database (S2Graph)**  
-여기다가 S2Graph 시작하는 법
+`cd s2graph/s2/apache-s2graph-0.2.0-incubating-src/target/apache-s2graph-0.2.0-incubating-bin`  
+`sh bin/start-s2graph.sh`  
 
 > **RDBMS**  
-너가 원하는 아무거나 
+Any DBMS whatever you want 
 
 # Settings
 You can setting by your environment to each frameworks  
@@ -55,6 +61,12 @@ serverUrl - your backend url
 at `/s2graph/s2/apache-s2graph-0.2.0-incubating-src/conf/application.conf`  
 check [S2Graph official document](https://steamshon.gitbooks.io/s2graph-book/content/)  
   
+# Demo video
+[Youtube](https://youtu.be/90HdtBw2n_g)
+
+# Demo Page
+[Click!](http://yeongmoj.timeline.s3-website.ap-northeast-2.amazonaws.com)
+
 # Licence
 MIT
   
@@ -65,8 +77,5 @@ MIT
 * [Ant Design](https://github.com/ant-design/ant-design/) - [MIT License](https://github.com/ant-design/ant-design/blob/master/LICENSE)
 * [react-fb-image-grid](https://github.com/Expertizo/react-fb-image-grid) - [MIT License](https://github.com/Expertizo/react-fb-image-grid/blob/master/LICENSE)  
 
-해야할것 - 더미데이터 넣고 데모영상 녹화,  
-피피티 만들기  
-오류 처리 해주기  
 배포하기  
-신청하기  
+신청하기    

@@ -7,16 +7,12 @@ This project is mainly consist of some open source framework
 * DBMS (in my case, I use MySQL)
 * S2Graph
 
-And this will be sumbmitted to `D2 CAMPUS FEST mini (7th)`  
-
 # Introduce Document
 [PDF slide](https://github.com/yeongmo-j/Timeline/blob/master/Timeline.pdf)
 
 # Why this?
-1. fast  
-It does not use relational database for gathering posts which posted from friends but use graph database. Which means that It is much faster than join in SQL. So users do not have to wait much time in the timeline, and developers do not have to care about the waiting time that much.
-2. intuitive  
-UI of this application is very intuitive so that users do not have to reading about how to use it or feeling confuse when they use it. 
+* Fast  
+It does not use relational database for gathering posts which posted from friends but use graph database. Which means that It is much faster than multiple join query in SQL. So users do not have to wait much time in the timeline, and developers do not have to care about the waiting time that much.
 
 # Getting started
 To start this application, you have to launch 3 seperate 4 application which list is on the top, Spring boot: the back-end server, React: the front-end view, Mysql: RDBMS, S2Graph: the graph database  
@@ -76,6 +72,3 @@ MIT
 * [S2Graph](https://github.com/apache/incubator-s2graph) - [Apache License 2.0](https://github.com/apache/incubator-s2graph/blob/master/LICENSE)
 * [Ant Design](https://github.com/ant-design/ant-design/) - [MIT License](https://github.com/ant-design/ant-design/blob/master/LICENSE)
 * [react-fb-image-grid](https://github.com/Expertizo/react-fb-image-grid) - [MIT License](https://github.com/Expertizo/react-fb-image-grid/blob/master/LICENSE)  
-
-배포하기  
-신청하기    

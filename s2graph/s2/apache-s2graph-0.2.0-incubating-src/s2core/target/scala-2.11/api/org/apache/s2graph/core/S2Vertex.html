@@ -1,0 +1,1243 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>S2Vertex - org.apache.s2graph.core.S2Vertex</title>
+          <meta name="description" content="S2Vertex - org.apache.s2graph.core.S2Vertex" />
+          <meta name="keywords" content="S2Vertex org.apache.s2graph.core.S2Vertex" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'org.apache.s2graph.core.S2Vertex';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="S2Vertex$.html" title="See companion object"><img alt="Class/Object" src="../../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../package.html" class="extype" name="org">org</a>.<a href="../../package.html" class="extype" name="org.apache">apache</a>.<a href="../package.html" class="extype" name="org.apache.s2graph">s2graph</a>.<a href="package.html" class="extype" name="org.apache.s2graph.core">core</a></p>
+        <h1><a href="S2Vertex$.html" title="See companion object">S2Vertex</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="S2Vertex$.html" title="See companion object">object S2Vertex</a>
+            | <a href="package.html" class="extype" name="org.apache.s2graph.core">package core</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">S2Vertex</span><span class="params">(<span name="graph">graph: <a href="S2Graph.html" class="extype" name="org.apache.s2graph.core.S2Graph">S2Graph</a></span>, <span name="id">id: <a href="types/VertexId.html" class="extype" name="org.apache.s2graph.core.types.VertexId">VertexId</a></span>, <span name="ts">ts: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">System.currentTimeMillis()</span></span>, <span name="props">props: <a href="S2Vertex$.html#Props=java.util.Map[String,org.apache.s2graph.core.S2VertexProperty[_]]" class="extmbr" name="org.apache.s2graph.core.S2Vertex.Props">Props</a> = <span class="symbol"><span class="name"><a href="S2Vertex$.html">S2Vertex.EmptyProps</a></span></span></span>, <span name="op">op: <span class="extype" name="scala.Byte">Byte</span> = <span class="symbol">0</span></span>, <span name="belongLabelIds">belongLabelIds: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">Seq.empty</span></span>)</span><span class="result"> extends <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a> with <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex">Vertex</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex">Vertex</span>, <span class="extype" name="org.apache.tinkerpop.gremlin.structure.util.Host">Host</span>, <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Element">Element</span>, <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="org.apache.s2graph.core.S2Vertex"><span>S2Vertex</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="org.apache.tinkerpop.gremlin.structure.Vertex"><span>Vertex</span></li><li class="in" name="org.apache.tinkerpop.gremlin.structure.util.Host"><span>Host</span></li><li class="in" name="org.apache.tinkerpop.gremlin.structure.Element"><span>Element</span></li><li class="in" name="org.apache.s2graph.core.GraphElement"><span>GraphElement</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.s2graph.core.S2Vertex#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(graph:org.apache.s2graph.core.S2Graph,id:org.apache.s2graph.core.types.VertexId,ts:Long,props:org.apache.s2graph.core.S2Vertex.Props,op:Byte,belongLabelIds:Seq[Int]):org.apache.s2graph.core.S2Vertex"></a>
+      <a id="&lt;init&gt;:S2Vertex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">S2Vertex</span><span class="params">(<span name="graph">graph: <a href="S2Graph.html" class="extype" name="org.apache.s2graph.core.S2Graph">S2Graph</a></span>, <span name="id">id: <a href="types/VertexId.html" class="extype" name="org.apache.s2graph.core.types.VertexId">VertexId</a></span>, <span name="ts">ts: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">System.currentTimeMillis()</span></span>, <span name="props">props: <a href="S2Vertex$.html#Props=java.util.Map[String,org.apache.s2graph.core.S2VertexProperty[_]]" class="extmbr" name="org.apache.s2graph.core.S2Vertex.Props">Props</a> = <span class="symbol"><span class="name"><a href="S2Vertex$.html">S2Vertex.EmptyProps</a></span></span></span>, <span name="op">op: <span class="extype" name="scala.Byte">Byte</span> = <span class="symbol">0</span></span>, <span name="belongLabelIds">belongLabelIds: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">Seq.empty</span></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@&lt;init&gt;(graph:org.apache.s2graph.core.S2Graph,id:org.apache.s2graph.core.types.VertexId,ts:Long,props:org.apache.s2graph.core.S2Vertex.Props,op:Byte,belongLabelIds:Seq[Int]):org.apache.s2graph.core.S2Vertex" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="org.apache.tinkerpop.gremlin.structure.Vertex#addEdge" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="addEdge(x$1:String,x$2:org.apache.tinkerpop.gremlin.structure.Vertex,x$3:Object*):org.apache.tinkerpop.gremlin.structure.Edge"></a>
+      <a id="addEdge(String,Vertex,&lt;repeated...&gt;[AnyRef]):Edge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addEdge</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.String">String</span></span>, <span name="arg1">arg1: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex">Vertex</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.&lt;repeated...&gt;">&lt;repeated...&gt;</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Edge">Edge</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@addEdge(x$1:String,x$2:org.apache.tinkerpop.gremlin.structure.Vertex,x$3:Object*):org.apache.tinkerpop.gremlin.structure.Edge" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Vertex</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.structure.Vertex#edges" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="edges(x$1:org.apache.tinkerpop.gremlin.structure.Direction,x$2:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.Edge]"></a>
+      <a id="edges(Direction,&lt;repeated...&gt;[String]):Iterator[Edge]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">edges</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Direction">Direction</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.&lt;repeated...&gt;">&lt;repeated...&gt;</span>[<span class="extype" name="java.lang.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Edge">Edge</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@edges(x$1:org.apache.tinkerpop.gremlin.structure.Direction,x$2:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.Edge]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Vertex</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.structure.Vertex#properties" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="properties[V](x$1:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.VertexProperty[V]]"></a>
+      <a id="properties[V](&lt;repeated...&gt;[String]):Iterator[VertexProperty[V]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">properties</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.&lt;repeated...&gt;">&lt;repeated...&gt;</span>[<span class="extype" name="java.lang.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty">VertexProperty</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex.properties.V">V</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@properties[V](x$1:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.VertexProperty[V]]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Vertex → Element</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.structure.Vertex#property" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="property[V](x$1:org.apache.tinkerpop.gremlin.structure.VertexProperty.Cardinality,x$2:String,x$3:V,x$4:Object*):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]"></a>
+      <a id="property[V](Cardinality,String,V,&lt;repeated...&gt;[AnyRef]):VertexProperty[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">property</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty.Cardinality">Cardinality</span></span>, <span name="arg1">arg1: <span class="extype" name="java.lang.String">String</span></span>, <span name="arg2">arg2: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex.property.V">V</span></span>, <span name="arg3">arg3: <span class="extype" name="scala.&lt;repeated...&gt;">&lt;repeated...&gt;</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty">VertexProperty</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex.property.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@property[V](x$1:org.apache.tinkerpop.gremlin.structure.VertexProperty.Cardinality,x$2:String,x$3:V,x$4:Object*):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Vertex</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.structure.Vertex#vertices" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="vertices(x$1:org.apache.tinkerpop.gremlin.structure.Direction,x$2:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.Vertex]"></a>
+      <a id="vertices(Direction,&lt;repeated...&gt;[String]):Iterator[Vertex]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">vertices</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Direction">Direction</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.&lt;repeated...&gt;">&lt;repeated...&gt;</span>[<span class="extype" name="java.lang.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex">Vertex</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@vertices(x$1:org.apache.tinkerpop.gremlin.structure.Direction,x$2:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.Vertex]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Vertex</dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@##():Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#addEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="addEdge(labelName:String,vertex:org.apache.tinkerpop.gremlin.structure.Vertex,kvs:AnyRef*):org.apache.tinkerpop.gremlin.structure.Edge"></a>
+      <a id="addEdge(String,Vertex,AnyRef*):Edge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addEdge</span><span class="params">(<span name="labelName">labelName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="vertex">vertex: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex">Vertex</span></span>, <span name="kvs">kvs: <span class="extype" name="scala.AnyRef">AnyRef</span>*</span>)</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Edge">Edge</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@addEdge(labelName:String,vertex:org.apache.tinkerpop.gremlin.structure.Vertex,kvs:AnyRef*):org.apache.tinkerpop.gremlin.structure.Edge" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#belongLabelIds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="belongLabelIds:Seq[Int]"></a>
+      <a id="belongLabelIds:Seq[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">belongLabelIds</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@belongLabelIds:Seq[Int]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#columnName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="columnName:String"></a>
+      <a id="columnName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">columnName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@columnName:String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#copyVertexWithState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="copyVertexWithState(props:org.apache.s2graph.core.S2Vertex.Props):org.apache.s2graph.core.S2Vertex"></a>
+      <a id="copyVertexWithState(Props):S2Vertex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copyVertexWithState</span><span class="params">(<span name="props">props: <a href="S2Vertex$.html#Props=java.util.Map[String,org.apache.s2graph.core.S2VertexProperty[_]]" class="extmbr" name="org.apache.s2graph.core.S2Vertex.Props">Props</a></span>)</span><span class="result">: <a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@copyVertexWithState(props:org.apache.s2graph.core.S2Vertex.Props):org.apache.s2graph.core.S2Vertex" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#defaultProps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="defaultProps:java.util.HashMap[String,org.apache.s2graph.core.S2VertexProperty[_]]"></a>
+      <a id="defaultProps:HashMap[String,S2VertexProperty[_]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defaultProps</span><span class="result">: <span class="extype" name="java.util.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="S2VertexProperty.html" class="extype" name="org.apache.s2graph.core.S2VertexProperty">S2VertexProperty</a>[_]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@defaultProps:java.util.HashMap[String,org.apache.s2graph.core.S2VertexProperty[_]]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#edges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="edges(direction:org.apache.tinkerpop.gremlin.structure.Direction,labelNames:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.Edge]"></a>
+      <a id="edges(Direction,String*):Iterator[Edge]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">edges</span><span class="params">(<span name="direction">direction: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Direction">Direction</span></span>, <span name="labelNames">labelNames: <span class="extype" name="scala.Predef.String">String</span>*</span>)</span><span class="result">: <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Edge">Edge</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@edges(direction:org.apache.tinkerpop.gremlin.structure.Direction,labelNames:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.Edge]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(obj:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="obj">obj: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@equals(obj:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → Equals → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#graph" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="graph:org.apache.s2graph.core.S2Graph"></a>
+      <a id="graph:S2Graph"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">graph</span><span class="result">: <a href="S2Graph.html" class="extype" name="org.apache.s2graph.core.S2Graph">S2Graph</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@graph:org.apache.s2graph.core.S2Graph" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → Element</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#hbaseTableName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hbaseTableName:String"></a>
+      <a id="hbaseTableName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hbaseTableName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@hbaseTableName:String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#hbaseZkAddr" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="hbaseZkAddr:String"></a>
+      <a id="hbaseZkAddr:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hbaseZkAddr</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@hbaseZkAddr:String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#id" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="id:org.apache.s2graph.core.types.VertexId"></a>
+      <a id="id:VertexId"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">id</span><span class="result">: <a href="types/VertexId.html" class="extype" name="org.apache.s2graph.core.types.VertexId">VertexId</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@id:org.apache.s2graph.core.types.VertexId" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → Element</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#innerId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="innerId:org.apache.s2graph.core.types.InnerValLike"></a>
+      <a id="innerId:InnerValLike"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">innerId</span><span class="result">: <a href="types/InnerValLike.html" class="extype" name="org.apache.s2graph.core.types.InnerValLike">InnerValLike</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@innerId:org.apache.s2graph.core.types.InnerValLike" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#innerIdVal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="innerIdVal:Any"></a>
+      <a id="innerIdVal:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">innerIdVal</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@innerIdVal:Any" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#isAsync" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isAsync:Boolean"></a>
+      <a id="isAsync:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isAsync</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@isAsync:Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.structure.Element#keys" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="keys():java.util.Set[String]"></a>
+      <a id="keys():Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">keys</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@keys():java.util.Set[String]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Element</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#label" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="label():String"></a>
+      <a id="label():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">label</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@label():String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → Element</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#op" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="op:Byte"></a>
+      <a id="op:Byte"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">op</span><span class="result">: <span class="extype" name="scala.Byte">Byte</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@op:Byte" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#properties" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="properties[V](keys:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.VertexProperty[V]]"></a>
+      <a id="properties[V](String*):Iterator[VertexProperty[V]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">properties</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="keys">keys: <span class="extype" name="scala.Predef.String">String</span>*</span>)</span><span class="result">: <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty">VertexProperty</span>[<span class="extype" name="org.apache.s2graph.core.S2Vertex.properties.V">V</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@properties[V](keys:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.VertexProperty[V]]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#properties" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="properties:scala.collection.mutable.Map[String,Any]"></a>
+      <a id="properties:Map[String,Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">properties</span><span class="result">: <span class="extype" name="scala.collection.mutable.Map">Map</span>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="scala.Any">Any</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@properties:scala.collection.mutable.Map[String,Any]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#property" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="property[V](key:String):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]"></a>
+      <a id="property[V](String):VertexProperty[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">property</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty">VertexProperty</span>[<span class="extype" name="org.apache.s2graph.core.S2Vertex.property.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@property[V](key:String):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → Vertex → Element</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#property" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="property[V](cardinality:org.apache.tinkerpop.gremlin.structure.VertexProperty.Cardinality,key:String,value:V,objects:AnyRef*):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]"></a>
+      <a id="property[V](Cardinality,String,V,AnyRef*):VertexProperty[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">property</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="cardinality">cardinality: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty.Cardinality">Cardinality</span></span>, <span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="org.apache.s2graph.core.S2Vertex.property.V">V</span></span>, <span name="objects">objects: <span class="extype" name="scala.AnyRef">AnyRef</span>*</span>)</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty">VertexProperty</span>[<span class="extype" name="org.apache.s2graph.core.S2Vertex.property.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@property[V](cardinality:org.apache.tinkerpop.gremlin.structure.VertexProperty.Cardinality,key:String,value:V,objects:AnyRef*):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.tinkerpop.gremlin.structure.Vertex#property" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="property[V](x$1:String,x$2:V,x$3:Object*):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]"></a>
+      <a id="property[V](String,V,&lt;repeated...&gt;[AnyRef]):VertexProperty[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">property</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.String">String</span></span>, <span name="arg1">arg1: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex.property.V">V</span></span>, <span name="arg2">arg2: <span class="extype" name="scala.&lt;repeated...&gt;">&lt;repeated...&gt;</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty">VertexProperty</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex.property.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@property[V](x$1:String,x$2:V,x$3:Object*):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Vertex</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.structure.Vertex#property" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="property[V](x$1:String,x$2:V):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]"></a>
+      <a id="property[V](String,V):VertexProperty[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">property</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.String">String</span></span>, <span name="arg1">arg1: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex.property.V">V</span></span>)</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty">VertexProperty</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex.property.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@property[V](x$1:String,x$2:V):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Vertex → Element</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#propertyInner" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="propertyInner[V](cardinality:org.apache.tinkerpop.gremlin.structure.VertexProperty.Cardinality,key:String,value:V,objects:AnyRef*):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]"></a>
+      <a id="propertyInner[V](Cardinality,String,V,AnyRef*):VertexProperty[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">propertyInner</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="cardinality">cardinality: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty.Cardinality">Cardinality</span></span>, <span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="org.apache.s2graph.core.S2Vertex.propertyInner.V">V</span></span>, <span name="objects">objects: <span class="extype" name="scala.AnyRef">AnyRef</span>*</span>)</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty">VertexProperty</span>[<span class="extype" name="org.apache.s2graph.core.S2Vertex.propertyInner.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@propertyInner[V](cardinality:org.apache.tinkerpop.gremlin.structure.VertexProperty.Cardinality,key:String,value:V,objects:AnyRef*):org.apache.tinkerpop.gremlin.structure.VertexProperty[V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#props" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="props:org.apache.s2graph.core.S2Vertex.Props"></a>
+      <a id="props:Props"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">props</span><span class="result">: <a href="S2Vertex$.html#Props=java.util.Map[String,org.apache.s2graph.core.S2VertexProperty[_]]" class="extmbr" name="org.apache.s2graph.core.S2Vertex.Props">Props</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@props:org.apache.s2graph.core.S2Vertex.Props" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#propsWithName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="propsWithName:scala.collection.mutable.Map[String,String]"></a>
+      <a id="propsWithName:Map[String,String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">propsWithName</span><span class="result">: <span class="extype" name="scala.collection.mutable.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="java.lang.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@propsWithName:scala.collection.mutable.Map[String,String]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#queueKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="queueKey:String"></a>
+      <a id="queueKey:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">queueKey</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@queueKey:String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a></dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#queuePartitionKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="queuePartitionKey:String"></a>
+      <a id="queuePartitionKey:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">queuePartitionKey</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@queuePartitionKey:String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a></dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#remove" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="remove():Unit"></a>
+      <a id="remove():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">remove</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@remove():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → Element</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#schemaVer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="schemaVer:String"></a>
+      <a id="schemaVer:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">schemaVer</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@schemaVer:String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#service" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="service:org.apache.s2graph.core.mysqls.Service"></a>
+      <a id="service:Service"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">service</span><span class="result">: <a href="mysqls/Service.html" class="extype" name="org.apache.s2graph.core.mysqls.Service">Service</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@service:org.apache.s2graph.core.mysqls.Service" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#serviceColumn" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="serviceColumn:org.apache.s2graph.core.mysqls.ServiceColumn"></a>
+      <a id="serviceColumn:ServiceColumn"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">serviceColumn</span><span class="result">: <a href="mysqls/ServiceColumn.html" class="extype" name="org.apache.s2graph.core.mysqls.ServiceColumn">ServiceColumn</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@serviceColumn:org.apache.s2graph.core.mysqls.ServiceColumn" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex#serviceName" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="serviceName:String"></a>
+      <a id="serviceName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">serviceName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@serviceName:String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">TODO: make this as configurable</p><div class="fullcomment"><div class="comment cmt"><p>TODO: make this as configurable</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#toLogString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toLogString():String"></a>
+      <a id="toLogString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toLogString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@toLogString():String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a></dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@toString():String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#ts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ts:Long"></a>
+      <a id="ts:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ts</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@ts:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a> → <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a></dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.structure.Element#value" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="value[V](x$1:String):V"></a>
+      <a id="value[V](String):V"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">value</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Element.value.V">V</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@value[V](x$1:String):V" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Element</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.util.NoSuchElementException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.structure.Element#values" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="values[V](x$1:String*):java.util.Iterator[V]"></a>
+      <a id="values[V](&lt;repeated...&gt;[String]):Iterator[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">values</span><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.&lt;repeated...&gt;">&lt;repeated...&gt;</span>[<span class="extype" name="java.lang.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Element.values.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@values[V](x$1:String*):java.util.Iterator[V]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Element</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Vertex#vertices" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="vertices(direction:org.apache.tinkerpop.gremlin.structure.Direction,edgeLabels:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.Vertex]"></a>
+      <a id="vertices(Direction,String*):Iterator[Vertex]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">vertices</span><span class="params">(<span name="direction">direction: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Direction">Direction</span></span>, <span name="edgeLabels">edgeLabels: <span class="extype" name="scala.Predef.String">String</span>*</span>)</span><span class="result">: <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex">Vertex</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@vertices(direction:org.apache.tinkerpop.gremlin.structure.Direction,edgeLabels:String*):java.util.Iterator[org.apache.tinkerpop.gremlin.structure.Vertex]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Vertex@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="org.apache.tinkerpop.gremlin.structure.Vertex">
+              <h3>Inherited from <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex">Vertex</span></h3>
+            </div><div class="parent" name="org.apache.tinkerpop.gremlin.structure.util.Host">
+              <h3>Inherited from <span class="extype" name="org.apache.tinkerpop.gremlin.structure.util.Host">Host</span></h3>
+            </div><div class="parent" name="org.apache.tinkerpop.gremlin.structure.Element">
+              <h3>Inherited from <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Element">Element</span></h3>
+            </div><div class="parent" name="org.apache.s2graph.core.GraphElement">
+              <h3>Inherited from <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

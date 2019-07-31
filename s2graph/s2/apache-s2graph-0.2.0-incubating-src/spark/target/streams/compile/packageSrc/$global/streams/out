@@ -1,0 +1,21 @@
+[0m[[0minfo[0m] [0mPackaging /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/spark/target/scala-2.11/s2spark_2.11-0.2.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/spark/spark/HashMapParam.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/spark/src/main/scala/org/apache/s2graph/spark/spark/HashMapParam.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/spark/spark/SubscriberListener.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/spark/src/main/scala/org/apache/s2graph/spark/spark/SubscriberListener.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/spark/spark/WithKafka.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/spark/src/main/scala/org/apache/s2graph/spark/spark/WithKafka.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/spark/spark/SparkApp.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/spark/src/main/scala/org/apache/s2graph/spark/spark/SparkApp.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/spark/config/S2ConfigFactory.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/spark/src/main/scala/org/apache/s2graph/spark/config/S2ConfigFactory.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/spark/spark/RDDUtil.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/spark/src/main/scala/org/apache/s2graph/spark/spark/RDDUtil.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/spark/streaming/kafka/KafkaRDDFunctions.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/spark/src/main/scala/org/apache/spark/streaming/kafka/KafkaRDDFunctions.scala[0m
+[0m[[0mdebug[0m] [0m	kafka/KafkaHelper.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/spark/src/main/scala/kafka/KafkaHelper.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/spark/streaming/kafka/StreamHelper.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/spark/src/main/scala/org/apache/spark/streaming/kafka/StreamHelper.scala[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

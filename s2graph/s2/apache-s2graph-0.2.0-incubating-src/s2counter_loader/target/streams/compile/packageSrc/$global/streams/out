@@ -1,0 +1,27 @@
+[0m[[0minfo[0m] [0mPackaging /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/target/scala-2.11/s2counter-loader_2.11-0.2.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/core/DimensionProps.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/core/DimensionProps.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/core/CounterEtlFunctions.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/core/CounterEtlFunctions.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/stream/ExactCounterStreaming.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/stream/ExactCounterStreaming.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/config/StreamingConfig.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/config/StreamingConfig.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/CounterBulkLoader.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/CounterBulkLoader.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/stream/RankingCounterStreaming.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/stream/RankingCounterStreaming.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/stream/EtlStreaming.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/stream/EtlStreaming.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/stream/GraphToETLStreaming.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/stream/GraphToETLStreaming.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/models/DefaultCounterModel.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/models/DefaultCounterModel.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/EraseDailyCounter.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/EraseDailyCounter.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/core/CounterFunctions.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/core/CounterFunctions.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/counter/loader/core/CounterEtlItem.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2counter_loader/src/main/scala/org/apache/s2graph/counter/loader/core/CounterEtlItem.scala[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

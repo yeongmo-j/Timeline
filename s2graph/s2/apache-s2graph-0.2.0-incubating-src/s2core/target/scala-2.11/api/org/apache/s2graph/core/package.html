@@ -1,0 +1,1267 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>core - org.apache.s2graph.core</title>
+          <meta name="description" content="core - org.apache.s2graph.core" />
+          <meta name="keywords" content="core org.apache.s2graph.core" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'org.apache.s2graph.core.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="org">org</a>.<a href="../../package.html" class="extype" name="org.apache">apache</a>.<a href="../package.html" class="extype" name="org.apache.s2graph">s2graph</a></p>
+        <h1>core</h1><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">core</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.s2graph.core.EdgeId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EdgeIdextendsProductwithSerializable"></a>
+      <a id="EdgeId:EdgeId"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="EdgeId.html"><span class="name">EdgeId</span></a><span class="params">(<span name="srcVertexId">srcVertexId: <a href="types/VertexId.html" class="extype" name="org.apache.s2graph.core.types.VertexId">VertexId</a></span>, <span name="tgtVertexId">tgtVertexId: <a href="types/VertexId.html" class="extype" name="org.apache.s2graph.core.types.VertexId">VertexId</a></span>, <span name="labelName">labelName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="direction">direction: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="ts">ts: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@EdgeIdextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.EdgeMutate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EdgeMutateextendsProductwithSerializable"></a>
+      <a id="EdgeMutate:EdgeMutate"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="EdgeMutate.html"><span class="name">EdgeMutate</span></a><span class="params">(<span name="edgesToDelete">edgesToDelete: <span class="extype" name="scala.List">List</span>[<a href="IndexEdge.html" class="extype" name="org.apache.s2graph.core.IndexEdge">IndexEdge</a>] = <span class="symbol">List.empty[IndexEdge]</span></span>, <span name="edgesToInsert">edgesToInsert: <span class="extype" name="scala.List">List</span>[<a href="IndexEdge.html" class="extype" name="org.apache.s2graph.core.IndexEdge">IndexEdge</a>] = <span class="symbol">List.empty[IndexEdge]</span></span>, <span name="newSnapshotEdge">newSnapshotEdge: <span class="extype" name="scala.Option">Option</span>[<a href="SnapshotEdge.html" class="extype" name="org.apache.s2graph.core.SnapshotEdge">SnapshotEdge</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@EdgeMutateextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.EdgeTransformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EdgeTransformerextendsProductwithSerializable"></a>
+      <a id="EdgeTransformer:EdgeTransformer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="EdgeTransformer.html"><span class="name">EdgeTransformer</span></a><span class="params">(<span name="jsValue">jsValue: <span class="extype" name="play.api.libs.json.JsValue">JsValue</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@EdgeTransformerextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">TODO: step wise outputFields should be used with nextStepLimit, nextStepThreshold.</p>
+    </li><li name="org.apache.s2graph.core.EdgeWithScore" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EdgeWithScoreextendsProductwithSerializable"></a>
+      <a id="EdgeWithScore:EdgeWithScore"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="EdgeWithScore.html"><span class="name">EdgeWithScore</span></a><span class="params">(<span name="edge">edge: <a href="S2Edge.html" class="extype" name="org.apache.s2graph.core.S2Edge">S2Edge</a></span>, <span name="score">score: <span class="extype" name="scala.Double">Double</span></span>, <span name="label">label: <a href="mysqls/Label.html" class="extype" name="org.apache.s2graph.core.mysqls.Label">Label</a></span>, <span name="orderByValues">orderByValues: (<span class="extype" name="scala.Any">Any</span>, <span class="extype" name="scala.Any">Any</span>, <span class="extype" name="scala.Any">Any</span>, <span class="extype" name="scala.Any">Any</span>) = <span class="symbol"><span class="name"><a href="StepResult$.html">StepResult.EmptyOrderByValues</a></span></span></span>, <span name="groupByValues">groupByValues: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Any">Any</span>]] = <span class="symbol">Nil</span></span>, <span name="stepGroupByValues">stepGroupByValues: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Any">Any</span>]] = <span class="symbol">Nil</span></span>, <span name="filterOutValues">filterOutValues: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Any">Any</span>]] = <span class="symbol">Nil</span></span>, <span name="accumulatedScores">accumulatedScores: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Double">Double</span>] = <span class="symbol">Map.empty</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@EdgeWithScoreextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.ExceptionHandler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExceptionHandlerextendsAnyRef"></a>
+      <a id="ExceptionHandler:ExceptionHandler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ExceptionHandler.html"><span class="name">ExceptionHandler</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@ExceptionHandlerextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.GraphElement" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GraphElementextendsAnyRef"></a>
+      <a id="GraphElement:GraphElement"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="GraphElement.html"><span class="name">GraphElement</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@GraphElementextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.GroupBy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GroupByextendsProductwithSerializable"></a>
+      <a id="GroupBy:GroupBy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="GroupBy.html"><span class="name">GroupBy</span></a><span class="params">(<span name="keys">keys: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Nil</span></span>, <span name="limit">limit: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">Int.MaxValue</span></span>, <span name="minShouldMatch">minShouldMatch: <span class="extype" name="scala.Option">Option</span>[<a href="MinShouldMatchParam.html" class="extype" name="org.apache.s2graph.core.MinShouldMatchParam">MinShouldMatchParam</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@GroupByextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.IndexEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IndexEdgeextendsProductwithSerializable"></a>
+      <a id="IndexEdge:IndexEdge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="IndexEdge.html"><span class="name">IndexEdge</span></a><span class="params">(<span name="graph">graph: <a href="S2Graph.html" class="extype" name="org.apache.s2graph.core.S2Graph">S2Graph</a></span>, <span name="srcVertex">srcVertex: <a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a></span>, <span name="tgtVertex">tgtVertex: <a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a></span>, <span name="label">label: <a href="mysqls/Label.html" class="extype" name="org.apache.s2graph.core.mysqls.Label">Label</a></span>, <span name="dir">dir: <span class="extype" name="scala.Int">Int</span></span>, <span name="op">op: <span class="extype" name="scala.Byte">Byte</span></span>, <span name="version">version: <span class="extype" name="scala.Long">Long</span></span>, <span name="labelIndexSeq">labelIndexSeq: <span class="extype" name="scala.Byte">Byte</span></span>, <span name="propsWithTs">propsWithTs: <a href="S2Edge$.html#Props=java.util.Map[String,org.apache.s2graph.core.S2Property[_]]" class="extmbr" name="org.apache.s2graph.core.S2Edge.Props">Props</a></span>, <span name="tsInnerValOpt">tsInnerValOpt: <span class="extype" name="scala.Option">Option</span>[<a href="types/InnerValLike.html" class="extype" name="org.apache.s2graph.core.types.InnerValLike">InnerValLike</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@IndexEdgeextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.Management" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ManagementextendsAnyRef"></a>
+      <a id="Management:Management"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Management.html"><span class="name">Management</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@ManagementextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.MinShouldMatchParam" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MinShouldMatchParamextendsProductwithSerializable"></a>
+      <a id="MinShouldMatchParam:MinShouldMatchParam"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MinShouldMatchParam.html"><span class="name">MinShouldMatchParam</span></a><span class="params">(<span name="prop">prop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="count">count: <span class="extype" name="scala.Int">Int</span></span>, <span name="terms">terms: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@MinShouldMatchParamextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.MultiQuery" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MultiQueryextendsProductwithSerializable"></a>
+      <a id="MultiQuery:MultiQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MultiQuery.html"><span class="name">MultiQuery</span></a><span class="params">(<span name="queries">queries: <span class="extype" name="scala.Seq">Seq</span>[<a href="Query.html" class="extype" name="org.apache.s2graph.core.Query">Query</a>]</span>, <span name="weights">weights: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="queryOption">queryOption: <a href="QueryOption.html" class="extype" name="org.apache.s2graph.core.QueryOption">QueryOption</a></span>, <span name="jsonQuery">jsonQuery: <span class="extype" name="play.api.libs.json.JsValue">JsValue</span> = <span class="symbol">JsNull</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@MultiQueryextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.Query" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueryextendsProductwithSerializable"></a>
+      <a id="Query:Query"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Query.html"><span class="name">Query</span></a><span class="params">(<span name="vertices">vertices: <span class="extype" name="scala.Seq">Seq</span>[<a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a>] = <span class="symbol">Seq.empty[S2Vertex]</span></span>, <span name="steps">steps: <span class="extype" name="scala.IndexedSeq">IndexedSeq</span>[<a href="Step.html" class="extype" name="org.apache.s2graph.core.Step">Step</a>] = <span class="symbol">Vector.empty[Step]</span></span>, <span name="queryOption">queryOption: <a href="QueryOption.html" class="extype" name="org.apache.s2graph.core.QueryOption">QueryOption</a> = <span class="symbol"><span class="name"><a href="QueryOption$.html">QueryOption()</a></span></span></span>, <span name="jsonQuery">jsonQuery: <span class="extype" name="play.api.libs.json.JsValue">JsValue</span> = <span class="symbol">JsNull</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@QueryextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.QueryOption" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueryOptionextendsProductwithSerializable"></a>
+      <a id="QueryOption:QueryOption"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="QueryOption.html"><span class="name">QueryOption</span></a><span class="params">(<span name="removeCycle">removeCycle: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="selectColumns">selectColumns: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="groupBy">groupBy: <a href="GroupBy.html" class="extype" name="org.apache.s2graph.core.GroupBy">GroupBy</a> = <span class="symbol"><span class="name"><a href="GroupBy$.html">GroupBy.Empty</a></span></span></span>, <span name="orderByColumns">orderByColumns: <span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Boolean">Boolean</span>)] = <span class="symbol">Seq.empty</span></span>, <span name="filterOutQuery">filterOutQuery: <span class="extype" name="scala.Option">Option</span>[<a href="Query.html" class="extype" name="org.apache.s2graph.core.Query">Query</a>] = <span class="symbol">None</span></span>, <span name="filterOutFields">filterOutFields: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol"><span class="name"><a href="../../../package.html">Seq(LabelMeta.to.name)</a></span></span></span>, <span name="withScore">withScore: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="returnTree">returnTree: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="limitOpt">limitOpt: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">None</span></span>, <span name="returnAgg">returnAgg: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="scoreThreshold">scoreThreshold: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">Double.MinValue</span></span>, <span name="returnDegree">returnDegree: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="impIdOpt">impIdOpt: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="shouldPropagateScore">shouldPropagateScore: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="ignorePrevStepCache">ignorePrevStepCache: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@QueryOptionextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.QueryParam" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueryParamextendsProductwithSerializable"></a>
+      <a id="QueryParam:QueryParam"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="QueryParam.html"><span class="name">QueryParam</span></a><span class="params">(<span name="labelName">labelName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="direction">direction: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;out&quot;</span></span>, <span name="offset">offset: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0</span></span>, <span name="limit">limit: <span class="extype" name="scala.Int">Int</span> = <span class="symbol"><span class="name"><a href="S2Graph$.html">S2Graph.DefaultFetchLimit</a></span></span></span>, <span name="sample">sample: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">1</span></span>, <span name="maxAttempt">maxAttempt: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">20</span></span>, <span name="rpcTimeout">rpcTimeout: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">600000</span></span>, <span name="cacheTTLInMillis">cacheTTLInMillis: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">1L</span></span>, <span name="indexName">indexName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol"><span class="name"><a href="../../../package.html">LabelIndex.DefaultName</a></span></span></span>, <span name="where">where: <span class="extype" name="scala.util.Try">Try</span>[<a href="parsers/Where.html" class="extype" name="org.apache.s2graph.core.parsers.Where">Where</a>] = <span class="symbol"><span class="name"><a href="../../../package.html">Success(WhereParser.success)</a></span></span></span>, <span name="timestamp">timestamp: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">System.currentTimeMillis()</span></span>, <span name="threshold">threshold: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">Double.MinValue</span></span>, <span name="rank">rank: <a href="RankParam.html" class="extype" name="org.apache.s2graph.core.RankParam">RankParam</a> = <span class="symbol"><span class="name"><a href="RankParam$.html">RankParam.Default</a></span></span></span>, <span name="intervalOpt">intervalOpt: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="play.api.libs.json.JsValue">JsValue</span>)], <span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="play.api.libs.json.JsValue">JsValue</span>)])] = <span class="symbol">None</span></span>, <span name="durationOpt">durationOpt: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>)] = <span class="symbol">None</span></span>, <span name="exclude">exclude: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="include">include: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="has">has: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Any">Any</span>] = <span class="symbol">Map.empty</span></span>, <span name="duplicatePolicy">duplicatePolicy: <a href="DuplicatePolicy$.html#DuplicatePolicy=org.apache.s2graph.core.DuplicatePolicy.Value" class="extmbr" name="org.apache.s2graph.core.DuplicatePolicy.DuplicatePolicy">DuplicatePolicy</a> = <span class="symbol"><span class="name"><a href="DuplicatePolicy$.html">DuplicatePolicy.First</a></span></span></span>, <span name="includeDegree">includeDegree: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="scorePropagateShrinkage">scorePropagateShrinkage: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">500L</span></span>, <span name="scorePropagateOp">scorePropagateOp: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;multiply&quot;</span></span>, <span name="shouldNormalize">shouldNormalize: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="whereRawOpt">whereRawOpt: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="cursorOpt">cursorOpt: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="tgtVertexIdOpt">tgtVertexIdOpt: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Any">Any</span>] = <span class="symbol">None</span></span>, <span name="edgeTransformer">edgeTransformer: <a href="EdgeTransformer.html" class="extype" name="org.apache.s2graph.core.EdgeTransformer">EdgeTransformer</a> = <span class="defval" name='<span class="name"><a href="EdgeTransformer$.html">EdgeTransformer(EdgeTransformer.DefaultJson)</a></span>'>...</span></span>, <span name="timeDecay">timeDecay: <span class="extype" name="scala.Option">Option</span>[<a href="TimeDecay.html" class="extype" name="org.apache.s2graph.core.TimeDecay">TimeDecay</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@QueryParamextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.QueryRequest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueryRequestextendsProductwithSerializable"></a>
+      <a id="QueryRequest:QueryRequest"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="QueryRequest.html"><span class="name">QueryRequest</span></a><span class="params">(<span name="query">query: <a href="Query.html" class="extype" name="org.apache.s2graph.core.Query">Query</a></span>, <span name="stepIdx">stepIdx: <span class="extype" name="scala.Int">Int</span></span>, <span name="vertex">vertex: <a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a></span>, <span name="queryParam">queryParam: <a href="QueryParam.html" class="extype" name="org.apache.s2graph.core.QueryParam">QueryParam</a></span>, <span name="prevStepScore">prevStepScore: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">1.0</span></span>, <span name="labelWeight">labelWeight: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">1.0</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@QueryRequestextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.RankParam" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RankParamextendsProductwithSerializable"></a>
+      <a id="RankParam:RankParam"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="RankParam.html"><span class="name">RankParam</span></a><span class="params">(<span name="keySeqAndWeights">keySeqAndWeights: <span class="extype" name="scala.Seq">Seq</span>[(<a href="mysqls/LabelMeta.html" class="extype" name="org.apache.s2graph.core.mysqls.LabelMeta">LabelMeta</a>, <span class="extype" name="scala.Double">Double</span>)] = <span class="symbol"><span class="name"><a href="../../../package.html">Seq((LabelMeta.count, 1.0))</a></span></span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@RankParamextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Edge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2EdgeextendsGraphElementwithEdgewithProductwithSerializable"></a>
+      <a id="S2Edge:S2Edge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="S2Edge.html"><span class="name">S2Edge</span></a><span class="params">(<span name="innerGraph">innerGraph: <a href="S2Graph.html" class="extype" name="org.apache.s2graph.core.S2Graph">S2Graph</a></span>, <span name="srcVertex">srcVertex: <a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a></span>, <span name="tgtVertex">tgtVertex: <a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a></span>, <span name="innerLabel">innerLabel: <a href="mysqls/Label.html" class="extype" name="org.apache.s2graph.core.mysqls.Label">Label</a></span>, <span name="dir">dir: <span class="extype" name="scala.Int">Int</span></span>, <span name="op">op: <span class="extype" name="scala.Byte">Byte</span> = <span class="symbol"><span class="name"><a href="GraphUtil$.html">GraphUtil.defaultOpByte</a></span></span></span>, <span name="version">version: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">System.currentTimeMillis()</span></span>, <span name="propsWithTs">propsWithTs: <a href="S2Edge$.html#Props=java.util.Map[String,org.apache.s2graph.core.S2Property[_]]" class="extmbr" name="org.apache.s2graph.core.S2Edge.Props">Props</a> = <span class="symbol"><span class="name"><a href="S2Edge$.html">S2Edge.EmptyProps</a></span></span></span>, <span name="parentEdges">parentEdges: <span class="extype" name="scala.Seq">Seq</span>[<a href="EdgeWithScore.html" class="extype" name="org.apache.s2graph.core.EdgeWithScore">EdgeWithScore</a>] = <span class="symbol">Nil</span></span>, <span name="originalEdgeOpt">originalEdgeOpt: <span class="extype" name="scala.Option">Option</span>[<a href="S2Edge.html" class="extype" name="org.apache.s2graph.core.S2Edge">S2Edge</a>] = <span class="symbol">None</span></span>, <span name="pendingEdgeOpt">pendingEdgeOpt: <span class="extype" name="scala.Option">Option</span>[<a href="S2Edge.html" class="extype" name="org.apache.s2graph.core.S2Edge">S2Edge</a>] = <span class="symbol">None</span></span>, <span name="statusCode">statusCode: <span class="extype" name="scala.Byte">Byte</span> = <span class="symbol">0</span></span>, <span name="lockTs">lockTs: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>] = <span class="symbol">None</span></span>, <span name="tsInnerValOpt">tsInnerValOpt: <span class="extype" name="scala.Option">Option</span>[<a href="types/InnerValLike.html" class="extype" name="org.apache.s2graph.core.types.InnerValLike">InnerValLike</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a> with <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Edge">Edge</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2EdgeextendsGraphElementwithEdgewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="S2GraphextendsGraph"></a>
+      <a id="S2Graph:S2Graph"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="S2Graph.html"><span class="name">S2Graph</span></a><span class="result"> extends <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Graph">Graph</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2GraphextendsGraph" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@OptIns</span><span class="args">()</span>
+              
+                <span class="name">@OptOuts</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2GraphIoRegistry" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2GraphIoRegistryextendsAbstractIoRegistry"></a>
+      <a id="S2GraphIoRegistry:S2GraphIoRegistry"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="S2GraphIoRegistry.html"><span class="name">S2GraphIoRegistry</span></a><span class="result"> extends <span class="extype" name="org.apache.tinkerpop.gremlin.structure.io.AbstractIoRegistry">AbstractIoRegistry</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2GraphIoRegistryextendsAbstractIoRegistry" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Property" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2Property[V]extendsProperty[V]withProductwithSerializable"></a>
+      <a id="S2Property[V]:S2Property[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="S2Property.html"><span class="name">S2Property</span></a><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="element">element: <a href="S2Edge.html" class="extype" name="org.apache.s2graph.core.S2Edge">S2Edge</a></span>, <span name="labelMeta">labelMeta: <a href="mysqls/LabelMeta.html" class="extype" name="org.apache.s2graph.core.mysqls.LabelMeta">LabelMeta</a></span>, <span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="v">v: <span class="extype" name="org.apache.s2graph.core.S2Property.V">V</span></span>, <span name="ts">ts: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Property">Property</span>[<span class="extype" name="org.apache.s2graph.core.S2Property.V">V</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2Property[V]extendsProperty[V]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2VertexextendsGraphElementwithVertexwithProductwithSerializable"></a>
+      <a id="S2Vertex:S2Vertex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="S2Vertex.html"><span class="name">S2Vertex</span></a><span class="params">(<span name="graph">graph: <a href="S2Graph.html" class="extype" name="org.apache.s2graph.core.S2Graph">S2Graph</a></span>, <span name="id">id: <a href="types/VertexId.html" class="extype" name="org.apache.s2graph.core.types.VertexId">VertexId</a></span>, <span name="ts">ts: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">System.currentTimeMillis()</span></span>, <span name="props">props: <a href="S2Vertex$.html#Props=java.util.Map[String,org.apache.s2graph.core.S2VertexProperty[_]]" class="extmbr" name="org.apache.s2graph.core.S2Vertex.Props">Props</a> = <span class="symbol"><span class="name"><a href="S2Vertex$.html">S2Vertex.EmptyProps</a></span></span></span>, <span name="op">op: <span class="extype" name="scala.Byte">Byte</span> = <span class="symbol">0</span></span>, <span name="belongLabelIds">belongLabelIds: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">Seq.empty</span></span>)</span><span class="result"> extends <a href="GraphElement.html" class="extype" name="org.apache.s2graph.core.GraphElement">GraphElement</a> with <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Vertex">Vertex</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2VertexextendsGraphElementwithVertexwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2VertexProperty" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2VertexProperty[V]extendsVertexProperty[V]withProductwithSerializable"></a>
+      <a id="S2VertexProperty[V]:S2VertexProperty[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="S2VertexProperty.html"><span class="name">S2VertexProperty</span></a><span class="tparams">[<span name="V">V</span>]</span><span class="params">(<span name="element">element: <a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a></span>, <span name="columnMeta">columnMeta: <a href="mysqls/ColumnMeta.html" class="extype" name="org.apache.s2graph.core.mysqls.ColumnMeta">ColumnMeta</a></span>, <span name="key">key: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="v">v: <span class="extype" name="org.apache.s2graph.core.S2VertexProperty.V">V</span></span>)</span><span class="result"> extends <span class="extype" name="org.apache.tinkerpop.gremlin.structure.VertexProperty">VertexProperty</span>[<span class="extype" name="org.apache.s2graph.core.S2VertexProperty.V">V</span>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2VertexProperty[V]extendsVertexProperty[V]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2VertexPropertyId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2VertexPropertyIdextendsProductwithSerializable"></a>
+      <a id="S2VertexPropertyId:S2VertexPropertyId"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="S2VertexPropertyId.html"><span class="name">S2VertexPropertyId</span></a><span class="params">(<span name="columnMeta">columnMeta: <a href="mysqls/ColumnMeta.html" class="extype" name="org.apache.s2graph.core.mysqls.ColumnMeta">ColumnMeta</a></span>, <span name="value">value: <a href="types/InnerValLike.html" class="extype" name="org.apache.s2graph.core.types.InnerValLike">InnerValLike</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2VertexPropertyIdextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.SeqMultiOrdering" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SeqMultiOrdering[T]extendsOrdering[Seq[T]]"></a>
+      <a id="SeqMultiOrdering[T]:SeqMultiOrdering[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SeqMultiOrdering.html"><span class="name">SeqMultiOrdering</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.s2graph.core.SeqMultiOrdering.T">T</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@SeqMultiOrdering[T]extendsOrdering[Seq[T]]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.SnapshotEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SnapshotEdgeextendsProductwithSerializable"></a>
+      <a id="SnapshotEdge:SnapshotEdge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SnapshotEdge.html"><span class="name">SnapshotEdge</span></a><span class="params">(<span name="graph">graph: <a href="S2Graph.html" class="extype" name="org.apache.s2graph.core.S2Graph">S2Graph</a></span>, <span name="srcVertex">srcVertex: <a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a></span>, <span name="tgtVertex">tgtVertex: <a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a></span>, <span name="label">label: <a href="mysqls/Label.html" class="extype" name="org.apache.s2graph.core.mysqls.Label">Label</a></span>, <span name="dir">dir: <span class="extype" name="scala.Int">Int</span></span>, <span name="op">op: <span class="extype" name="scala.Byte">Byte</span></span>, <span name="version">version: <span class="extype" name="scala.Long">Long</span></span>, <span name="propsWithTs">propsWithTs: <a href="S2Edge$.html#Props=java.util.Map[String,org.apache.s2graph.core.S2Property[_]]" class="extmbr" name="org.apache.s2graph.core.S2Edge.Props">Props</a></span>, <span name="pendingEdgeOpt">pendingEdgeOpt: <span class="extype" name="scala.Option">Option</span>[<a href="S2Edge.html" class="extype" name="org.apache.s2graph.core.S2Edge">S2Edge</a>]</span>, <span name="statusCode">statusCode: <span class="extype" name="scala.Byte">Byte</span> = <span class="symbol">0</span></span>, <span name="lockTs">lockTs: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Long">Long</span>]</span>, <span name="tsInnerValOpt">tsInnerValOpt: <span class="extype" name="scala.Option">Option</span>[<a href="types/InnerValLike.html" class="extype" name="org.apache.s2graph.core.types.InnerValLike">InnerValLike</a>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@SnapshotEdgeextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.Step" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StepextendsProductwithSerializable"></a>
+      <a id="Step:Step"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Step.html"><span class="name">Step</span></a><span class="params">(<span name="queryParams">queryParams: <span class="extype" name="scala.Seq">Seq</span>[<a href="QueryParam.html" class="extype" name="org.apache.s2graph.core.QueryParam">QueryParam</a>]</span>, <span name="labelWeights">labelWeights: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>] = <span class="symbol">Map.empty</span></span>, <span name="nextStepScoreThreshold">nextStepScoreThreshold: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.0</span></span>, <span name="nextStepLimit">nextStepLimit: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">1</span></span>, <span name="cacheTTL">cacheTTL: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">1</span></span>, <span name="groupBy">groupBy: <a href="GroupBy.html" class="extype" name="org.apache.s2graph.core.GroupBy">GroupBy</a> = <span class="symbol"><span class="name"><a href="GroupBy$.html">GroupBy.Empty</a></span></span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@StepextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.StepResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StepResultextendsProductwithSerializable"></a>
+      <a id="StepResult:StepResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="StepResult.html"><span class="name">StepResult</span></a><span class="params">(<span name="edgeWithScores">edgeWithScores: <span class="extype" name="scala.collection.Seq">Seq</span>[<a href="EdgeWithScore.html" class="extype" name="org.apache.s2graph.core.EdgeWithScore">EdgeWithScore</a>]</span>, <span name="grouped">grouped: <span class="extype" name="scala.collection.Seq">Seq</span>[(<a href="StepResult$.html#GroupByKey=Seq[Option[Any]]" class="extmbr" name="org.apache.s2graph.core.StepResult.GroupByKey">GroupByKey</a>, (<span class="extype" name="scala.Double">Double</span>, <a href="StepResult$.html#Values=Seq[org.apache.s2graph.core.EdgeWithScore]" class="extmbr" name="org.apache.s2graph.core.StepResult.Values">Values</a>))]</span>, <span name="degreeEdges">degreeEdges: <span class="extype" name="scala.collection.Seq">Seq</span>[<a href="EdgeWithScore.html" class="extype" name="org.apache.s2graph.core.EdgeWithScore">EdgeWithScore</a>]</span>, <span name="isFailure">isFailure: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="accumulatedCursors">accumulatedCursors: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]]] = <span class="symbol">Nil</span></span>, <span name="cursors">cursors: <span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]] = <span class="symbol">Nil</span></span>, <span name="failCount">failCount: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@StepResultextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">result</p>
+    </li><li name="org.apache.s2graph.core.TimeDecay" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TimeDecayextendsProductwithSerializable"></a>
+      <a id="TimeDecay:TimeDecay"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TimeDecay.html"><span class="name">TimeDecay</span></a><span class="params">(<span name="initial">initial: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">1.0</span></span>, <span name="lambda">lambda: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.1</span></span>, <span name="timeUnit">timeUnit: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">60 * 60 * 24</span></span>, <span name="labelMeta">labelMeta: <a href="mysqls/LabelMeta.html" class="extype" name="org.apache.s2graph.core.mysqls.LabelMeta">LabelMeta</a> = <span class="symbol"><span class="name"><a href="../../../package.html">LabelMeta.timestamp</a></span></span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@TimeDecayextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.VertexParam" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VertexParamextendsProductwithSerializable"></a>
+      <a id="VertexParam:VertexParam"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="VertexParam.html"><span class="name">VertexParam</span></a><span class="params">(<span name="vertices">vertices: <span class="extype" name="scala.Seq">Seq</span>[<a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@VertexParamextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.WithScore" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="WithScore[T]extendsAnyRef"></a>
+      <a id="WithScore[T]:WithScore[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="WithScore.html"><span class="name">WithScore</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@WithScore[T]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="org.apache.s2graph.core.DuplicatePolicy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DuplicatePolicy"></a>
+      <a id="DuplicatePolicy:DuplicatePolicy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DuplicatePolicy$.html"><span class="name">DuplicatePolicy</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@DuplicatePolicy" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.EdgeId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EdgeId"></a>
+      <a id="EdgeId:EdgeId"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EdgeId$.html"><span class="name">EdgeId</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@EdgeId" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.EdgeMutate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EdgeMutate"></a>
+      <a id="EdgeMutate:EdgeMutate"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EdgeMutate$.html"><span class="name">EdgeMutate</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@EdgeMutate" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.EdgeTransformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EdgeTransformer"></a>
+      <a id="EdgeTransformer:EdgeTransformer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EdgeTransformer$.html"><span class="name">EdgeTransformer</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@EdgeTransformer" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.ExceptionHandler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExceptionHandler"></a>
+      <a id="ExceptionHandler:ExceptionHandler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ExceptionHandler$.html"><span class="name">ExceptionHandler</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@ExceptionHandler" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.GraphExceptions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GraphExceptions"></a>
+      <a id="GraphExceptions:GraphExceptions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GraphExceptions$.html"><span class="name">GraphExceptions</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@GraphExceptions" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.GraphUtil" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GraphUtil"></a>
+      <a id="GraphUtil:GraphUtil"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GraphUtil$.html"><span class="name">GraphUtil</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@GraphUtil" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.GroupBy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GroupBy"></a>
+      <a id="GroupBy:GroupBy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GroupBy$.html"><span class="name">GroupBy</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@GroupBy" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.IndexEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IndexEdge"></a>
+      <a id="IndexEdge:IndexEdge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="IndexEdge$.html"><span class="name">IndexEdge</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@IndexEdge" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.JSONParser" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JSONParser"></a>
+      <a id="JSONParser:JSONParser"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="JSONParser$.html"><span class="name">JSONParser</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@JSONParser" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.Management" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Management"></a>
+      <a id="Management:Management"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Management$.html"><span class="name">Management</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@Management" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This is designed to be bridge between rest to s2core.</p><div class="fullcomment"><div class="comment cmt"><p>This is designed to be bridge between rest to s2core.
+s2core never use this for finding models.
+</p></div></div>
+    </li><li name="org.apache.s2graph.core.OrderingUtil" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OrderingUtil"></a>
+      <a id="OrderingUtil:OrderingUtil"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="OrderingUtil$.html"><span class="name">OrderingUtil</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@OrderingUtil" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.PostProcess" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PostProcess"></a>
+      <a id="PostProcess:PostProcess"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PostProcess$.html"><span class="name">PostProcess</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@PostProcess" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.Query" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Query"></a>
+      <a id="Query:Query"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Query$.html"><span class="name">Query</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@Query" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.QueryOption" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueryOption"></a>
+      <a id="QueryOption:QueryOption"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="QueryOption$.html"><span class="name">QueryOption</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@QueryOption" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.QueryParam" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueryParam"></a>
+      <a id="QueryParam:QueryParam"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="QueryParam$.html"><span class="name">QueryParam</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@QueryParam" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.QueryResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueryResult"></a>
+      <a id="QueryResult:QueryResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="QueryResult$.html"><span class="name">QueryResult</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@QueryResult" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.RankParam" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RankParam"></a>
+      <a id="RankParam:RankParam"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RankParam$.html"><span class="name">RankParam</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@RankParam" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Edge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2Edge"></a>
+      <a id="S2Edge:S2Edge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="S2Edge$.html"><span class="name">S2Edge</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2Edge" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2Graph"></a>
+      <a id="S2Graph:S2Graph"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="S2Graph$.html"><span class="name">S2Graph</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2Graph" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2GraphFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2GraphFactory"></a>
+      <a id="S2GraphFactory:S2GraphFactory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="S2GraphFactory$.html"><span class="name">S2GraphFactory</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2GraphFactory" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2GraphIoRegistry" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2GraphIoRegistry"></a>
+      <a id="S2GraphIoRegistry:S2GraphIoRegistry"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="S2GraphIoRegistry$.html"><span class="name">S2GraphIoRegistry</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2GraphIoRegistry" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Property" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2Property"></a>
+      <a id="S2Property:S2Property"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="S2Property$.html"><span class="name">S2Property</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2Property" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Vertex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2Vertex"></a>
+      <a id="S2Vertex:S2Vertex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="S2Vertex$.html"><span class="name">S2Vertex</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2Vertex" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2VertexPropertyId" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="S2VertexPropertyId"></a>
+      <a id="S2VertexPropertyId:S2VertexPropertyId"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="S2VertexPropertyId$.html"><span class="name">S2VertexPropertyId</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@S2VertexPropertyId" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.SnapshotEdge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SnapshotEdge"></a>
+      <a id="SnapshotEdge:SnapshotEdge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SnapshotEdge$.html"><span class="name">SnapshotEdge</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@SnapshotEdge" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.Step" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Step"></a>
+      <a id="Step:Step"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Step$.html"><span class="name">Step</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@Step" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.StepResult" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StepResult"></a>
+      <a id="StepResult:StepResult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StepResult$.html"><span class="name">StepResult</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@StepResult" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.WithScore" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WithScore"></a>
+      <a id="WithScore:WithScore"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="WithScore$.html"><span class="name">WithScore</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@WithScore" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.features" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="features"></a>
+      <a id="features:features"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="features/package.html"><span class="name">features</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@features" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.index" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="index"></a>
+      <a id="index:index"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="index/package.html"><span class="name">index</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@index" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.io" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="io"></a>
+      <a id="io:io"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="io/package.html"><span class="name">io</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@io" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mysqls"></a>
+      <a id="mysqls:mysqls"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="mysqls/package.html"><span class="name">mysqls</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@mysqls" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="parsers"></a>
+      <a id="parsers:parsers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="parsers/package.html"><span class="name">parsers</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@parsers" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.rest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rest"></a>
+      <a id="rest:rest"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="rest/package.html"><span class="name">rest</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@rest" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.storage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="storage"></a>
+      <a id="storage:storage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="storage/package.html"><span class="name">storage</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@storage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.types" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="types"></a>
+      <a id="types:types"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="types/package.html"><span class="name">types</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@types" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.utils" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="utils"></a>
+      <a id="utils:utils"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="utils/package.html"><span class="name">utils</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.package@utils" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

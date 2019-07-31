@@ -1,0 +1,359 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>parsers - org.apache.s2graph.core.parsers</title>
+          <meta name="description" content="parsers - org.apache.s2graph.core.parsers" />
+          <meta name="keywords" content="parsers org.apache.s2graph.core.parsers" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'org.apache.s2graph.core.parsers.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.s2graph">s2graph</a>.<a href="../package.html" class="extype" name="org.apache.s2graph.core">core</a></p>
+        <h1>parsers</h1><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parsers</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.s2graph.core.parsers.And" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AndextendsClausewithProductwithSerializable"></a>
+      <a id="And:And"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="And.html"><span class="name">And</span></a><span class="params">(<span name="left">left: <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a></span>, <span name="right">right: <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a></span>)</span><span class="result"> extends <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@AndextendsClausewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.Between" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BetweenextendsClausewithProductwithSerializable"></a>
+      <a id="Between:Between"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Between.html"><span class="name">Between</span></a><span class="params">(<span name="propKey">propKey: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="minValue">minValue: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="maxValue">maxValue: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@BetweenextendsClausewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.Clause" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClauseextendsExtractValue"></a>
+      <a id="Clause:Clause"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Clause.html"><span class="name">Clause</span></a><span class="result"> extends <a href="ExtractValue.html" class="extype" name="org.apache.s2graph.core.parsers.ExtractValue">ExtractValue</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@ClauseextendsExtractValue" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.Eq" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EqextendsClausewithProductwithSerializable"></a>
+      <a id="Eq:Eq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Eq.html"><span class="name">Eq</span></a><span class="params">(<span name="propKey">propKey: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@EqextendsClausewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.ExtractValue" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ExtractValueextendsAnyRef"></a>
+      <a id="ExtractValue:ExtractValue"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ExtractValue.html"><span class="name">ExtractValue</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@ExtractValueextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.Gt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GtextendsClausewithProductwithSerializable"></a>
+      <a id="Gt:Gt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Gt.html"><span class="name">Gt</span></a><span class="params">(<span name="propKey">propKey: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@GtextendsClausewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.IN" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="INextendsClausewithProductwithSerializable"></a>
+      <a id="IN:IN"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="IN.html"><span class="name">IN</span></a><span class="params">(<span name="propKey">propKey: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="values">values: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@INextendsClausewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.InWithoutParent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InWithoutParentextendsClausewithProductwithSerializable"></a>
+      <a id="InWithoutParent:InWithoutParent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="InWithoutParent.html"><span class="name">InWithoutParent</span></a><span class="params">(<span name="label">label: <a href="../mysqls/Label.html" class="extype" name="org.apache.s2graph.core.mysqls.Label">Label</a></span>, <span name="propKey">propKey: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="values">values: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@InWithoutParentextendsClausewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.Lt" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LtextendsClausewithProductwithSerializable"></a>
+      <a id="Lt:Lt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Lt.html"><span class="name">Lt</span></a><span class="params">(<span name="propKey">propKey: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@LtextendsClausewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.Not" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NotextendsClausewithProductwithSerializable"></a>
+      <a id="Not:Not"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Not.html"><span class="name">Not</span></a><span class="params">(<span name="self">self: <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a></span>)</span><span class="result"> extends <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@NotextendsClausewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.Or" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OrextendsClausewithProductwithSerializable"></a>
+      <a id="Or:Or"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Or.html"><span class="name">Or</span></a><span class="params">(<span name="left">left: <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a></span>, <span name="right">right: <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a></span>)</span><span class="result"> extends <a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@OrextendsClausewithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.Where" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WhereextendsProductwithSerializable"></a>
+      <a id="Where:Where"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Where.html"><span class="name">Where</span></a><span class="params">(<span name="clauses">clauses: <span class="extype" name="scala.Seq">Seq</span>[<a href="Clause.html" class="extype" name="org.apache.s2graph.core.parsers.Clause">Clause</a>] = <span class="symbol">Seq.empty[Clause]</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@WhereextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.WhereParser" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WhereParserextendsJavaTokenParserswithProductwithSerializable"></a>
+      <a id="WhereParser:WhereParser"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="WhereParser.html"><span class="name">WhereParser</span></a><span class="params">(<span name="label">label: <a href="../mysqls/Label.html" class="extype" name="org.apache.s2graph.core.mysqls.Label">Label</a></span>)</span><span class="result"> extends <span class="extype" name="scala.util.parsing.combinator.JavaTokenParsers">JavaTokenParsers</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@WhereParserextendsJavaTokenParserswithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="org.apache.s2graph.core.parsers.Where" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Where"></a>
+      <a id="Where:Where"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Where$.html"><span class="name">Where</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@Where" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.parsers.WhereParser" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WhereParser"></a>
+      <a id="WhereParser:WhereParser"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="WhereParser$.html"><span class="name">WhereParser</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.parsers.package@WhereParser" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

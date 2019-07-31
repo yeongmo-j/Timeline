@@ -1,0 +1,1288 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>CounterFunctions - org.apache.s2graph.counter.loader.core.CounterFunctions</title>
+          <meta name="description" content="CounterFunctions - org.apache.s2graph.counter.loader.core.CounterFunctions" />
+          <meta name="keywords" content="CounterFunctions org.apache.s2graph.counter.loader.core.CounterFunctions" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../index.html';
+            var hash = 'org.apache.s2graph.counter.loader.core.CounterFunctions$';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Object" src="../../../../../../lib/object_big.png" />
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="org">org</a>.<a href="../../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../../package.html" class="extype" name="org.apache.s2graph">s2graph</a>.<a href="../../package.html" class="extype" name="org.apache.s2graph.counter">counter</a>.<a href="../package.html" class="extype" name="org.apache.s2graph.counter.loader">loader</a>.<a href="package.html" class="extype" name="org.apache.s2graph.counter.loader.core">core</a></p>
+        <h1>CounterFunctions</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="org.apache.s2graph.counter.loader.core">package core</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CounterFunctions</span><span class="result"> extends <span class="extype" name="org.apache.spark.Logging">Logging</span> with <span class="extype" name="org.apache.s2graph.spark.spark.WithKafka">WithKafka</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.apache.s2graph.spark.spark.WithKafka">WithKafka</span>, <span class="extype" name="org.apache.spark.Logging">Logging</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="org.apache.s2graph.counter.loader.core.CounterFunctions"><span>CounterFunctions</span></li><li class="in" name="org.apache.s2graph.spark.spark.WithKafka"><span>WithKafka</span></li><li class="in" name="org.apache.spark.Logging"><span>Logging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.s2graph.counter.loader.core.CounterFunctions.HashMapAccumulable" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HashMapAccumulable=org.apache.spark.Accumulable[scala.collection.mutable.HashMap[String,Long],(String,Long)]"></a>
+      <a id="HashMapAccumulable:HashMapAccumulable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HashMapAccumulable</span><span class="result"> = <span class="extype" name="org.apache.spark.Accumulable">Accumulable</span>[<span class="extype" name="scala.collection.mutable.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Long">Long</span>], (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Long">Long</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@HashMapAccumulable=org.apache.spark.Accumulable[scala.collection.mutable.HashMap[String,Long],(String,Long)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ItemRankingRowextendsProductwithSerializable"></a>
+      <a id="ItemRankingRow:ItemRankingRow"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="CounterFunctions$$ItemRankingRow.html"><span class="name">ItemRankingRow</span></a><span class="params">(<span name="key">key: <span class="extype" name="org.apache.s2graph.counter.core.ExactKeyTrait">ExactKeyTrait</span></span>, <span name="value">value: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="org.apache.s2graph.counter.core.ExactQualifier">ExactQualifier</span>, <span class="extype" name="org.apache.s2graph.counter.core.RankingValue">RankingValue</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@ItemRankingRowextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@##():Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#ec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ec:scala.concurrent.ExecutionContextExecutor"></a>
+      <a id="ec:ExecutionContextExecutor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ec</span><span class="result">: <span class="extype" name="scala.concurrent.ExecutionContextExecutor">ExecutionContextExecutor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@ec:scala.concurrent.ExecutionContextExecutor" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#exactCountFromEtl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="exactCountFromEtl(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.loader.core.CounterEtlItem],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.ExactKeyTrait,org.apache.s2graph.counter.core.ExactCounter.ExactValueMap)]"></a>
+      <a id="exactCountFromEtl(RDD[CounterEtlItem],Int):RDD[(ExactKeyTrait,ExactValueMap)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exactCountFromEtl</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="CounterEtlItem.html" class="extype" name="org.apache.s2graph.counter.loader.core.CounterEtlItem">CounterEtlItem</a>]</span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="org.apache.s2graph.counter.core.ExactKeyTrait">ExactKeyTrait</span>, <span class="extype" name="org.apache.s2graph.counter.core.ExactCounter.ExactValueMap">ExactValueMap</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@exactCountFromEtl(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.loader.core.CounterEtlItem],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.ExactKeyTrait,org.apache.s2graph.counter.core.ExactCounter.ExactValueMap)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#exactCounter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="exactCounter:org.apache.s2graph.counter.core.ExactCounter"></a>
+      <a id="exactCounter:ExactCounter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exactCounter</span><span class="result">: <span class="extype" name="org.apache.s2graph.counter.core.ExactCounter">ExactCounter</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@exactCounter:org.apache.s2graph.counter.core.ExactCounter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#exactMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="exactMapper(item:org.apache.s2graph.counter.loader.core.CounterEtlItem):Option[(org.apache.s2graph.counter.core.ExactKeyTrait,org.apache.s2graph.counter.core.ExactCounter.ExactValueMap)]"></a>
+      <a id="exactMapper(CounterEtlItem):Option[(ExactKeyTrait,ExactValueMap)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exactMapper</span><span class="params">(<span name="item">item: <a href="CounterEtlItem.html" class="extype" name="org.apache.s2graph.counter.loader.core.CounterEtlItem">CounterEtlItem</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="org.apache.s2graph.counter.core.ExactKeyTrait">ExactKeyTrait</span>, <span class="extype" name="org.apache.s2graph.counter.core.ExactCounter.ExactValueMap">ExactValueMap</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@exactMapper(item:org.apache.s2graph.counter.loader.core.CounterEtlItem):Option[(org.apache.s2graph.counter.core.ExactKeyTrait,org.apache.s2graph.counter.core.ExactCounter.ExactValueMap)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#getCountValue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getCountValue(policy:org.apache.s2graph.counter.models.Counter,item:org.apache.s2graph.counter.loader.core.CounterEtlItem):org.apache.s2graph.counter.core.ExactCounter.ExactValueMap"></a>
+      <a id="getCountValue(Counter,CounterEtlItem):ExactValueMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCountValue</span><span class="params">(<span name="policy">policy: <span class="extype" name="org.apache.s2graph.counter.models.Counter">Counter</span></span>, <span name="item">item: <a href="CounterEtlItem.html" class="extype" name="org.apache.s2graph.counter.loader.core.CounterEtlItem">CounterEtlItem</a></span>)</span><span class="result">: <span class="extype" name="org.apache.s2graph.counter.core.ExactCounter.ExactValueMap">ExactValueMap</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@getCountValue(policy:org.apache.s2graph.counter.models.Counter,item:org.apache.s2graph.counter.loader.core.CounterEtlItem):org.apache.s2graph.counter.core.ExactCounter.ExactValueMap" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#getDimensionValues" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getDimensionValues(dimension:play.api.libs.json.JsValue,keys:Array[String]):Option[Array[String]]"></a>
+      <a id="getDimensionValues(JsValue,Array[String]):Option[Array[String]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getDimensionValues</span><span class="params">(<span name="dimension">dimension: <span class="extype" name="play.api.libs.json.JsValue">JsValue</span></span>, <span name="keys">keys: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@getDimensionValues(dimension:play.api.libs.json.JsValue,keys:Array[String]):Option[Array[String]]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.spark.spark.WithKafka#getPartKey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPartKey(k:Any,n:Int):Int"></a>
+      <a id="getPartKey(Any,Int):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPartKey</span><span class="params">(<span name="k">k: <span class="extype" name="scala.Any">Any</span></span>, <span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@getPartKey(k:Any,n:Int):Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WithKafka</dd></dl></div>
+    </li><li name="org.apache.s2graph.spark.spark.WithKafka#getProducer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getProducer[K,V](brokers:String):kafka.producer.Producer[K,V]"></a>
+      <a id="getProducer[K,V](String):Producer[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getProducer</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="brokers">brokers: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="kafka.producer.Producer">Producer</span>[<span class="extype" name="org.apache.s2graph.spark.spark.WithKafka.getProducer.K">K</span>, <span class="extype" name="org.apache.s2graph.spark.spark.WithKafka.getProducer.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@getProducer[K,V](brokers:String):kafka.producer.Producer[K,V]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WithKafka</dd></dl></div>
+    </li><li name="org.apache.s2graph.spark.spark.WithKafka#getProducer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getProducer[K,V](config:kafka.producer.ProducerConfig):kafka.producer.Producer[K,V]"></a>
+      <a id="getProducer[K,V](ProducerConfig):Producer[K,V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getProducer</span><span class="tparams">[<span name="K">K</span>, <span name="V">V</span>]</span><span class="params">(<span name="config">config: <span class="extype" name="kafka.producer.ProducerConfig">ProducerConfig</span></span>)</span><span class="result">: <span class="extype" name="kafka.producer.Producer">Producer</span>[<span class="extype" name="org.apache.s2graph.spark.spark.WithKafka.getProducer.K">K</span>, <span class="extype" name="org.apache.s2graph.spark.spark.WithKafka.getProducer.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@getProducer[K,V](config:kafka.producer.ProducerConfig):kafka.producer.Producer[K,V]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WithKafka</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#initialize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="initialize:Boolean"></a>
+      <a id="initialize:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initialize</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@initialize:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#insertBlobValue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="insertBlobValue(keys:Seq[org.apache.s2graph.counter.core.BlobExactKey],acc:org.apache.s2graph.counter.loader.core.CounterFunctions.HashMapAccumulable):Unit"></a>
+      <a id="insertBlobValue(Seq[BlobExactKey],HashMapAccumulable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">insertBlobValue</span><span class="params">(<span name="keys">keys: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.s2graph.counter.core.BlobExactKey">BlobExactKey</span>]</span>, <span name="acc">acc: <a href="#HashMapAccumulable=org.apache.spark.Accumulable[scala.collection.mutable.HashMap[String,Long],(String,Long)]" class="extmbr" name="org.apache.s2graph.counter.loader.core.CounterFunctions.HashMapAccumulable">HashMapAccumulable</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@insertBlobValue(keys:Seq[org.apache.s2graph.counter.core.BlobExactKey],acc:org.apache.s2graph.counter.loader.core.CounterFunctions.HashMapAccumulable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#isTraceEnabled" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isTraceEnabled():Boolean"></a>
+      <a id="isTraceEnabled():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isTraceEnabled</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@isTraceEnabled():Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.s2graph.spark.spark.WithKafka#kafkaConf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="kafkaConf(brokerList:String):kafka.producer.ProducerConfig"></a>
+      <a id="kafkaConf(String):ProducerConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kafkaConf</span><span class="params">(<span name="brokerList">brokerList: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="kafka.producer.ProducerConfig">ProducerConfig</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@kafkaConf(brokerList:String):kafka.producer.ProducerConfig" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WithKafka</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#log" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="log:org.slf4j.Logger"></a>
+      <a id="log:Logger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">log</span><span class="result">: <span class="extype" name="org.slf4j.Logger">Logger</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@log:org.slf4j.Logger" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logDebug(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logDebug(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logDebug" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logDebug(msg:=&gt;String):Unit"></a>
+      <a id="logDebug(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logDebug</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logDebug(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logError(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logError(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logError" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logError(msg:=&gt;String):Unit"></a>
+      <a id="logError(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logError</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logError(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logInfo(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logInfo(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logInfo" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logInfo(msg:=&gt;String):Unit"></a>
+      <a id="logInfo(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logInfo</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logInfo(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logName" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logName:String"></a>
+      <a id="logName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logName:String" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#logToRankValue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="logToRankValue(log:org.apache.s2graph.counter.TrxLog):Option[(org.apache.s2graph.counter.core.ExactKeyTrait,Map[org.apache.s2graph.counter.core.ExactQualifier,org.apache.s2graph.counter.core.RankingValue])]"></a>
+      <a id="logToRankValue(TrxLog):Option[(ExactKeyTrait,Map[ExactQualifier,RankingValue])]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logToRankValue</span><span class="params">(<span name="log">log: <span class="extype" name="org.apache.s2graph.counter.TrxLog">TrxLog</span></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="org.apache.s2graph.counter.core.ExactKeyTrait">ExactKeyTrait</span>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="org.apache.s2graph.counter.core.ExactQualifier">ExactQualifier</span>, <span class="extype" name="org.apache.s2graph.counter.core.RankingValue">RankingValue</span>])]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logToRankValue(log:org.apache.s2graph.counter.TrxLog):Option[(org.apache.s2graph.counter.core.ExactKeyTrait,Map[org.apache.s2graph.counter.core.ExactQualifier,org.apache.s2graph.counter.core.RankingValue])]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logTrace(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logTrace(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logTrace" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logTrace(msg:=&gt;String):Unit"></a>
+      <a id="logTrace(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logTrace</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logTrace(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String,throwable:Throwable):Unit"></a>
+      <a id="logWarning(⇒String,Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="throwable">throwable: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logWarning(msg:=&gt;String,throwable:Throwable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.spark.Logging#logWarning" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logWarning(msg:=&gt;String):Unit"></a>
+      <a id="logWarning(⇒String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logWarning</span><span class="params">(<span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@logWarning(msg:=&gt;String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Logging</dd></dl></div>
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#makeExactRdd" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="makeExactRdd(rdd:org.apache.spark.rdd.RDD[(String,String)],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.ExactKeyTrait,org.apache.s2graph.counter.core.ExactCounter.ExactValueMap)]"></a>
+      <a id="makeExactRdd(RDD[(String,String)],Int):RDD[(ExactKeyTrait,ExactValueMap)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeExactRdd</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="org.apache.s2graph.counter.core.ExactKeyTrait">ExactKeyTrait</span>, <span class="extype" name="org.apache.s2graph.counter.core.ExactCounter.ExactValueMap">ExactValueMap</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@makeExactRdd(rdd:org.apache.spark.rdd.RDD[(String,String)],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.ExactKeyTrait,org.apache.s2graph.counter.core.ExactCounter.ExactValueMap)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#makeItemRankingRdd" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="makeItemRankingRdd(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.TrxLog],numPartitions:Int):org.apache.spark.rdd.RDD[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow]"></a>
+      <a id="makeItemRankingRdd(RDD[TrxLog],Int):RDD[ItemRankingRow]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeItemRankingRdd</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="org.apache.s2graph.counter.TrxLog">TrxLog</span>]</span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="CounterFunctions$$ItemRankingRow.html" class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow">ItemRankingRow</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@makeItemRankingRdd(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.TrxLog],numPartitions:Int):org.apache.spark.rdd.RDD[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.spark.spark.WithKafka#makeKafkaGroupId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="makeKafkaGroupId(topic:String,ext:String):String"></a>
+      <a id="makeKafkaGroupId(String,String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeKafkaGroupId</span><span class="params">(<span name="topic">topic: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="ext">ext: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@makeKafkaGroupId(topic:String,ext:String):String" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WithKafka</dd></dl></div>
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#makeRankingRdd" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="makeRankingRdd(rdd:org.apache.spark.rdd.RDD[(String,String)],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]"></a>
+      <a id="makeRankingRdd(RDD[(String,String)],Int):RDD[(RankingKey,RankingValueMap)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeRankingRdd</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="org.apache.s2graph.counter.core.RankingKey">RankingKey</span>, <span class="extype" name="org.apache.s2graph.counter.core.RankingCounter.RankingValueMap">RankingValueMap</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@makeRankingRdd(rdd:org.apache.spark.rdd.RDD[(String,String)],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#makeRankingRddFromTrxLog" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="makeRankingRddFromTrxLog(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.TrxLog],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]"></a>
+      <a id="makeRankingRddFromTrxLog(RDD[TrxLog],Int):RDD[(RankingKey,RankingValueMap)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeRankingRddFromTrxLog</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="org.apache.s2graph.counter.TrxLog">TrxLog</span>]</span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="org.apache.s2graph.counter.core.RankingKey">RankingKey</span>, <span class="extype" name="org.apache.s2graph.counter.core.RankingCounter.RankingValueMap">RankingValueMap</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@makeRankingRddFromTrxLog(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.TrxLog],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#makeTrxLogRdd" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="makeTrxLogRdd(rdd:org.apache.spark.rdd.RDD[(String,String)],numPartitions:Int):org.apache.spark.rdd.RDD[org.apache.s2graph.counter.TrxLog]"></a>
+      <a id="makeTrxLogRdd(RDD[(String,String)],Int):RDD[TrxLog]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeTrxLogRdd</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<span class="extype" name="org.apache.s2graph.counter.TrxLog">TrxLog</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@makeTrxLogRdd(rdd:org.apache.spark.rdd.RDD[(String,String)],numPartitions:Int):org.apache.spark.rdd.RDD[org.apache.s2graph.counter.TrxLog]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#mapRateRankingValue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mapRateRankingValue(rows:Seq[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow]):Seq[(org.apache.s2graph.counter.core.ExactKeyTrait,Map[org.apache.s2graph.counter.core.ExactQualifier,org.apache.s2graph.counter.core.RateRankingValue])]"></a>
+      <a id="mapRateRankingValue(Seq[ItemRankingRow]):Seq[(ExactKeyTrait,Map[ExactQualifier,RateRankingValue])]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapRateRankingValue</span><span class="params">(<span name="rows">rows: <span class="extype" name="scala.Seq">Seq</span>[<a href="CounterFunctions$$ItemRankingRow.html" class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow">ItemRankingRow</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="org.apache.s2graph.counter.core.ExactKeyTrait">ExactKeyTrait</span>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="org.apache.s2graph.counter.core.ExactQualifier">ExactQualifier</span>, <span class="extype" name="org.apache.s2graph.counter.core.RateRankingValue">RateRankingValue</span>])]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@mapRateRankingValue(rows:Seq[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow]):Seq[(org.apache.s2graph.counter.core.ExactKeyTrait,Map[org.apache.s2graph.counter.core.ExactQualifier,org.apache.s2graph.counter.core.RateRankingValue])]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#mapTrendRankingValue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mapTrendRankingValue(rows:Seq[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow]):Seq[(org.apache.s2graph.counter.core.ExactKeyTrait,Map[org.apache.s2graph.counter.core.ExactQualifier,org.apache.s2graph.counter.core.RateRankingValue])]"></a>
+      <a id="mapTrendRankingValue(Seq[ItemRankingRow]):Seq[(ExactKeyTrait,Map[ExactQualifier,RateRankingValue])]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mapTrendRankingValue</span><span class="params">(<span name="rows">rows: <span class="extype" name="scala.Seq">Seq</span>[<a href="CounterFunctions$$ItemRankingRow.html" class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow">ItemRankingRow</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="org.apache.s2graph.counter.core.ExactKeyTrait">ExactKeyTrait</span>, <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="org.apache.s2graph.counter.core.ExactQualifier">ExactQualifier</span>, <span class="extype" name="org.apache.s2graph.counter.core.RateRankingValue">RateRankingValue</span>])]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@mapTrendRankingValue(rows:Seq[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow]):Seq[(org.apache.s2graph.counter.core.ExactKeyTrait,Map[org.apache.s2graph.counter.core.ExactQualifier,org.apache.s2graph.counter.core.RateRankingValue])]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#produceTrxLog" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="produceTrxLog(trxLogs:TraversableOnce[org.apache.s2graph.counter.TrxLog]):Unit"></a>
+      <a id="produceTrxLog(TraversableOnce[TrxLog]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">produceTrxLog</span><span class="params">(<span name="trxLogs">trxLogs: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[<span class="extype" name="org.apache.s2graph.counter.TrxLog">TrxLog</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@produceTrxLog(trxLogs:TraversableOnce[org.apache.s2graph.counter.TrxLog]):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#producer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="producer:kafka.producer.Producer[String,String]"></a>
+      <a id="producer:Producer[String,String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">producer</span><span class="result">: <span class="extype" name="kafka.producer.Producer">Producer</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@producer:kafka.producer.Producer[String,String]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.spark.spark.WithKafka#producerConfig" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="producerConfig(brokerList:String,requireAcks:String,producerType:String):kafka.producer.ProducerConfig"></a>
+      <a id="producerConfig(String,String,String):ProducerConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">producerConfig</span><span class="params">(<span name="brokerList">brokerList: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="requireAcks">requireAcks: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="producerType">producerType: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="kafka.producer.ProducerConfig">ProducerConfig</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@producerConfig(brokerList:String,requireAcks:String,producerType:String):kafka.producer.ProducerConfig" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>WithKafka</dd></dl></div>
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#rankingCount" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rankingCount(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]"></a>
+      <a id="rankingCount(RDD[ItemRankingRow],Int):RDD[(RankingKey,RankingValueMap)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rankingCount</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="CounterFunctions$$ItemRankingRow.html" class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow">ItemRankingRow</a>]</span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="org.apache.s2graph.counter.core.RankingKey">RankingKey</span>, <span class="extype" name="org.apache.s2graph.counter.core.RankingCounter.RankingValueMap">RankingValueMap</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@rankingCount(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#rankingCounter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rankingCounter:org.apache.s2graph.counter.core.RankingCounter"></a>
+      <a id="rankingCounter:RankingCounter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rankingCounter</span><span class="result">: <span class="extype" name="org.apache.s2graph.counter.core.RankingCounter">RankingCounter</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@rankingCounter:org.apache.s2graph.counter.core.RankingCounter" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#rankingMapper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rankingMapper(row:org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow):Seq[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]"></a>
+      <a id="rankingMapper(ItemRankingRow):Seq[(RankingKey,RankingValueMap)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rankingMapper</span><span class="params">(<span name="row">row: <a href="CounterFunctions$$ItemRankingRow.html" class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow">ItemRankingRow</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="org.apache.s2graph.counter.core.RankingKey">RankingKey</span>, <span class="extype" name="org.apache.s2graph.counter.core.RankingCounter.RankingValueMap">RankingValueMap</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@rankingMapper(row:org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow):Seq[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#rateRankingCount" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rateRankingCount(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]"></a>
+      <a id="rateRankingCount(RDD[ItemRankingRow],Int):RDD[(RankingKey,RankingValueMap)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rateRankingCount</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="CounterFunctions$$ItemRankingRow.html" class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow">ItemRankingRow</a>]</span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="org.apache.s2graph.counter.core.RankingKey">RankingKey</span>, <span class="extype" name="org.apache.s2graph.counter.core.RankingCounter.RankingValueMap">RankingValueMap</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@rateRankingCount(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#reduceValue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="reduceValue[T,U](op:(U,U)=&gt;U,default:U)(m1:Map[T,U],m2:Map[T,U]):Map[T,U]"></a>
+      <a id="reduceValue[T,U]((U,U)⇒U,U)(Map[T,U],Map[T,U]):Map[T,U]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reduceValue</span><span class="tparams">[<span name="T">T</span>, <span name="U">U</span>]</span><span class="params">(<span name="op">op: (<span class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.reduceValue.U">U</span>, <span class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.reduceValue.U">U</span>) ⇒ <span class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.reduceValue.U">U</span></span>, <span name="default">default: <span class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.reduceValue.U">U</span></span>)</span><span class="params">(<span name="m1">m1: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.reduceValue.T">T</span>, <span class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.reduceValue.U">U</span>]</span>, <span name="m2">m2: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.reduceValue.T">T</span>, <span class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.reduceValue.U">U</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.reduceValue.T">T</span>, <span class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.reduceValue.U">U</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@reduceValue[T,U](op:(U,U)=&gt;U,default:U)(m1:Map[T,U],m2:Map[T,U]):Map[T,U]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@toString():String" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#trendRankingCount" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="trendRankingCount(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]"></a>
+      <a id="trendRankingCount(RDD[ItemRankingRow],Int):RDD[(RankingKey,RankingValueMap)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">trendRankingCount</span><span class="params">(<span name="rdd">rdd: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[<a href="CounterFunctions$$ItemRankingRow.html" class="extype" name="org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow">ItemRankingRow</a>]</span>, <span name="numPartitions">numPartitions: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.apache.spark.rdd.RDD">RDD</span>[(<span class="extype" name="org.apache.s2graph.counter.core.RankingKey">RankingKey</span>, <span class="extype" name="org.apache.s2graph.counter.core.RankingCounter.RankingValueMap">RankingValueMap</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@trendRankingCount(rdd:org.apache.spark.rdd.RDD[org.apache.s2graph.counter.loader.core.CounterFunctions.ItemRankingRow],numPartitions:Int):org.apache.spark.rdd.RDD[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#updateExactCounter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="updateExactCounter(counts:Seq[(org.apache.s2graph.counter.core.ExactKeyTrait,org.apache.s2graph.counter.core.ExactCounter.ExactValueMap)],acc:org.apache.s2graph.counter.loader.core.CounterFunctions.HashMapAccumulable):Seq[org.apache.s2graph.counter.TrxLog]"></a>
+      <a id="updateExactCounter(Seq[(ExactKeyTrait,ExactValueMap)],HashMapAccumulable):Seq[TrxLog]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateExactCounter</span><span class="params">(<span name="counts">counts: <span class="extype" name="scala.Seq">Seq</span>[(<span class="extype" name="org.apache.s2graph.counter.core.ExactKeyTrait">ExactKeyTrait</span>, <span class="extype" name="org.apache.s2graph.counter.core.ExactCounter.ExactValueMap">ExactValueMap</span>)]</span>, <span name="acc">acc: <a href="#HashMapAccumulable=org.apache.spark.Accumulable[scala.collection.mutable.HashMap[String,Long],(String,Long)]" class="extmbr" name="org.apache.s2graph.counter.loader.core.CounterFunctions.HashMapAccumulable">HashMapAccumulable</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="org.apache.s2graph.counter.TrxLog">TrxLog</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@updateExactCounter(counts:Seq[(org.apache.s2graph.counter.core.ExactKeyTrait,org.apache.s2graph.counter.core.ExactCounter.ExactValueMap)],acc:org.apache.s2graph.counter.loader.core.CounterFunctions.HashMapAccumulable):Seq[org.apache.s2graph.counter.TrxLog]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.counter.loader.core.CounterFunctions#updateRankingCounter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="updateRankingCounter(values:TraversableOnce[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)],acc:org.apache.s2graph.counter.loader.core.CounterFunctions.HashMapAccumulable):Unit"></a>
+      <a id="updateRankingCounter(TraversableOnce[(RankingKey,RankingValueMap)],HashMapAccumulable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateRankingCounter</span><span class="params">(<span name="values">values: <span class="extype" name="scala.TraversableOnce">TraversableOnce</span>[(<span class="extype" name="org.apache.s2graph.counter.core.RankingKey">RankingKey</span>, <span class="extype" name="org.apache.s2graph.counter.core.RankingCounter.RankingValueMap">RankingValueMap</span>)]</span>, <span name="acc">acc: <a href="#HashMapAccumulable=org.apache.spark.Accumulable[scala.collection.mutable.HashMap[String,Long],(String,Long)]" class="extmbr" name="org.apache.s2graph.counter.loader.core.CounterFunctions.HashMapAccumulable">HashMapAccumulable</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@updateRankingCounter(values:TraversableOnce[(org.apache.s2graph.counter.core.RankingKey,org.apache.s2graph.counter.core.RankingCounter.RankingValueMap)],acc:org.apache.s2graph.counter.loader.core.CounterFunctions.HashMapAccumulable):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#org.apache.s2graph.counter.loader.core.CounterFunctions$@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.apache.s2graph.spark.spark.WithKafka">
+              <h3>Inherited from <span class="extype" name="org.apache.s2graph.spark.spark.WithKafka">WithKafka</span></h3>
+            </div><div class="parent" name="org.apache.spark.Logging">
+              <h3>Inherited from <span class="extype" name="org.apache.spark.Logging">Logging</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

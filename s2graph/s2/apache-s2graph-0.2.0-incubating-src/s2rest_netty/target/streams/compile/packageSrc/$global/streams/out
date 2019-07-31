@@ -1,0 +1,7 @@
+[0m[[0minfo[0m] [0mPackaging /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2rest_netty/target/scala-2.11/s2rest_netty_2.11-0.2.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	reference.conf[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2rest_netty/src/main/resources/reference.conf[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/rest/netty/Server.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/s2rest_netty/src/main/scala/org/apache/s2graph/rest/netty/Server.scala[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

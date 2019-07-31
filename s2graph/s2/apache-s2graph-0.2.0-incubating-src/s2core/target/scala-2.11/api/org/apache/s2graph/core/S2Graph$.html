@@ -1,0 +1,949 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>S2Graph - org.apache.s2graph.core.S2Graph</title>
+          <meta name="description" content="S2Graph - org.apache.s2graph.core.S2Graph" />
+          <meta name="keywords" content="S2Graph org.apache.s2graph.core.S2Graph" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'org.apache.s2graph.core.S2Graph$';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <a href="S2Graph.html" title="See companion class"><img alt="Object/Class" src="../../../../lib/object_to_class_big.png" /></a>
+        <p id="owner"><a href="../../../package.html" class="extype" name="org">org</a>.<a href="../../package.html" class="extype" name="org.apache">apache</a>.<a href="../package.html" class="extype" name="org.apache.s2graph">s2graph</a>.<a href="package.html" class="extype" name="org.apache.s2graph.core">core</a></p>
+        <h1><a href="S2Graph.html" title="See companion class">S2Graph</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="S2Graph.html" title="See companion class">class S2Graph</a>
+            | <a href="package.html" class="extype" name="org.apache.s2graph.core">package core</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">S2Graph</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="org.apache.s2graph.core.S2Graph"><span>S2Graph</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.s2graph.core.S2Graph.FilterHashKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FilterHashKey=(Int,Int)"></a>
+      <a id="FilterHashKey:FilterHashKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FilterHashKey</span><span class="result"> = (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@FilterHashKey=(Int,Int)" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph.HashKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HashKey=(Int,Int,Int,Int,Boolean)"></a>
+      <a id="HashKey:HashKey"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HashKey</span><span class="result"> = (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Boolean">Boolean</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@HashKey=(Int,Int,Int,Int,Boolean)" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@##():Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#DefaultColumnName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultColumnName:String"></a>
+      <a id="DefaultColumnName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DefaultColumnName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@DefaultColumnName:String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#DefaultConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultConfig:com.typesafe.config.Config"></a>
+      <a id="DefaultConfig:Config"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DefaultConfig</span><span class="result">: <span class="extype" name="com.typesafe.config.Config">Config</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@DefaultConfig:com.typesafe.config.Config" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#DefaultFetchLimit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultFetchLimit:Int"></a>
+      <a id="DefaultFetchLimit:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DefaultFetchLimit</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@DefaultFetchLimit:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#DefaultLabelName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultLabelName:String"></a>
+      <a id="DefaultLabelName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DefaultLabelName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@DefaultLabelName:String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#DefaultScore" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultScore:Double"></a>
+      <a id="DefaultScore:Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DefaultScore</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@DefaultScore:Double" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#DefaultServiceName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultServiceName:String"></a>
+      <a id="DefaultServiceName:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DefaultServiceName</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@DefaultServiceName:String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#FetchAllLimit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FetchAllLimit:Int"></a>
+      <a id="FetchAllLimit:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FetchAllLimit</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@FetchAllLimit:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#alreadyVisitedVertices" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="alreadyVisitedVertices(edgeWithScoreLs:Seq[org.apache.s2graph.core.EdgeWithScore]):Map[(org.apache.s2graph.core.types.LabelWithDirection,org.apache.s2graph.core.S2Vertex),Boolean]"></a>
+      <a id="alreadyVisitedVertices(Seq[EdgeWithScore]):Map[(LabelWithDirection,S2Vertex),Boolean]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">alreadyVisitedVertices</span><span class="params">(<span name="edgeWithScoreLs">edgeWithScoreLs: <span class="extype" name="scala.Seq">Seq</span>[<a href="EdgeWithScore.html" class="extype" name="org.apache.s2graph.core.EdgeWithScore">EdgeWithScore</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[(<a href="types/LabelWithDirection.html" class="extype" name="org.apache.s2graph.core.types.LabelWithDirection">LabelWithDirection</a>, <a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a>), <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@alreadyVisitedVertices(edgeWithScoreLs:Seq[org.apache.s2graph.core.EdgeWithScore]):Map[(org.apache.s2graph.core.types.LabelWithDirection,org.apache.s2graph.core.S2Vertex),Boolean]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#convertEdges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="convertEdges(queryParam:org.apache.s2graph.core.QueryParam,edge:org.apache.s2graph.core.S2Edge,nextStepOpt:Option[org.apache.s2graph.core.Step]):Seq[org.apache.s2graph.core.S2Edge]"></a>
+      <a id="convertEdges(QueryParam,S2Edge,Option[Step]):Seq[S2Edge]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">convertEdges</span><span class="params">(<span name="queryParam">queryParam: <a href="QueryParam.html" class="extype" name="org.apache.s2graph.core.QueryParam">QueryParam</a></span>, <span name="edge">edge: <a href="S2Edge.html" class="extype" name="org.apache.s2graph.core.S2Edge">S2Edge</a></span>, <span name="nextStepOpt">nextStepOpt: <span class="extype" name="scala.Option">Option</span>[<a href="Step.html" class="extype" name="org.apache.s2graph.core.Step">Step</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="S2Edge.html" class="extype" name="org.apache.s2graph.core.S2Edge">S2Edge</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@convertEdges(queryParam:org.apache.s2graph.core.QueryParam,edge:org.apache.s2graph.core.S2Edge,nextStepOpt:Option[org.apache.s2graph.core.Step]):Seq[org.apache.s2graph.core.S2Edge]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">common methods for filter out, transform, aggregate queryResult</p>
+    </li><li name="org.apache.s2graph.core.S2Graph#ec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ec:scala.concurrent.ExecutionContextExecutor"></a>
+      <a id="ec:ExecutionContextExecutor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ec</span><span class="result">: <span class="extype" name="scala.concurrent.ExecutionContextExecutor">ExecutionContextExecutor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@ec:scala.concurrent.ExecutionContextExecutor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#filterEdges" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="filterEdges(q:org.apache.s2graph.core.Query,stepIdx:Int,queryRequests:Seq[org.apache.s2graph.core.QueryRequest],queryResultLsFuture:scala.concurrent.Future[Seq[org.apache.s2graph.core.StepResult]],queryParams:Seq[org.apache.s2graph.core.QueryParam],alreadyVisited:Map[(org.apache.s2graph.core.types.LabelWithDirection,org.apache.s2graph.core.S2Vertex),Boolean],buildLastStepInnerResult:Boolean,parentEdges:Map[org.apache.s2graph.core.types.VertexId,Seq[org.apache.s2graph.core.EdgeWithScore]])(implicitec:scala.concurrent.ExecutionContext):scala.concurrent.Future[org.apache.s2graph.core.StepResult]"></a>
+      <a id="filterEdges(Query,Int,Seq[QueryRequest],Future[Seq[StepResult]],Seq[QueryParam],Map[(LabelWithDirection,S2Vertex),Boolean],Boolean,Map[VertexId,Seq[EdgeWithScore]])(ExecutionContext):Future[StepResult]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">filterEdges</span><span class="params">(<span name="q">q: <a href="Query.html" class="extype" name="org.apache.s2graph.core.Query">Query</a></span>, <span name="stepIdx">stepIdx: <span class="extype" name="scala.Int">Int</span></span>, <span name="queryRequests">queryRequests: <span class="extype" name="scala.Seq">Seq</span>[<a href="QueryRequest.html" class="extype" name="org.apache.s2graph.core.QueryRequest">QueryRequest</a>]</span>, <span name="queryResultLsFuture">queryResultLsFuture: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="StepResult.html" class="extype" name="org.apache.s2graph.core.StepResult">StepResult</a>]]</span>, <span name="queryParams">queryParams: <span class="extype" name="scala.Seq">Seq</span>[<a href="QueryParam.html" class="extype" name="org.apache.s2graph.core.QueryParam">QueryParam</a>]</span>, <span name="alreadyVisited">alreadyVisited: <span class="extype" name="scala.Predef.Map">Map</span>[(<a href="types/LabelWithDirection.html" class="extype" name="org.apache.s2graph.core.types.LabelWithDirection">LabelWithDirection</a>, <a href="S2Vertex.html" class="extype" name="org.apache.s2graph.core.S2Vertex">S2Vertex</a>), <span class="extype" name="scala.Boolean">Boolean</span>] = <span class="symbol">Map.empty</span></span>, <span name="buildLastStepInnerResult">buildLastStepInnerResult: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="parentEdges">parentEdges: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="types/VertexId.html" class="extype" name="org.apache.s2graph.core.types.VertexId">VertexId</a>, <span class="extype" name="scala.Seq">Seq</span>[<a href="EdgeWithScore.html" class="extype" name="org.apache.s2graph.core.EdgeWithScore">EdgeWithScore</a>]]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ec">ec: <span class="extype" name="scala.concurrent.ExecutionContext">ExecutionContext</span></span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<a href="StepResult.html" class="extype" name="org.apache.s2graph.core.StepResult">StepResult</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@filterEdges(q:org.apache.s2graph.core.Query,stepIdx:Int,queryRequests:Seq[org.apache.s2graph.core.QueryRequest],queryResultLsFuture:scala.concurrent.Future[Seq[org.apache.s2graph.core.StepResult]],queryParams:Seq[org.apache.s2graph.core.QueryParam],alreadyVisited:Map[(org.apache.s2graph.core.types.LabelWithDirection,org.apache.s2graph.core.S2Vertex),Boolean],buildLastStepInnerResult:Boolean,parentEdges:Map[org.apache.s2graph.core.types.VertexId,Seq[org.apache.s2graph.core.EdgeWithScore]])(implicitec:scala.concurrent.ExecutionContext):scala.concurrent.Future[org.apache.s2graph.core.StepResult]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#fromTypeSafeConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fromTypeSafeConfig(config:com.typesafe.config.Config):org.apache.commons.configuration.Configuration"></a>
+      <a id="fromTypeSafeConfig(Config):Configuration"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fromTypeSafeConfig</span><span class="params">(<span name="config">config: <span class="extype" name="com.typesafe.config.Config">Config</span></span>)</span><span class="result">: <span class="extype" name="org.apache.commons.configuration.Configuration">Configuration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@fromTypeSafeConfig(config:com.typesafe.config.Config):org.apache.commons.configuration.Configuration" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#graphStrategies" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="graphStrategies:org.apache.tinkerpop.gremlin.process.traversal.TraversalStrategies"></a>
+      <a id="graphStrategies:TraversalStrategies"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">graphStrategies</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.TraversalStrategies">TraversalStrategies</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@graphStrategies:org.apache.tinkerpop.gremlin.process.traversal.TraversalStrategies" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#initStorage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="initStorage(graph:org.apache.s2graph.core.S2Graph,config:com.typesafe.config.Config)(ec:scala.concurrent.ExecutionContext):org.apache.s2graph.core.storage.Storage[_,_]"></a>
+      <a id="initStorage(S2Graph,Config)(ExecutionContext):Storage[_,_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initStorage</span><span class="params">(<span name="graph">graph: <a href="S2Graph.html" class="extype" name="org.apache.s2graph.core.S2Graph">S2Graph</a></span>, <span name="config">config: <span class="extype" name="com.typesafe.config.Config">Config</span></span>)</span><span class="params">(<span name="ec">ec: <span class="extype" name="scala.concurrent.ExecutionContext">ExecutionContext</span></span>)</span><span class="result">: <a href="storage/Storage.html" class="extype" name="org.apache.s2graph.core.storage.Storage">Storage</a>[_, _]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@initStorage(graph:org.apache.s2graph.core.S2Graph,config:com.typesafe.config.Config)(ec:scala.concurrent.ExecutionContext):org.apache.s2graph.core.storage.Storage[_,_]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#normalize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="normalize(edgeWithScores:Seq[org.apache.s2graph.core.EdgeWithScore]):Seq[org.apache.s2graph.core.EdgeWithScore]"></a>
+      <a id="normalize(Seq[EdgeWithScore]):Seq[EdgeWithScore]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">normalize</span><span class="params">(<span name="edgeWithScores">edgeWithScores: <span class="extype" name="scala.Seq">Seq</span>[<a href="EdgeWithScore.html" class="extype" name="org.apache.s2graph.core.EdgeWithScore">EdgeWithScore</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="EdgeWithScore.html" class="extype" name="org.apache.s2graph.core.EdgeWithScore">EdgeWithScore</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@normalize(edgeWithScores:Seq[org.apache.s2graph.core.EdgeWithScore]):Seq[org.apache.s2graph.core.EdgeWithScore]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#numOfThread" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="numOfThread:Int"></a>
+      <a id="numOfThread:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">numOfThread</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@numOfThread:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#open" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="open(configuration:org.apache.commons.configuration.Configuration):org.apache.s2graph.core.S2Graph"></a>
+      <a id="open(Configuration):S2Graph"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">open</span><span class="params">(<span name="configuration">configuration: <span class="extype" name="org.apache.commons.configuration.Configuration">Configuration</span></span>)</span><span class="result">: <a href="S2Graph.html" class="extype" name="org.apache.s2graph.core.S2Graph">S2Graph</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@open(configuration:org.apache.commons.configuration.Configuration):org.apache.s2graph.core.S2Graph" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#parseCacheConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="parseCacheConfig(config:com.typesafe.config.Config,prefix:String):com.typesafe.config.Config"></a>
+      <a id="parseCacheConfig(Config,String):Config"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parseCacheConfig</span><span class="params">(<span name="config">config: <span class="extype" name="com.typesafe.config.Config">Config</span></span>, <span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="com.typesafe.config.Config">Config</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@parseCacheConfig(config:com.typesafe.config.Config,prefix:String):com.typesafe.config.Config" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#processDuplicates" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="processDuplicates[R](queryParam:org.apache.s2graph.core.QueryParam,duplicates:Seq[(org.apache.s2graph.core.S2Graph.FilterHashKey,R)])(implicitev:org.apache.s2graph.core.WithScore[R]):Seq[(org.apache.s2graph.core.S2Graph.FilterHashKey,R)]"></a>
+      <a id="processDuplicates[R](QueryParam,Seq[(FilterHashKey,R)])(WithScore[R]):Seq[(FilterHashKey,R)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">processDuplicates</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="queryParam">queryParam: <a href="QueryParam.html" class="extype" name="org.apache.s2graph.core.QueryParam">QueryParam</a></span>, <span name="duplicates">duplicates: <span class="extype" name="scala.Seq">Seq</span>[(<a href="#FilterHashKey=(Int,Int)" class="extmbr" name="org.apache.s2graph.core.S2Graph.FilterHashKey">FilterHashKey</a>, <span class="extype" name="org.apache.s2graph.core.S2Graph.processDuplicates.R">R</span>)]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <a href="WithScore.html" class="extype" name="org.apache.s2graph.core.WithScore">WithScore</a>[<span class="extype" name="org.apache.s2graph.core.S2Graph.processDuplicates.R">R</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[(<a href="#FilterHashKey=(Int,Int)" class="extmbr" name="org.apache.s2graph.core.S2Graph.FilterHashKey">FilterHashKey</a>, <span class="extype" name="org.apache.s2graph.core.S2Graph.processDuplicates.R">R</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@processDuplicates[R](queryParam:org.apache.s2graph.core.QueryParam,duplicates:Seq[(org.apache.s2graph.core.S2Graph.FilterHashKey,R)])(implicitev:org.apache.s2graph.core.WithScore[R]):Seq[(org.apache.s2graph.core.S2Graph.FilterHashKey,R)]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#processTimeDecay" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="processTimeDecay(queryParam:org.apache.s2graph.core.QueryParam,edge:org.apache.s2graph.core.S2Edge):Double"></a>
+      <a id="processTimeDecay(QueryParam,S2Edge):Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">processTimeDecay</span><span class="params">(<span name="queryParam">queryParam: <a href="QueryParam.html" class="extype" name="org.apache.s2graph.core.QueryParam">QueryParam</a></span>, <span name="edge">edge: <a href="S2Edge.html" class="extype" name="org.apache.s2graph.core.S2Edge">S2Edge</a></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@processTimeDecay(queryParam:org.apache.s2graph.core.QueryParam,edge:org.apache.s2graph.core.S2Edge):Double" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#randomInt" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="randomInt(sampleNumber:Int,range:Int,set:Set[Int]):Set[Int]"></a>
+      <a id="randomInt(Int,Int,Set[Int]):Set[Int]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">randomInt</span><span class="params">(<span name="sampleNumber">sampleNumber: <span class="extype" name="scala.Int">Int</span></span>, <span name="range">range: <span class="extype" name="scala.Int">Int</span></span>, <span name="set">set: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Int">Int</span>] = <span class="symbol">Set.empty[Int]</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@randomInt(sampleNumber:Int,range:Int,set:Set[Int]):Set[Int]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Global helper functions</p><div class="fullcomment"><div class="comment cmt"><p>Global helper functions</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@tailrec</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#sample" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sample(queryRequest:org.apache.s2graph.core.QueryRequest,edges:Seq[org.apache.s2graph.core.EdgeWithScore],n:Int):Seq[org.apache.s2graph.core.EdgeWithScore]"></a>
+      <a id="sample(QueryRequest,Seq[EdgeWithScore],Int):Seq[EdgeWithScore]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sample</span><span class="params">(<span name="queryRequest">queryRequest: <a href="QueryRequest.html" class="extype" name="org.apache.s2graph.core.QueryRequest">QueryRequest</a></span>, <span name="edges">edges: <span class="extype" name="scala.Seq">Seq</span>[<a href="EdgeWithScore.html" class="extype" name="org.apache.s2graph.core.EdgeWithScore">EdgeWithScore</a>]</span>, <span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="EdgeWithScore.html" class="extype" name="org.apache.s2graph.core.EdgeWithScore">EdgeWithScore</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@sample(queryRequest:org.apache.s2graph.core.QueryRequest,edges:Seq[org.apache.s2graph.core.EdgeWithScore],n:Int):Seq[org.apache.s2graph.core.EdgeWithScore]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#threadPool" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="threadPool:java.util.concurrent.ExecutorService"></a>
+      <a id="threadPool:ExecutorService"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">threadPool</span><span class="result">: <span class="extype" name="java.util.concurrent.ExecutorService">ExecutorService</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@threadPool:java.util.concurrent.ExecutorService" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.S2Graph#toHashKey" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toHashKey(queryParam:org.apache.s2graph.core.QueryParam,edge:org.apache.s2graph.core.S2Edge,isDegree:Boolean):(org.apache.s2graph.core.S2Graph.HashKey,org.apache.s2graph.core.S2Graph.FilterHashKey)"></a>
+      <a id="toHashKey(QueryParam,S2Edge,Boolean):(HashKey,FilterHashKey)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toHashKey</span><span class="params">(<span name="queryParam">queryParam: <a href="QueryParam.html" class="extype" name="org.apache.s2graph.core.QueryParam">QueryParam</a></span>, <span name="edge">edge: <a href="S2Edge.html" class="extype" name="org.apache.s2graph.core.S2Edge">S2Edge</a></span>, <span name="isDegree">isDegree: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: (<a href="#HashKey=(Int,Int,Int,Int,Boolean)" class="extmbr" name="org.apache.s2graph.core.S2Graph.HashKey">HashKey</a>, <a href="#FilterHashKey=(Int,Int)" class="extmbr" name="org.apache.s2graph.core.S2Graph.FilterHashKey">FilterHashKey</a>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@toHashKey(queryParam:org.apache.s2graph.core.QueryParam,edge:org.apache.s2graph.core.S2Edge,isDegree:Boolean):(org.apache.s2graph.core.S2Graph.HashKey,org.apache.s2graph.core.S2Graph.FilterHashKey)" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@toString():String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.S2Graph#toTypeSafeConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="toTypeSafeConfig(configuration:org.apache.commons.configuration.Configuration):com.typesafe.config.Config"></a>
+      <a id="toTypeSafeConfig(Configuration):Config"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toTypeSafeConfig</span><span class="params">(<span name="configuration">configuration: <span class="extype" name="org.apache.commons.configuration.Configuration">Configuration</span></span>)</span><span class="result">: <span class="extype" name="com.typesafe.config.Config">Config</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@toTypeSafeConfig(configuration:org.apache.commons.configuration.Configuration):com.typesafe.config.Config" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#org.apache.s2graph.core.S2Graph$@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>mysqls - org.apache.s2graph.core.mysqls</title>
+          <meta name="description" content="mysqls - org.apache.s2graph.core.mysqls" />
+          <meta name="keywords" content="mysqls org.apache.s2graph.core.mysqls" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'org.apache.s2graph.core.mysqls.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="org">org</a>.<a href="../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../package.html" class="extype" name="org.apache.s2graph">s2graph</a>.<a href="../package.html" class="extype" name="org.apache.s2graph.core">core</a></p>
+        <h1>mysqls</h1><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mysqls</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.apache.s2graph.core.mysqls.Bucket" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BucketextendsProductwithSerializable"></a>
+      <a id="Bucket:Bucket"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Bucket.html"><span class="name">Bucket</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="experimentId">experimentId: <span class="extype" name="scala.Int">Int</span></span>, <span name="modular">modular: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="httpVerb">httpVerb: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="apiPath">apiPath: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="requestBody">requestBody: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="timeout">timeout: <span class="extype" name="scala.Int">Int</span></span>, <span name="impressionId">impressionId: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="isGraphQuery">isGraphQuery: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="isEmpty">isEmpty: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@BucketextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.ColumnMeta" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ColumnMetaextendsProductwithSerializable"></a>
+      <a id="ColumnMeta:ColumnMeta"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ColumnMeta.html"><span class="name">ColumnMeta</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="columnId">columnId: <span class="extype" name="scala.Int">Int</span></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="seq">seq: <span class="extype" name="scala.Byte">Byte</span></span>, <span name="dataType">dataType: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@ColumnMetaextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.Experiment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExperimentextendsProductwithSerializable"></a>
+      <a id="Experiment:Experiment"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Experiment.html"><span class="name">Experiment</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="serviceId">serviceId: <span class="extype" name="scala.Int">Int</span></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="description">description: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="experimentType">experimentType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="totalModular">totalModular: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@ExperimentextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.GlobalIndex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GlobalIndexextendsProductwithSerializable"></a>
+      <a id="GlobalIndex:GlobalIndex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="GlobalIndex.html"><span class="name">GlobalIndex</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="elementType">elementType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="propNames">propNames: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="indexName">indexName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@GlobalIndexextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.Label" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LabelextendsProductwithSerializable"></a>
+      <a id="Label:Label"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Label.html"><span class="name">Label</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="label">label: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="srcServiceId">srcServiceId: <span class="extype" name="scala.Int">Int</span></span>, <span name="srcColumnName">srcColumnName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="srcColumnType">srcColumnType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tgtServiceId">tgtServiceId: <span class="extype" name="scala.Int">Int</span></span>, <span name="tgtColumnName">tgtColumnName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tgtColumnType">tgtColumnType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="isDirected">isDirected: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="serviceName">serviceName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="serviceId">serviceId: <span class="extype" name="scala.Int">Int</span></span>, <span name="consistencyLevel">consistencyLevel: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;strong&quot;</span></span>, <span name="hTableName">hTableName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hTableTTL">hTableTTL: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="schemaVersion">schemaVersion: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="isAsync">isAsync: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="compressionAlgorithm">compressionAlgorithm: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="options">options: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@LabelextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.LabelIndex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LabelIndexextendsProductwithSerializable"></a>
+      <a id="LabelIndex:LabelIndex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LabelIndex.html"><span class="name">LabelIndex</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="labelId">labelId: <span class="extype" name="scala.Int">Int</span></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="seq">seq: <span class="extype" name="scala.Byte">Byte</span></span>, <span name="metaSeqs">metaSeqs: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="formulars">formulars: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@LabelIndexextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">mgmt.buildIndex('nameAndAge',Vertex.class)
+.addKey(name,Mapping.TEXT.getParameter())
+.addKey(age,Mapping.TEXT.getParameter())
+.buildMixedIndex(&quot;search&quot;)</p><div class="fullcomment"><div class="comment cmt"><p>mgmt.buildIndex('nameAndAge',Vertex.class)
+.addKey(name,Mapping.TEXT.getParameter())
+.addKey(age,Mapping.TEXT.getParameter())
+.buildMixedIndex(&quot;search&quot;)</p><p>v: {name: abc} - E1: {age: 20}, E2, E3....</p><p>Management.createServiceColumn(
+		serviceName = serviceName, columnName = &quot;person&quot;, columnType = &quot;integer&quot;,
+    props = Seq(
+    	Prop(&quot;name&quot;, &quot;-&quot;, &quot;string&quot;),
+    	Prop(&quot;age&quot;, &quot;0&quot;, &quot;integer&quot;),
+    	Prop(&quot;location&quot;, &quot;-&quot;, &quot;string&quot;)
+    )
+)</p><p>management.createLabel(
+		label = &quot;bought&quot;,
+    srcServiceName = serviceName, srcColumnName = &quot;person&quot;, srcColumnType = &quot;integer&quot;,
+    tgtServiceName = serviceName, tgtColumnName = &quot;product&quot;, tgtColumnType = &quot;integer&quot;, idDirected = true,
+    serviceName = serviceName,
+    indices = Seq(
+    	Index(&quot;PK&quot;, Seq(&quot;amount&quot;, &quot;created_at&quot;), IndexType(&quot;mixed&quot;, propsMapping: Map[String, String]),
+{&quot;in&quot;: {}, &quot;out&quot;: {}})
+    ),
+    props = Seq(
+    	Prop(&quot;amount&quot;, &quot;0.0&quot;, &quot;double&quot;),
+    	Prop(&quot;created_at&quot;, &quot;2000-01-01&quot;, &quot;string&quot;)
+    ),
+    consistencyLevel = &quot;strong&quot;
+)</p><p>mgmt.buildIndex('PK', Edge.class)
+  .addKey(amount, Double)
+  .buildCompositeIndex
+</p></div></div>
+    </li><li name="org.apache.s2graph.core.mysqls.LabelMeta" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LabelMetaextendsProductwithSerializable"></a>
+      <a id="LabelMeta:LabelMeta"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LabelMeta.html"><span class="name">LabelMeta</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="labelId">labelId: <span class="extype" name="scala.Int">Int</span></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="seq">seq: <span class="extype" name="scala.Byte">Byte</span></span>, <span name="defaultValue">defaultValue: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dataType">dataType: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@LabelMetaextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.Model" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Model[V]extendsSQLSyntaxSupport[V]"></a>
+      <a id="Model[V]:Model[V]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Model.html"><span class="name">Model</span></a><span class="tparams">[<span name="V">V</span>]</span><span class="result"> extends <a href="../../../../../scalikejdbc/package.html#SQLSyntaxSupport[A]extendsAnyRef" class="extmbr" name="scalikejdbc.SQLSyntaxSupport">scalikejdbc.SQLSyntaxSupport</a>[<span class="extype" name="org.apache.s2graph.core.mysqls.Model.V">V</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@Model[V]extendsSQLSyntaxSupport[V]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.Service" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ServiceextendsProductwithSerializable"></a>
+      <a id="Service:Service"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Service.html"><span class="name">Service</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="serviceName">serviceName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="accessToken">accessToken: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cluster">cluster: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hTableName">hTableName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="preSplitSize">preSplitSize: <span class="extype" name="scala.Int">Int</span></span>, <span name="hTableTTL">hTableTTL: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="options">options: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@ServiceextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.ServiceColumn" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ServiceColumnextendsProductwithSerializable"></a>
+      <a id="ServiceColumn:ServiceColumn"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ServiceColumn.html"><span class="name">ServiceColumn</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="serviceId">serviceId: <span class="extype" name="scala.Int">Int</span></span>, <span name="columnName">columnName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="columnType">columnType: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="schemaVersion">schemaVersion: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@ServiceColumnextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.ServiceColumnIndex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ServiceColumnIndexextendsProductwithSerializable"></a>
+      <a id="ServiceColumnIndex:ServiceColumnIndex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ServiceColumnIndex.html"><span class="name">ServiceColumnIndex</span></a><span class="params">(<span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="serviceId">serviceId: <span class="extype" name="scala.Int">Int</span></span>, <span name="serviceColumnId">serviceColumnId: <span class="extype" name="scala.Int">Int</span></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="seq">seq: <span class="extype" name="scala.Byte">Byte</span></span>, <span name="metaSeqs">metaSeqs: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>, <span name="options">options: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@ServiceColumnIndexextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="org.apache.s2graph.core.mysqls.Bucket" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Bucket"></a>
+      <a id="Bucket:Bucket"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Bucket$.html"><span class="name">Bucket</span></a><span class="result"> extends <a href="Model.html" class="extype" name="org.apache.s2graph.core.mysqls.Model">Model</a>[<a href="Bucket.html" class="extype" name="org.apache.s2graph.core.mysqls.Bucket">Bucket</a>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@Bucket" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.ColumnMeta" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ColumnMeta"></a>
+      <a id="ColumnMeta:ColumnMeta"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ColumnMeta$.html"><span class="name">ColumnMeta</span></a><span class="result"> extends <a href="Model.html" class="extype" name="org.apache.s2graph.core.mysqls.Model">Model</a>[<a href="ColumnMeta.html" class="extype" name="org.apache.s2graph.core.mysqls.ColumnMeta">ColumnMeta</a>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@ColumnMeta" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.Experiment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Experiment"></a>
+      <a id="Experiment:Experiment"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Experiment$.html"><span class="name">Experiment</span></a><span class="result"> extends <a href="Model.html" class="extype" name="org.apache.s2graph.core.mysqls.Model">Model</a>[<a href="Experiment.html" class="extype" name="org.apache.s2graph.core.mysqls.Experiment">Experiment</a>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@Experiment" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.GlobalIndex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GlobalIndex"></a>
+      <a id="GlobalIndex:GlobalIndex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GlobalIndex$.html"><span class="name">GlobalIndex</span></a><span class="result"> extends <a href="Model.html" class="extype" name="org.apache.s2graph.core.mysqls.Model">Model</a>[<a href="GlobalIndex.html" class="extype" name="org.apache.s2graph.core.mysqls.GlobalIndex">GlobalIndex</a>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@GlobalIndex" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.Label" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Label"></a>
+      <a id="Label:Label"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Label$.html"><span class="name">Label</span></a><span class="result"> extends <a href="Model.html" class="extype" name="org.apache.s2graph.core.mysqls.Model">Model</a>[<a href="Label.html" class="extype" name="org.apache.s2graph.core.mysqls.Label">Label</a>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@Label" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.LabelIndex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LabelIndex"></a>
+      <a id="LabelIndex:LabelIndex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LabelIndex$.html"><span class="name">LabelIndex</span></a><span class="result"> extends <a href="Model.html" class="extype" name="org.apache.s2graph.core.mysqls.Model">Model</a>[<a href="LabelIndex.html" class="extype" name="org.apache.s2graph.core.mysqls.LabelIndex">LabelIndex</a>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@LabelIndex" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.LabelMeta" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LabelMeta"></a>
+      <a id="LabelMeta:LabelMeta"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LabelMeta$.html"><span class="name">LabelMeta</span></a><span class="result"> extends <a href="Model.html" class="extype" name="org.apache.s2graph.core.mysqls.Model">Model</a>[<a href="LabelMeta.html" class="extype" name="org.apache.s2graph.core.mysqls.LabelMeta">LabelMeta</a>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@LabelMeta" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.Model" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Model"></a>
+      <a id="Model:Model"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Model$.html"><span class="name">Model</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@Model" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.Service" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Service"></a>
+      <a id="Service:Service"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Service$.html"><span class="name">Service</span></a><span class="result"> extends <a href="Model.html" class="extype" name="org.apache.s2graph.core.mysqls.Model">Model</a>[<a href="Service.html" class="extype" name="org.apache.s2graph.core.mysqls.Service">Service</a>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@Service" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.ServiceColumn" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ServiceColumn"></a>
+      <a id="ServiceColumn:ServiceColumn"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ServiceColumn$.html"><span class="name">ServiceColumn</span></a><span class="result"> extends <a href="Model.html" class="extype" name="org.apache.s2graph.core.mysqls.Model">Model</a>[<a href="ServiceColumn.html" class="extype" name="org.apache.s2graph.core.mysqls.ServiceColumn">ServiceColumn</a>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@ServiceColumn" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="org.apache.s2graph.core.mysqls.ServiceColumnIndex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ServiceColumnIndex"></a>
+      <a id="ServiceColumnIndex:ServiceColumnIndex"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ServiceColumnIndex$.html"><span class="name">ServiceColumnIndex</span></a><span class="result"> extends <a href="Model.html" class="extype" name="org.apache.s2graph.core.mysqls.Model">Model</a>[<a href="ServiceColumnIndex.html" class="extype" name="org.apache.s2graph.core.mysqls.ServiceColumnIndex">ServiceColumnIndex</a>] with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#org.apache.s2graph.core.mysqls.package@ServiceColumnIndex" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

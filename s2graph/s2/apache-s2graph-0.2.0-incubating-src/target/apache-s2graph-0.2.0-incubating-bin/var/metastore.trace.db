@@ -1,0 +1,4 @@
+2019-07-27 13:47:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Timeout trying to lock table ; SQL statement:
+insert into services(service_name, access_token, cluster, hbase_table_name, pre_split_size, hbase_table_ttl)
+    values(?, ?, ?, ?, ?, ?) [50200-192]

@@ -1,0 +1,25 @@
+[0m[[0minfo[0m] [0mPackaging /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/target/scala-2.11/s2loader_2.11-0.2.0-sources.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/subscriber/GraphSubscriber.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/subscriber/GraphSubscriber.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/spark/HBaseRDDFunctions.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/spark/HBaseRDDFunctions.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/spark/HBaseContext.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/spark/HBaseContext.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/subscriber/TransferToHFile.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/subscriber/TransferToHFile.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/subscriber/WalLogStat.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/subscriber/WalLogStat.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/spark/KeyFamilyQualifier.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/spark/KeyFamilyQualifier.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/spark/JavaHBaseContext.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/spark/JavaHBaseContext.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/spark/BulkLoadPartitioner.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/spark/BulkLoadPartitioner.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/spark/FamilyHFileWriteOptions.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/spark/FamilyHFileWriteOptions.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/subscriber/WalLogToHDFS.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/subscriber/WalLogToHDFS.scala[0m
+[0m[[0mdebug[0m] [0m	org/apache/s2graph/loader/spark/HBaseDStreamFunctions.scala[0m
+[0m[[0mdebug[0m] [0m	  /Users/yeongmo/Documents/Programming/timeline/s2graph/s2/apache-s2graph-0.2.0-incubating-src/loader/src/main/scala/org/apache/s2graph/loader/spark/HBaseDStreamFunctions.scala[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

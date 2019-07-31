@@ -1,0 +1,1073 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>S2GraphStep - org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep</title>
+          <meta name="description" content="S2GraphStep - org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep" />
+          <meta name="keywords" content="S2GraphStep org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../../index.html';
+            var hash = 'org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img alt="Class" src="../../../../../../../lib/class_big.png" />
+        <p id="owner"><a href="../../../../../../package.html" class="extype" name="org">org</a>.<a href="../../../../../package.html" class="extype" name="org.apache">apache</a>.<a href="../../../../package.html" class="extype" name="org.apache.s2graph">s2graph</a>.<a href="../../../package.html" class="extype" name="org.apache.s2graph.core">core</a>.<a href="../../package.html" class="extype" name="org.apache.s2graph.core.io">io</a>.<a href="../package.html" class="extype" name="org.apache.s2graph.core.io.tinkerpop">tinkerpop</a>.<a href="package.html" class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize">optimize</a></p>
+        <h1>S2GraphStep</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize">package optimize</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">S2GraphStep</span><span class="tparams">[<span name="S">S</span>, <span name="E">E &lt;: <span class="extype" name="org.apache.tinkerpop.gremlin.structure.Element">Element</span></span>]</span><span class="result"> extends <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep">GraphStep</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep">GraphStep</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>], <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span>, <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.GraphComputing">GraphComputing</span>, <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep">AbstractStep</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>], <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Step">tinkerpop.gremlin.process.traversal.Step</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>], <span class="extype" name="java.lang.Cloneable">Cloneable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin">Admin</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep"><span>S2GraphStep</span></li><li class="in" name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep"><span>GraphStep</span></li><li class="in" name="java.lang.AutoCloseable"><span>AutoCloseable</span></li><li class="in" name="org.apache.tinkerpop.gremlin.process.traversal.step.GraphComputing"><span>GraphComputing</span></li><li class="in" name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep"><span>AbstractStep</span></li><li class="in" name="org.apache.tinkerpop.gremlin.process.traversal.Step"><span>Step</span></li><li class="in" name="java.lang.Cloneable"><span>Cloneable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="java.util.Iterator"><span>Iterator</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(originalStep:org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep[S,E]):org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep[S,E]"></a>
+      <a id="&lt;init&gt;:S2GraphStep[S,E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">S2GraphStep</span><span class="params">(<span name="originalStep">originalStep: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep">GraphStep</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@&lt;init&gt;(originalStep:org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep[S,E]):org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep[S,E]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@##():Int" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#addIds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addIds(x$1:Object*):Unit"></a>
+      <a id="addIds(&lt;repeated...&gt;[AnyRef]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addIds</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.&lt;repeated...&gt;">&lt;repeated...&gt;</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@addIds(x$1:Object*):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#addLabel" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addLabel(x$1:String):Unit"></a>
+      <a id="addLabel(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addLabel</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@addLabel(x$1:String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#addStart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addStart(x$1:org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin[S]):Unit"></a>
+      <a id="addStart(Admin[S]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addStart</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin">Admin</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@addStart(x$1:org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin[S]):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#addStarts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addStarts(x$1:java.util.Iterator[org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin[S]]):Unit"></a>
+      <a id="addStarts(Iterator[Admin[S]]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addStarts</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin">Admin</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@addStarts(x$1:java.util.Iterator[org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin[S]]):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.GraphComputing#atMaster" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="atMaster(x$1:Boolean):Unit"></a>
+      <a id="atMaster(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">atMaster</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@atMaster(x$1:Boolean):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphComputing</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#clearIds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clearIds():Unit"></a>
+      <a id="clearIds():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clearIds</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@clearIds():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#clone" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep[S,E]"></a>
+      <a id="clone():AbstractStep[S,E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep">AbstractStep</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@clone():org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep[S,E]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step → AnyRef</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#close" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="close():Unit"></a>
+      <a id="close():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">close</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@close():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep → AutoCloseable</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#convertElementsToIds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="convertElementsToIds():Unit"></a>
+      <a id="convertElementsToIds():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">convertElementsToIds</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@convertElementsToIds():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.Step#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:org.apache.tinkerpop.gremlin.process.traversal.Step[_,_],x$2:Boolean):Boolean"></a>
+      <a id="equals(tinkerpop.gremlin.process.traversal.Step[_,_],Boolean):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Step">tinkerpop.gremlin.process.traversal.Step</span>[_, _]</span>, <span name="arg1">arg1: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@equals(x$1:org.apache.tinkerpop.gremlin.process.traversal.Step[_,_],x$2:Boolean):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Step</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="java.util.Iterator#forEachRemaining" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="forEachRemaining(x$1:java.util.function.Consumer[_&gt;:E]):Unit"></a>
+      <a id="forEachRemaining(Consumer[_&gt;:Admin[E]]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forEachRemaining</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.function.Consumer">Consumer</span>[_ &gt;: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin">Admin</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@forEachRemaining(x$1:java.util.function.Consumer[_&gt;:E]):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#getId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getId():String"></a>
+      <a id="getId():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getId</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@getId():String" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#getIds" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getIds():Array[Object]"></a>
+      <a id="getIds():Array[AnyRef]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getIds</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.AnyRef">AnyRef</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@getIds():Array[Object]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#getLabels" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getLabels():java.util.Set[String]"></a>
+      <a id="getLabels():Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLabels</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="java.lang.String">String</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@getLabels():java.util.Set[String]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#getNextStep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getNextStep():org.apache.tinkerpop.gremlin.process.traversal.Step[E,_]"></a>
+      <a id="getNextStep():tinkerpop.gremlin.process.traversal.Step[E,_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getNextStep</span><span class="params">()</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Step">tinkerpop.gremlin.process.traversal.Step</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>, _]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@getNextStep():org.apache.tinkerpop.gremlin.process.traversal.Step[E,_]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#getPreviousStep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getPreviousStep():org.apache.tinkerpop.gremlin.process.traversal.Step[_,S]"></a>
+      <a id="getPreviousStep():tinkerpop.gremlin.process.traversal.Step[_,S]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPreviousStep</span><span class="params">()</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Step">tinkerpop.gremlin.process.traversal.Step</span>[_, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@getPreviousStep():org.apache.tinkerpop.gremlin.process.traversal.Step[_,S]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.Step#getRequirements" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getRequirements():java.util.Set[org.apache.tinkerpop.gremlin.process.traversal.traverser.TraverserRequirement]"></a>
+      <a id="getRequirements():Set[TraverserRequirement]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getRequirements</span><span class="params">()</span><span class="result">: <span class="extype" name="java.util.Set">Set</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.traverser.TraverserRequirement">TraverserRequirement</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@getRequirements():java.util.Set[org.apache.tinkerpop.gremlin.process.traversal.traverser.TraverserRequirement]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#getReturnClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getReturnClass():Class[E]"></a>
+      <a id="getReturnClass():Class[E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getReturnClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@getReturnClass():Class[E]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#getTraversal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getTraversal[A,B]():org.apache.tinkerpop.gremlin.process.traversal.Traversal.Admin[A,B]"></a>
+      <a id="getTraversal[A,B]():Admin[A,B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getTraversal</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">()</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Traversal.Admin">Admin</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep.getTraversal.A">A</span>, <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep.getTraversal.B">B</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@getTraversal[A,B]():org.apache.tinkerpop.gremlin.process.traversal.Traversal.Admin[A,B]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#hasNext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasNext():Boolean"></a>
+      <a id="hasNext():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasNext</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@hasNext():Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Iterator</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep → AbstractStep → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#isStartStep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isStartStep():Boolean"></a>
+      <a id="isStartStep():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isStartStep</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@isStartStep():Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#next" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="next():org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin[E]"></a>
+      <a id="next():Admin[E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">next</span><span class="params">()</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin">Admin</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@next():org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin[E]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Iterator</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#onGraphComputer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="onGraphComputer():Unit"></a>
+      <a id="onGraphComputer():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onGraphComputer</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@onGraphComputer():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep → GraphComputing</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#processNextStart" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="processNextStart():org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin[E]"></a>
+      <a id="processNextStart():Admin[E]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">processNextStart</span><span class="params">()</span><span class="result">: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin">Admin</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@processNextStart():org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin[E]" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../tinkerpop$gremlin$process$traversal$step$map.html" class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.map">org.apache.tinkerpop.gremlin.process.traversal.step.map</a>] </dd><dt>Definition Classes</dt><dd>GraphStep → AbstractStep</dd></dl></div>
+    </li><li name="java.util.Iterator#remove" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="remove():Unit"></a>
+      <a id="remove():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">remove</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@remove():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Iterator</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#removeLabel" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="removeLabel(x$1:String):Unit"></a>
+      <a id="removeLabel(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">removeLabel</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@removeLabel(x$1:String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#reset" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reset():Unit"></a>
+      <a id="reset():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reset</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@reset():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep → AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#returnsEdge" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="returnsEdge():Boolean"></a>
+      <a id="returnsEdge():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">returnsEdge</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@returnsEdge():Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#returnsVertex" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="returnsVertex():Boolean"></a>
+      <a id="returnsVertex():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">returnsVertex</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@returnsVertex():Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#setId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setId(x$1:String):Unit"></a>
+      <a id="setId(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setId</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.lang.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@setId(x$1:String):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep#setIteratorSupplier" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setIteratorSupplier(x$1:java.util.function.Supplier[java.util.Iterator[E]]):Unit"></a>
+      <a id="setIteratorSupplier(Supplier[Iterator[E]]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setIteratorSupplier</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="java.util.function.Supplier">Supplier</span>[<span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@setIteratorSupplier(x$1:java.util.function.Supplier[java.util.Iterator[E]]):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GraphStep</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#setNextStep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setNextStep(x$1:org.apache.tinkerpop.gremlin.process.traversal.Step[E,_]):Unit"></a>
+      <a id="setNextStep(tinkerpop.gremlin.process.traversal.Step[E,_]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setNextStep</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Step">tinkerpop.gremlin.process.traversal.Step</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>, _]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@setNextStep(x$1:org.apache.tinkerpop.gremlin.process.traversal.Step[E,_]):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#setPreviousStep" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setPreviousStep(x$1:org.apache.tinkerpop.gremlin.process.traversal.Step[_,S]):Unit"></a>
+      <a id="setPreviousStep(tinkerpop.gremlin.process.traversal.Step[_,S]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setPreviousStep</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Step">tinkerpop.gremlin.process.traversal.Step</span>[_, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@setPreviousStep(x$1:org.apache.tinkerpop.gremlin.process.traversal.Step[_,S]):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep#setTraversal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setTraversal(x$1:org.apache.tinkerpop.gremlin.process.traversal.Traversal.Admin[_,_]):Unit"></a>
+      <a id="setTraversal(Admin[_,_]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setTraversal</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Traversal.Admin">Admin</span>[_, _]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@setTraversal(x$1:org.apache.tinkerpop.gremlin.process.traversal.Traversal.Admin[_,_]):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractStep → Step</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@toString():String" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep">S2GraphStep</a> → GraphStep → AbstractStep → AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../../index.html#org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep">
+              <h3>Inherited from <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.map.GraphStep">GraphStep</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]</h3>
+            </div><div class="parent" name="java.lang.AutoCloseable">
+              <h3>Inherited from <span class="extype" name="java.lang.AutoCloseable">AutoCloseable</span></h3>
+            </div><div class="parent" name="org.apache.tinkerpop.gremlin.process.traversal.step.GraphComputing">
+              <h3>Inherited from <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.GraphComputing">GraphComputing</span></h3>
+            </div><div class="parent" name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep">
+              <h3>Inherited from <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.step.util.AbstractStep">AbstractStep</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]</h3>
+            </div><div class="parent" name="org.apache.tinkerpop.gremlin.process.traversal.Step">
+              <h3>Inherited from <span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Step">tinkerpop.gremlin.process.traversal.Step</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.S">S</span>, <span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]</h3>
+            </div><div class="parent" name="java.lang.Cloneable">
+              <h3>Inherited from <span class="extype" name="java.lang.Cloneable">Cloneable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.util.Iterator">
+              <h3>Inherited from <span class="extype" name="java.util.Iterator">Iterator</span>[<span class="extype" name="org.apache.tinkerpop.gremlin.process.traversal.Traverser.Admin">Admin</span>[<span class="extype" name="org.apache.s2graph.core.io.tinkerpop.optimize.S2GraphStep.E">E</span>]]</h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

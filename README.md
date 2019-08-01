@@ -63,7 +63,7 @@ check [S2Graph official document](https://steamshon.gitbooks.io/s2graph-book/con
 [Youtube](https://youtu.be/90HdtBw2n_g)
 
 # Demo Page
-[Click!](http://yeongmoj.timeline.s3-website.ap-northeast-2.amazonaws.com)
+[Click!](http://yeongmoj.timeline.s3-website.ap-northeast-2.amazonaws.com) (Now Fixing)
 
 # Licence
 [MIT](https://github.com/yeongmo-j/Timeline/blob/master/LICENSE.txt)
